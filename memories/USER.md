@@ -1,0 +1,1 @@
+User prefers to communicate in Persian (Farsi). Always respond in Persian unless asked otherwise.
