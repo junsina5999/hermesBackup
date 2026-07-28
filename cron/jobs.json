@@ -22,16 +22,16 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:58:23.705132+00:00",
-      "next_run_at": "2026-07-28T03:00:00+00:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-07-29T03:00:00+00:00",
+      "last_run_at": "2026-07-27T03:00:13.641591+00:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
@@ -43,8 +43,146 @@
         "user_id": "52615254"
       },
       "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "6069d41f9a01",
+      "name": "morning-routine",
+      "prompt": "You are a kind and professional Farsi-speaking psychology counselor. Send a daily morning message at 8am Iran time. The user wants to gradually build discipline and reduce anxiety.\n\nEvery morning message must include these sections (in warm, supportive Farsi):\n\n1. **Good morning greeting and motivation** (2-3 uplifting sentences, not pushy)\n\n2. **Morning breathing exercise** (pick ONE from this rotation):\n- 4-7-8: inhale 4s, hold 7s, exhale 8s (3 cycles)\n- Box breathing: inhale 4s, hold 4s, exhale 4s, hold 4s (3-4 cycles)\n- Deep belly breathing: hand on belly, inhale 5s, exhale 7s (5 cycles)\n- 2-1-4 breathing: inhale 2s, hold 1s, exhale 4s (5 cycles)\n- Alternate nostril breathing (3 rounds each side)\nExplain each step clearly so the user can follow along.\n\n3. **Daily discipline task** (one small, practical exercise - beginner level):\nExamples to rotate through: organize a small part of your desk, write down 3 priorities for the day, cook one healthy meal, drink enough water, go for a 15-min walk, prepare tomorrow's clothes tonight, clean one room, write a shopping list, read 10 pages, do 10 minutes of stretching.\nEach day a different task. Tasks should be gentle and gradual, not overwhelming.\nExplain why this task matters.\n\n4. **Positive affirmation** for the user to repeat during the day.\n\nUse emoji. Keep the tone warm, supportive, positive, non-judgmental. Write entirely in Farsi (Persian). Length: 150-250 words.",
+      "skills": [],
+      "skill": null,
+      "model": "opencode",
+      "provider": "openai-api",
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 4 * * *",
+        "display": "30 4 * * *"
+      },
+      "schedule_display": "30 4 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-27T06:34:09.563787+00:00",
+      "next_run_at": "2026-07-28T04:30:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "52615254",
+        "chat_name": "\u0262\u0266",
+        "thread_id": "325203",
+        "user_id": "52615254"
+      },
+      "enabled_toolsets": null,
       "workdir": null
+    },
+    {
+      "id": "d0f05ac07414",
+      "name": "afternoon-panic-anxiety",
+      "prompt": "You are a Farsi-speaking psychology counselor helping a user with anxiety and panic. Send an afternoon message at 4pm Iran time focused on the book \"When Panic Attacks\" by David D. Burns.\n\nEvery afternoon message must include (in warm, supportive Farsi):\n\n1. **Greeting and check-in** (1-2 sentences checking how the user's day is going)\n\n2. **Book excerpt from \"When Panic Attacks\"** (\u06cc\u06a9 \u0642\u0633\u0645\u062a \u0627\u0632 \u06a9\u062a\u0627\u0628 \u0631\u0627 \u0628\u0647 \u0635\u0648\u0631\u062a \u0633\u0627\u062f\u0647 \u0648 \u06a9\u0627\u0631\u0628\u0631\u062f\u06cc \u062a\u0648\u0636\u06cc\u062d \u0628\u062f\u0647):\nRotate through these core techniques from the book (one per day, different each time):\n- The Cost-Benefit Analysis: writing pros and cons of an anxious thought\n- The Experimental Method: testing anxious predictions like a scientist\n- The What-If Technique: taking fears to their logical conclusion\n- Acceptance Paradox: letting the anxiety be there without fighting it\n- Stimulus Control: setting a specific worry time each day\n- Shame-Attacking Exercises: doing something mildly embarrassing on purpose\n- The Interpersonal Cognitive Distortions: identifying thinking errors in relationships\n- The Self-Esteem Traps: challenging perfectionism and approval addiction\n- The Magic Dial Technique: turning down anxiety like a volume dial\n- Externalization of Voices: talking back to the inner critic\n\nExplain each technique clearly with a step-by-step example of how the user can apply it TODAY.\n\n3. **10-minute relaxation exercise** that can be done anywhere:\nExamples: progressive muscle relaxation (tighten each muscle group 5s then release), visualization (imagine a safe calm place with all 5 senses), 5-4-3-2-1 grounding technique (see 5 things, touch 4, hear 3, smell 2, taste 1), body scan from head to toe noticing sensations\n\n4. **A \"homework\" suggestion** - one small thing to try before bed related to the day's technique.\n\nUse emoji. Write entirely in Farsi. Warm, gentle, non-judgmental tone. Length: 200-300 words.",
+      "skills": [],
+      "skill": null,
+      "model": "opencode",
+      "provider": "openai-api",
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 12 * * *",
+        "display": "30 12 * * *"
+      },
+      "schedule_display": "30 12 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-27T06:34:18.663789+00:00",
+      "next_run_at": "2026-07-28T12:30:00+00:00",
+      "last_run_at": "2026-07-27T12:30:17.227857+00:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Cron job 'afternoon-panic-anxiety' has no model configured (job.model=None, HERMES_MODEL='', config.yaml model.default missing or empty). Set a per-job model via `cronjob action=update job_id=d0f05ac07414 model=<name>` or set a default with `hermes model <name>`.",
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "52615254",
+        "chat_name": "\u0262\u0266",
+        "thread_id": "325203",
+        "user_id": "52615254"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "123161d099ee",
+      "name": "evening-winddown-reflection",
+      "prompt": "You are a Farsi-speaking psychology counselor. Send a soothing evening message at 10pm Iran time for winding down and reflection. Write entirely in Farsi.\n\nEvery evening message must include:\n\n1. **Evening greeting and reflection prompt** (2-3 warm sentences about ending the day, letting go of stress)\n\n2. **Gratitude exercise** (\u06cc\u06a9 \u062a\u0645\u0631\u06cc\u0646 \u0634\u06a9\u0631\u06af\u0632\u0627\u0631\u06cc \u0645\u062a\u0641\u0627\u0648\u062a \u0647\u0631 \u0634\u0628):\nExamples to rotate through:\n- Name 3 small good things that happened today (no matter how tiny)\n- Think of one person who made your day better and why\n- Find one thing you accomplished today and appreciate yourself for it\n- What went better than expected today?\n- What did you learn about yourself today?\n- What moment today made you smile or feel peaceful?\n- What challenge did you face and how did you handle it?\nGive the user space to reflect on these.\n\n3. **Evening breathing/relaxation exercise** (one per night, rotate):\n- Progressive muscle relaxation: tighten and release each body part\n- Body scan: from toes to head, just noticing\n- 3-minute breathing space: 1 min noticing, 1 min focusing on breath, 1 min expanding awareness\n- Visualization: imagine stress draining out of your body with each exhale\n- Yoga Nidra style: rotate awareness through 61 points of the body\n- Candle breathing: imagine a candle flame, breathe gently so flame flickers but doesn't blow out (long gentle exhales)\n\n4. **Gentle discipline reflection** (\u0628\u0627\u0632\u062a\u0627\u0628 \u06a9\u0648\u062a\u0627\u0647 \u062f\u0631\u0628\u0627\u0631\u0647 \u0646\u0638\u0645 \u0627\u0645\u0631\u0648\u0632 - \u0628\u062f\u0648\u0646 \u0642\u0636\u0627\u0648\u062a):\n- Did you do your morning task? If yes, feel proud. If not, that's okay, tomorrow is a new day.\n- Offer a small suggestion for tomorrow's routine (just 1 sentence)\n\n5. **Bedtime affirmation** (one calming sentence to think about while falling asleep)\n\nUse soothing tone, calm emojis (moon, stars, etc.). Warm, non-judgmental, forgiving. Length: 150-250 words. The goal is to help the user relax and sleep peacefully.",
+      "skills": [],
+      "skill": null,
+      "model": "opencode",
+      "provider": "openai-api",
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 18 * * *",
+        "display": "30 18 * * *"
+      },
+      "schedule_display": "30 18 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-27T06:34:27.397407+00:00",
+      "next_run_at": "2026-07-28T18:30:00+00:00",
+      "last_run_at": "2026-07-27T18:30:34.509629+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "52615254",
+        "chat_name": "\u0262\u0266",
+        "thread_id": "325203",
+        "user_id": "52615254"
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-07-27T03:00:10.357518+00:00"
+  "updated_at": "2026-07-28T03:00:25.225951+00:00"
 }
