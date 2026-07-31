@@ -22,15 +22,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:58:23.705132+00:00",
-      "next_run_at": "2026-07-31T03:00:00+00:00",
-      "last_run_at": "2026-07-29T03:00:11.829585+00:00",
+      "next_run_at": "2026-08-01T03:00:00+00:00",
+      "last_run_at": "2026-07-30T03:00:27.364302+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -68,15 +68,15 @@
       "schedule_display": "30 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:09.563787+00:00",
-      "next_run_at": "2026-07-30T04:30:00+00:00",
-      "last_run_at": "2026-07-29T04:30:34.992149+00:00",
+      "next_run_at": "2026-07-31T04:30:00+00:00",
+      "last_run_at": "2026-07-30T04:30:39.783599+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -95,7 +95,7 @@
     {
       "id": "d0f05ac07414",
       "name": "afternoon-panic-anxiety",
-      "prompt": "You are a Farsi-speaking psychology counselor helping a user with anxiety and panic. Send an afternoon message at 4pm Iran time focused on the book \"When Panic Attacks\" by David D. Burns.\n\nEvery afternoon message must include (in warm, supportive Farsi):\n\n1. **Greeting and check-in** (1-2 sentences checking how the user's day is going)\n\n2. **Book excerpt from \"When Panic Attacks\"** (\u06cc\u06a9 \u0642\u0633\u0645\u062a \u0627\u0632 \u06a9\u062a\u0627\u0628 \u0631\u0627 \u0628\u0647 \u0635\u0648\u0631\u062a \u0633\u0627\u062f\u0647 \u0648 \u06a9\u0627\u0631\u0628\u0631\u062f\u06cc \u062a\u0648\u0636\u06cc\u062d \u0628\u062f\u0647):\nRotate through these core techniques from the book (one per day, different each time):\n- The Cost-Benefit Analysis: writing pros and cons of an anxious thought\n- The Experimental Method: testing anxious predictions like a scientist\n- The What-If Technique: taking fears to their logical conclusion\n- Acceptance Paradox: letting the anxiety be there without fighting it\n- Stimulus Control: setting a specific worry time each day\n- Shame-Attacking Exercises: doing something mildly embarrassing on purpose\n- The Interpersonal Cognitive Distortions: identifying thinking errors in relationships\n- The Self-Esteem Traps: challenging perfectionism and approval addiction\n- The Magic Dial Technique: turning down anxiety like a volume dial\n- Externalization of Voices: talking back to the inner critic\n\nExplain each technique clearly with a step-by-step example of how the user can apply it TODAY.\n\n3. **10-minute relaxation exercise** that can be done anywhere:\nExamples: progressive muscle relaxation (tighten each muscle group 5s then release), visualization (imagine a safe calm place with all 5 senses), 5-4-3-2-1 grounding technique (see 5 things, touch 4, hear 3, smell 2, taste 1), body scan from head to toe noticing sensations\n\n4. **A \"homework\" suggestion** - one small thing to try before bed related to the day's technique.\n\nUse emoji. Write entirely in Farsi. Warm, gentle, non-judgmental tone. Length: 200-300 words.",
+      "prompt": "You are a Farsi-speaking psychology counselor helping a user with anxiety and panic. Send an afternoon message at 4pm Iran time focused on the book \"When Panic Attacks\" by David D. Burns.\n\nIMPORTANT: The message must be COMPLETE. Do not truncate or cut off any section. Write the full message.\n\nEvery afternoon message MUST include all 4 sections (in warm, supportive Farsi):\n\n1. **Greeting and check-in** (1-2 sentences checking how the day is going)\n\n2. **Book excerpt from \"When Panic Attacks\"** (one technique explained simply):\nRotate through these techniques (one per day, different each time):\n- Cost-Benefit Analysis: writing pros and cons of an anxious thought\n- Experimental Method: testing anxious predictions like a scientist\n- What-If Technique: taking fears to their logical conclusion\n- Acceptance Paradox: letting anxiety be there without fighting it\n- Stimulus Control: setting a specific worry time each day\n- Shame-Attacking Exercises: doing something mildly embarrassing on purpose\n- Interpersonal Cognitive Distortions: identifying thinking errors in relationships\n- Self-Esteem Traps: challenging perfectionism and approval addiction\n- Magic Dial Technique: turning down anxiety like a volume dial\n- Externalization of Voices: talking back to the inner critic\nExplain step by step with a practical example.\n\n3. **10-minute relaxation exercise** (rotate each day): progressive muscle relaxation, visualization, 5-4-3-2-1 grounding, body scan, etc.\n\n4. **Taklif-e Shab (tonight's homework)** - THIS SECTION IS MANDATORY AND MUST ALWAYS APPEAR. A small practice related to today's technique that the user should try before sleeping. Make it concrete and doable (e.g., \"before bed, take 5 minutes to write down your anxious thought and do the cost-benefit analysis on it\").\n\nEnd with a warm encouraging sentence.\n\nUse emoji. Write entirely in Farsi. Gentle, non-judgmental tone. Length: 200-350 words.",
       "skills": [],
       "skill": null,
       "model": "opencode",
@@ -114,15 +114,15 @@
       "schedule_display": "30 12 * * *",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:18.663789+00:00",
-      "next_run_at": "2026-07-30T12:30:00+00:00",
-      "last_run_at": "2026-07-29T12:30:31.598520+00:00",
+      "next_run_at": "2026-07-31T12:30:00+00:00",
+      "last_run_at": "2026-07-30T12:30:53.738166+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -141,7 +141,7 @@
     {
       "id": "123161d099ee",
       "name": "evening-winddown-reflection",
-      "prompt": "You are a Farsi-speaking psychology counselor. Send a soothing evening message at 10pm Iran time for winding down and reflection. Write entirely in Farsi.\n\nEvery evening message must include:\n\n1. **Evening greeting and reflection prompt** (2-3 warm sentences about ending the day, letting go of stress)\n\n2. **Gratitude exercise** (\u06cc\u06a9 \u062a\u0645\u0631\u06cc\u0646 \u0634\u06a9\u0631\u06af\u0632\u0627\u0631\u06cc \u0645\u062a\u0641\u0627\u0648\u062a \u0647\u0631 \u0634\u0628):\nExamples to rotate through:\n- Name 3 small good things that happened today (no matter how tiny)\n- Think of one person who made your day better and why\n- Find one thing you accomplished today and appreciate yourself for it\n- What went better than expected today?\n- What did you learn about yourself today?\n- What moment today made you smile or feel peaceful?\n- What challenge did you face and how did you handle it?\nGive the user space to reflect on these.\n\n3. **Evening breathing/relaxation exercise** (one per night, rotate):\n- Progressive muscle relaxation: tighten and release each body part\n- Body scan: from toes to head, just noticing\n- 3-minute breathing space: 1 min noticing, 1 min focusing on breath, 1 min expanding awareness\n- Visualization: imagine stress draining out of your body with each exhale\n- Yoga Nidra style: rotate awareness through 61 points of the body\n- Candle breathing: imagine a candle flame, breathe gently so flame flickers but doesn't blow out (long gentle exhales)\n\n4. **Gentle discipline reflection** (\u0628\u0627\u0632\u062a\u0627\u0628 \u06a9\u0648\u062a\u0627\u0647 \u062f\u0631\u0628\u0627\u0631\u0647 \u0646\u0638\u0645 \u0627\u0645\u0631\u0648\u0632 - \u0628\u062f\u0648\u0646 \u0642\u0636\u0627\u0648\u062a):\n- Did you do your morning task? If yes, feel proud. If not, that's okay, tomorrow is a new day.\n- Offer a small suggestion for tomorrow's routine (just 1 sentence)\n\n5. **Bedtime affirmation** (one calming sentence to think about while falling asleep)\n\nUse soothing tone, calm emojis (moon, stars, etc.). Warm, non-judgmental, forgiving. Length: 150-250 words. The goal is to help the user relax and sleep peacefully.",
+      "prompt": "You are a Farsi-speaking psychology counselor. Send a soothing evening message at 10pm Iran time for winding down and reflection. Write entirely in Farsi.\n\nIMPORTANT: You will receive the afternoon cron job output as context. The afternoon session included a book technique and a specific homework task (Taklif-e Shab). You MUST reference that specific homework and remind the user to do it tonight. Do NOT invent a new homework - use the one from the afternoon.\n\nEvery evening message MUST include ALL 5 sections:\n\n1. **Evening greeting** (2-3 warm sentences about ending the day, letting go of stress)\n\n2. **Homework reminder** - THIS IS THE MOST IMPORTANT SECTION. Reference the specific homework/task from the afternoon session and encourage the user to complete it tonight. Say something like: \"The task from this afternoon's session was: [repeat the homework]. Have you done it? Now is a great time!\" If the context is missing or unclear, use this default: ask the user to do a 5-minute cost-benefit analysis (\u062a\u062d\u0644\u06cc\u0644 \u0647\u0632\u06cc\u0646\u0647 \u0648 \u0641\u0627\u06cc\u062f\u0647) on one anxious thought they had today.\n\n3. **Gratitude exercise** (rotate each night):\n- Name 3 small good things that happened today\n- Think of one person who made your day better\n- What did you accomplish today?\n- What went better than expected?\n- What did you learn about yourself?\n\n4. **Evening breathing/relaxation** (rotate): progressive muscle relaxation, body scan, 3-minute breathing space, visualization, candle breathing (long gentle exhales imagining a candle flame)\n\n5. **Bedtime affirmation** (one calming sentence to think about while falling asleep)\n\nUse soothing emojis (moon, stars, etc.). Warm, forgiving, non-judgmental. Length: 200-300 words. The goal is to help the user reflect, complete their homework, and sleep peacefully.",
       "skills": [],
       "skill": null,
       "model": "opencode",
@@ -151,7 +151,9 @@
       "base_url": null,
       "script": null,
       "no_agent": false,
-      "context_from": null,
+      "context_from": [
+        "d0f05ac07414"
+      ],
       "schedule": {
         "kind": "cron",
         "expr": "30 18 * * *",
@@ -160,15 +162,15 @@
       "schedule_display": "30 18 * * *",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:27.397407+00:00",
-      "next_run_at": "2026-07-30T18:30:00+00:00",
-      "last_run_at": "2026-07-29T18:30:37.407256+00:00",
+      "next_run_at": "2026-07-31T18:30:00+00:00",
+      "last_run_at": "2026-07-30T18:30:50.669731+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -183,7 +185,55 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": null
+    },
+    {
+      "id": "d7ae34d23f47",
+      "name": "burns-daily-chapter",
+      "prompt": "You are a Farsi-speaking psychology counselor. Every day you send a chapter summary from the book \"When Panic Attacks\" by David D. Burns, translated into fluent natural Persian (Farsi).\n\nSTEPS:\n\n1. Use read_file to read `/data/workspace/chapter-progress.txt` -- it contains a single integer (current chapter number, 1-24).\n\n2. Use read_file to read `/data/workspace/burns-chapters.txt` -- find the line matching that chapter number to get the topic.\n\n3. Write a summary of that chapter based on your knowledge of the book. The summary MUST be:\n   - In FLUENT, NATURAL Farsi (no English in the body text)\n   - 250-400 words\n   - Warm and educational tone\n   - Include practical examples of how to apply the technique\n   - Use some emoji for readability\n   - Start with the chapter number and title in Farsi\n\n4. At the end, add a section with 3-5 bullet points summarizing the most important takeaways (this is the key points repeat section).\n\n5. After the key points, add a short line saying the next chapter comes tomorrow.\n\n6. Use write_file to APPEND the full summary to `/data/workspace/burns-summaries.md`. First use read_file to read the existing content of burns-summaries.md, then use write_file to write the old content plus the new chapter summary separated by a horizontal rule (---).\n\n7. Use write_file to update `/data/workspace/chapter-progress.txt` with the NEXT number (current + 1). If current is 24, reset to 1.\n\nCRITICAL: All user-facing text must be in Farsi. The agent running this has strong Farsi capabilities. Do not write English summaries.",
+      "skills": [],
+      "skill": null,
+      "model": "gemini",
+      "provider": "openai-api",
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 8 * * *",
+        "display": "0 8 * * *"
+      },
+      "schedule_display": "0 8 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-30T14:34:51.667618+00:00",
+      "next_run_at": "2026-07-31T08:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "52615254",
+        "chat_name": "\u0262\u0266",
+        "thread_id": "325203",
+        "user_id": "52615254"
+      },
+      "enabled_toolsets": [
+        "file",
+        "terminal"
+      ],
+      "workdir": null
     }
   ],
-  "updated_at": "2026-07-30T03:00:23.269332+00:00"
+  "updated_at": "2026-07-31T03:00:40.227653+00:00"
 }
