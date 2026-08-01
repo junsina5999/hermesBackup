@@ -20,6 +20,25 @@ Create visually appealing Persian/Farsi quote images and text posts for Telegram
 - User needs Persian/Farsi text images (quote cards, motivational graphics)
 - User wants social media content in RTL languages
 - User wants automated or semi-automated content creation for channels
+- User wants a recurring tech-news / tool-discovery digest for a channel
+  (see `references/tech-news-curation.md` for sources, filtering, and the
+  digest → deep-dive two-tier post pattern)
+
+## Universal content rules for this audience
+
+These apply to every post type, not just quote cards:
+
+1. **Free vs paid, always explicit.** Separate the layers: an open-source repo
+   can be free while the service it depends on is paid. State both.
+2. **Flag VPN/Iran accessibility** whenever a service is blocked or restricted.
+3. **Teach a transferable principle, then link.** A bare link with a summary
+   gets skipped; a post that leaves the reader knowing something gets saved.
+4. **Never post a resource the reader cannot act on.** If an item is a
+   reference/library/awesome-list rather than a usable tool, either reframe it
+   as an educational post or drop it.
+5. **End with a question** to invite comments.
+6. **Deliver copy-paste-ready text.** No English commentary or meta-explanation
+   wrapped around the post body — the user pastes it straight into the channel.
 
 ## Pipeline
 
@@ -157,4 +176,7 @@ After generating images:
 
 - `references/persian-fonts.md` — font alternatives and fallbacks
 - `references/telegram-specs.md` — Telegram media size limits
+- `references/tech-news-curation.md` — daily tech digest: GitHub/HN/newsroom
+  sources, spam filtering, repeat-protection log, digest → deep-dive pattern,
+  cron wiring for 09:00 Tehran
 - `scripts/generate-post.py` — CLI tool: `python3 scripts/generate-post.py --quote "..." --palette deep_purple --output post.png`

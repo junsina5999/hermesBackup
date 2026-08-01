@@ -22,15 +22,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:58:23.705132+00:00",
-      "next_run_at": "2026-08-01T03:00:00+00:00",
-      "last_run_at": "2026-07-30T03:00:27.364302+00:00",
+      "next_run_at": "2026-08-02T03:00:00+00:00",
+      "last_run_at": "2026-07-31T03:00:43.985783+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -68,15 +68,15 @@
       "schedule_display": "30 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 3
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:09.563787+00:00",
-      "next_run_at": "2026-07-31T04:30:00+00:00",
-      "last_run_at": "2026-07-30T04:30:39.783599+00:00",
+      "next_run_at": "2026-08-01T04:30:00+00:00",
+      "last_run_at": "2026-07-31T04:31:01.296075+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -114,15 +114,15 @@
       "schedule_display": "30 12 * * *",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:18.663789+00:00",
-      "next_run_at": "2026-07-31T12:30:00+00:00",
-      "last_run_at": "2026-07-30T12:30:53.738166+00:00",
+      "next_run_at": "2026-08-01T12:30:00+00:00",
+      "last_run_at": "2026-07-31T12:31:32.074694+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -162,15 +162,15 @@
       "schedule_display": "30 18 * * *",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:27.397407+00:00",
-      "next_run_at": "2026-07-31T18:30:00+00:00",
-      "last_run_at": "2026-07-30T18:30:50.669731+00:00",
+      "next_run_at": "2026-08-01T18:30:00+00:00",
+      "last_run_at": "2026-07-31T18:31:11.305118+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -189,10 +189,10 @@
     {
       "id": "d7ae34d23f47",
       "name": "burns-daily-chapter",
-      "prompt": "You are a Farsi-speaking psychology counselor. Every day you send a chapter summary from the book \"When Panic Attacks\" by David D. Burns, translated into fluent natural Persian (Farsi).\n\nSTEPS:\n\n1. Use read_file to read `/data/workspace/chapter-progress.txt` -- it contains a single integer (current chapter number, 1-24).\n\n2. Use read_file to read `/data/workspace/burns-chapters.txt` -- find the line matching that chapter number to get the topic.\n\n3. Write a summary of that chapter based on your knowledge of the book. The summary MUST be:\n   - In FLUENT, NATURAL Farsi (no English in the body text)\n   - 250-400 words\n   - Warm and educational tone\n   - Include practical examples of how to apply the technique\n   - Use some emoji for readability\n   - Start with the chapter number and title in Farsi\n\n4. At the end, add a section with 3-5 bullet points summarizing the most important takeaways (this is the key points repeat section).\n\n5. After the key points, add a short line saying the next chapter comes tomorrow.\n\n6. Use write_file to APPEND the full summary to `/data/workspace/burns-summaries.md`. First use read_file to read the existing content of burns-summaries.md, then use write_file to write the old content plus the new chapter summary separated by a horizontal rule (---).\n\n7. Use write_file to update `/data/workspace/chapter-progress.txt` with the NEXT number (current + 1). If current is 24, reset to 1.\n\nCRITICAL: All user-facing text must be in Farsi. The agent running this has strong Farsi capabilities. Do not write English summaries.",
+      "prompt": "You are a Farsi-speaking psychology counselor. Every day you send a chapter summary from the book \"When Panic Attacks\" by David D. Burns, translated into fluent natural Persian (Farsi).\n\nCRITICAL RULES:\n- Save the summary to a .txt file (NOT .md)\n- Your FINAL RESPONSE must include the MEDIA: tag with the file path\n\nSTEPS:\n\n1. Read `/data/workspace/chapter-progress.txt` (single integer, 1-24).\n\n2. Read `/data/workspace/burns-chapters.txt` to find the topic for that chapter.\n\n3. Write a DETAILED summary of that chapter in FLUENT, NATURAL Farsi (400-600 words). Since each chapter is ~25 pages, cover main concepts, techniques, and examples thoroughly. Structure:\n   - Chapter number and title\n   - Main concepts with examples\n   - Practical exercises/techniques\n   - Key Points section with 3-5 bullet points (repeat the most important takeaways)\n   - Line saying next chapter comes tomorrow\n\n4. Save the summary to `/data/workspace/burns-chapter-N.txt` (use actual chapter number, .txt extension).\n\n5. In your FINAL RESPONSE (assistant text), write a brief 1-2 line intro in Farsi, then on a new line write: MEDIA:/data/workspace/burns-chapter-N.txt\n\n6. Update `/data/workspace/chapter-progress.txt` with NEXT number (current + 1). If current is 24, reset to 1.\n\n7. Also append the summary to `/data/workspace/burns-summaries.md` for PDF compilation.\n\nIMPORTANT: The file MUST be saved with .txt extension before you reference it with MEDIA:. All user-facing text must be in Farsi.",
       "skills": [],
       "skill": null,
-      "model": "gemini",
+      "model": "opencode",
       "provider": "openai-api",
       "provider_snapshot": null,
       "model_snapshot": null,
@@ -208,16 +208,16 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 4
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-30T14:34:51.667618+00:00",
-      "next_run_at": "2026-07-31T08:00:00+00:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-08-01T08:00:00+00:00",
+      "last_run_at": "2026-07-31T09:03:44.201425+00:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
@@ -232,8 +232,61 @@
         "file",
         "terminal"
       ],
-      "workdir": null
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "6e3a37165521",
+      "name": "Daily Tech Digest for Telegram Channel",
+      "prompt": "You are a tech news curator for an Iranian Telegram channel (@abasmanesh222). The audience is general Persian-speaking users interested in practical technology: useful apps for laptop and phone, trending GitHub tools they can actually use, free AI websites (image/video generation), Windows and Android customization software, and major tech news (new AI model launches, flagship phone reveals).\n\nSTEP 1 - AVOID REPEATS\nRead /data/workspace/tech-channel-history.txt to see what was already posted. Never repeat an item that appears there.\n\nSTEP 2 - GATHER (run these in parallel where possible)\na) Trending new GitHub repos from the last 10 days:\n   curl -s -m 25 \"https://api.github.com/search/repositories?q=created:%3E$(date -d '10 days ago' +%Y-%m-%d)+stars:%3E150&sort=stars&order=desc&per_page=20\"\nb) Trending repos created in the last year that are still hot (for the \"hidden gem\" slot):\n   curl -s -m 25 \"https://api.github.com/search/repositories?q=created:%3E$(date -d '1 year ago' +%Y-%m-%d)+stars:%3E3000&sort=updated&order=desc&per_page=20\"\nc) Hacker News top stories:\n   curl -s -m 25 \"https://hn.algolia.com/api/v1/search_by_date?tags=story&numericFilters=points%3E100&hitsPerPage=25\"\nd) Use web_search for fresh news on: new OpenAI / Google Gemini / Anthropic model releases, new free AI image or video generation sites, newly announced flagship phones. Search in English.\ne) Optionally use gh CLI: gh search repos --sort stars --limit 15\n\nParse JSON with python3. Filter OUT: crypto/MEV bots, academic papers with no usable tool, pure libraries only developers care about, anything already in the history file.\n\nSTEP 3 - SELECT 4 to 5 ITEMS\nPrioritize what a normal person finds exciting and can actually try:\n- 1-2 practical tools/apps (Windows, Android, macOS, or web) with a real everyday use\n- 1 free AI tool (image, video, voice, writing) - state clearly if it is free\n- 1 big news item (new AI model, flagship phone, major launch) with concrete details: name, key specs or capabilities, price if known, availability date\n- Occasionally (about twice a week) 1 \"hidden gem\" from the past year that is useful but not widely known in Iran\nOn slow news days, fall back to a well-explained flagship phone or a major software feature.\nAbout once a week, include one item about what Hermes Agent itself can do (automated daily reports, image generation, cron scheduling, controlling other AI coding agents, reading YouTube transcripts, etc.) framed as a capability the audience would find impressive.\n\nSTEP 4 - WRITE THE POST IN FLUENT PERSIAN (FARSI)\nFormat each item like this:\n- A short punchy Persian headline with one relevant emoji\n- 2 to 4 sentences of plain Persian explaining WHAT it does and WHY it matters to the reader. No jargon dumps. Explain the benefit.\n- The direct link (GitHub URL or official site)\nSeparate items with a blank line. Start the whole message with a short Persian intro line with today's Persian date context, and end with a one-line Persian call to action. Total length should fit comfortably in a Telegram message: roughly 250 to 400 Persian words. Do NOT use markdown headers. Use bold sparingly. Write naturally, like a human channel admin, not like a translated press release.\n\nSTEP 5 - LOG IT\nAppend one line per selected item to /data/workspace/tech-channel-history.txt in the format: YYYY-MM-DD | item name | source\n\nCRITICAL: Your FINAL RESPONSE (the assistant text you output at the end) IS the message delivered to the user, ready to copy-paste into the channel. Put the complete Persian post there. Writing to the history file is secondary. Do NOT end with only tool calls. Do NOT add English commentary or meta-explanation around the post - deliver the post text itself.",
+      "skills": [
+        "agent-reach"
+      ],
+      "skill": "agent-reach",
+      "model": "claude-opus-5-thinking",
+      "provider": "custom:gorouter.app",
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 5 * * *",
+        "display": "30 5 * * *"
+      },
+      "schedule_display": "30 5 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-07-31T13:36:55.875565+00:00",
+      "next_run_at": "2026-08-01T05:30:00+00:00",
+      "last_run_at": "2026-07-31T13:40:27.726446+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "52615254",
+        "chat_name": "\u0262\u0266",
+        "thread_id": "325697",
+        "user_id": "52615254"
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file",
+        "web"
+      ],
+      "workdir": null,
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-07-31T03:00:40.227653+00:00"
+  "updated_at": "2026-08-01T03:00:55.644818+00:00"
 }

@@ -137,6 +137,49 @@ Cron jobs run on the same filesystem. On small disks (<1GB), be cautious about:
 
 Check with `df -h` before downloading. Clean up temp files after processing.
 
+## Cron Job Delivery: Final Response = Delivered Message
+
+**Critical pattern**: What the agent outputs as its final assistant text IS the message delivered to the user. If the agent only calls tools (write_file, read_file) and produces no text response, nothing gets delivered.
+
+This causes silent failures: the cron runs successfully (status: ok), files are written, but the user sees nothing.
+
+**Fix**: Always include an explicit instruction in the cron prompt:
+```
+CRITICAL: Your FINAL RESPONSE (the assistant text you output at the end)
+IS the message delivered to the user. Put the user-facing content there.
+Writing to files is secondary. Do NOT end with just tool calls.
+```
+
+**Verification**: After creating a cron job, run it once (`cronjob action=run`) and confirm the user received the message, not just that files were updated.
+
+## Model Provider Matching
+
+Models must match their provider. Setting `{"model": "gemini", "provider": "openai-api"}` will fail with HTTP 404 because gemini models are not available through the OpenAI-compatible API endpoint.
+
+Check which models are available on each provider:
+- `openai-api`: GPT models, opencode
+- `anthropic`: Claude models
+- `openrouter`: Most models including gemini
+- Use `hermes models` to see available model/provider combinations
+
+When in doubt, use the current session's model as a safe default.
+
+## Telegram MEDIA: File Format
+
+When delivering files via `MEDIA:/path/to/file` on Telegram:
+- **`.txt` files work** — sent as document attachments
+- **`.md` files may fail silently** — Telegram sometimes rejects markdown files via MEDIA:
+- Always use `.txt` extension for file delivery on Telegram
+- If you need markdown content, save as `.txt` and send that
+
+Pattern for cron jobs that deliver files:
+```
+1. Generate content
+2. Save to /data/workspace/chapter-N.txt  (NOT .md)
+3. In final response: MEDIA:/data/workspace/chapter-N.txt
+4. Clean up file after user confirms receipt
+```
+
 ## Verification Checklist
 
 Before declaring cron setup complete:
@@ -148,3 +191,7 @@ Before declaring cron setup complete:
 - [ ] `enabled_toolsets` includes "file" if job reads/writes files
 - [ ] Disk space sufficient for any downloads or output files
 - [ ] Test one job manually via `cronjob action=run` to verify
+- [ ] Agent prompt instructs it to output user-facing content as final response (not just tool calls)
+- [ ] Model matches its provider (e.g., gemini needs openrouter, not openai-api)
+- [ ] File delivery uses `.txt` extension for Telegram MEDIA: (not `.md`)
+- [ ] Test file delivery manually to confirm MEDIA: works
