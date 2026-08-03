@@ -15,3 +15,5 @@ The /data partition is small (~434MB) and fills up, breaking npm installs with E
 AI image generators still render Farsi text broken inside images (detached, malformed glyphs). Keep image prompts in English and overlay Farsi text afterward in an editor.
 §
 skill_manage(action='create') rejects skill descriptions over ~60 chars (index truncates at 57). One short trigger sentence; detail goes in the body.
+§
+Image editing: user works in Google AI Studio Playground on Android. Gemini image models copy style well but reinterpret real faces (slimmer/younger) — for identity preservation use Flux Kontext Max on fal.ai or face-swap tools (InstantID/PuLID, remaker.ai). Prompt pattern: make the real photo the BASE image and change only wardrobe/background/lighting.
