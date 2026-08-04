@@ -31,6 +31,12 @@ custom_providers:
     models:
       claude-opus-5-thinking:
         context_length: 1000000
+mcp_servers:
+  exa:
+    url: https://mcp.exa.ai/mcp?tools=web_search_exa,web_fetch_exa,web_search_advanced_exa,agent_run
+    headers:
+      Authorization: Bearer ${MCP_EXA_API_KEY}
+    enabled: true
 
 # ── Security ──────────────────────────────────────────────────────────
 # Secret redaction is ON by default — strings that look like API keys,

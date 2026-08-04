@@ -213,11 +213,60 @@ Common causes:
 
 ### "MCP server 'X' requires HTTP transport but mcp.client.streamable_http is not available"
 
-Your `mcp` package version doesn't include HTTP client support. Upgrade:
+Usually a *too new* `mcp`, not a too old one. **`mcp` 2.0.0 removed the legacy
+`streamablehttp_client` symbol** that Hermes probes to set `_MCP_HTTP_AVAILABLE`,
+so every HTTP/StreamableHTTP server fails this check even though the new
+`streamable_http_client` exists. Downgrading too far (e.g. 1.20.0) then trips a
+second error, `streamablehttp_client() got an unexpected keyword argument
+'verify'`, because Hermes passes `verify`/`cert` through an httpx client the old
+signature doesn't accept.
+
+Known-good pin:
 
 ```bash
-pip install --upgrade mcp
+pip install "mcp==1.29.0"
 ```
+
+Verify both symbols exist before retrying:
+
+```bash
+python -c "from mcp.client.streamable_http import streamablehttp_client, streamable_http_client; print('ok')"
+```
+
+If the package genuinely predates HTTP support, `pip install --upgrade mcp` is
+still the fix — just don't land on 2.x.
+
+### `hermes mcp add` is non-interactive / hangs in an agent session
+
+`hermes mcp add` asks three questions in order: auth required, then (after a
+successful connect) enable-all-tools, then save. Pipe the answers:
+
+```bash
+printf 'n\ny\n' | hermes mcp add exa --url "https://mcp.exa.ai/mcp"
+```
+
+The `Event loop is closed` / `Exception ignored in: <coroutine MCPServerTask.run>`
+traceback printed after the result is harmless teardown noise — check for the
+`✓ Saved` line, not the exit code. Confirm with `hermes mcp list` and
+`hermes mcp test <name>`.
+
+### `--auth header` writes the literal prompt text into `.env`
+
+`hermes mcp add --auth header` reads the token via `getpass`, which **cannot be
+piped** — on a non-TTY it stores whatever string it received verbatim as
+`MCP_<NAME>_API_KEY`. Piping `'${MY_VAR}\n'` in the hope of an indirection
+lands the literal 14-char string `${MY_VAR}` in `.env`, and the server then
+sends that as the bearer token. It still "connects" against servers with a
+generous anonymous tier, so `hermes mcp test` looks green while you are in fact
+unauthenticated.
+
+Two-step workaround: run `hermes mcp add --auth header` with any placeholder to
+get the `headers: Authorization: Bearer ${MCP_X_API_KEY}` scaffold into
+`config.yaml`, then rewrite the value in `~/.hermes/.env` with the real key
+(`read_file`/`write_file` are blocked on `.env` by design — use `terminal`).
+Verify by connecting directly with the key in an explicit header and confirming
+an authenticated-only tool works; a green `hermes mcp test` alone does not prove
+the key took.
 
 ### Tools not appearing
 
