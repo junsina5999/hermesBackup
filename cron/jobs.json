@@ -22,15 +22,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 9
+        "completed": 10
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:58:23.705132+00:00",
-      "next_run_at": "2026-08-06T03:00:00+00:00",
-      "last_run_at": "2026-08-04T03:00:46.828372+00:00",
+      "next_run_at": "2026-08-07T03:00:00+00:00",
+      "last_run_at": "2026-08-05T03:00:06.119118+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -68,15 +68,15 @@
       "schedule_display": "30 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 8
+        "completed": 9
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:09.563787+00:00",
-      "next_run_at": "2026-08-05T04:30:00+00:00",
-      "last_run_at": "2026-08-04T04:32:07.068994+00:00",
+      "next_run_at": "2026-08-06T04:30:00+00:00",
+      "last_run_at": "2026-08-05T04:30:37.112948+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -114,15 +114,15 @@
       "schedule_display": "30 12 * * *",
       "repeat": {
         "times": null,
-        "completed": 9
+        "completed": 10
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:18.663789+00:00",
-      "next_run_at": "2026-08-05T12:30:00+00:00",
-      "last_run_at": "2026-08-04T12:31:34.562135+00:00",
+      "next_run_at": "2026-08-06T12:30:00+00:00",
+      "last_run_at": "2026-08-05T12:31:07.301849+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -162,17 +162,17 @@
       "schedule_display": "30 18 * * *",
       "repeat": {
         "times": null,
-        "completed": 9
+        "completed": 10
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:27.397407+00:00",
-      "next_run_at": "2026-08-05T18:30:00+00:00",
-      "last_run_at": "2026-08-04T18:31:10.697445+00:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-08-06T18:30:00+00:00",
+      "last_run_at": "2026-08-05T18:31:30.408994+00:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: HTTP 502: Application failed to respond",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -208,15 +208,15 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 8
+        "completed": 9
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-30T14:34:51.667618+00:00",
-      "next_run_at": "2026-08-05T08:00:00+00:00",
-      "last_run_at": "2026-08-04T08:02:20.167353+00:00",
+      "next_run_at": "2026-08-06T08:00:00+00:00",
+      "last_run_at": "2026-08-05T08:01:07.515998+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -238,7 +238,7 @@
     {
       "id": "6e3a37165521",
       "name": "Daily Tech Digest for Telegram Channel",
-      "prompt": "You are a tech news curator for an Iranian Telegram channel (@abasmanesh222). The audience is general Persian-speaking users interested in practical technology: useful apps for laptop and phone, trending GitHub tools they can actually use, free AI websites (image/video generation), Windows and Android customization software, and major tech news (new AI model launches, flagship phone reveals).\n\nSTEP 1 - AVOID REPEATS\nRead /data/workspace/tech-channel-history.txt to see what was already posted. Never repeat an item that appears there.\n\nSTEP 2 - GATHER (run these in parallel where possible)\na) Trending new GitHub repos from the last 10 days:\n   curl -s -m 25 \"https://api.github.com/search/repositories?q=created:%3E$(date -d '10 days ago' +%Y-%m-%d)+stars:%3E150&sort=stars&order=desc&per_page=20\"\nb) Trending repos created in the last year that are still hot (for the \"hidden gem\" slot):\n   curl -s -m 25 \"https://api.github.com/search/repositories?q=created:%3E$(date -d '1 year ago' +%Y-%m-%d)+stars:%3E3000&sort=updated&order=desc&per_page=20\"\nc) Hacker News top stories:\n   curl -s -m 25 \"https://hn.algolia.com/api/v1/search_by_date?tags=story&numericFilters=points%3E100&hitsPerPage=25\"\nd) Use web_search for fresh news on: new OpenAI / Google Gemini / Anthropic model releases, new free AI image or video generation sites, newly announced flagship phones. Search in English.\ne) Optionally use gh CLI: gh search repos --sort stars --limit 15\n\nParse JSON with python3. Filter OUT: crypto/MEV bots, academic papers with no usable tool, pure libraries only developers care about, anything already in the history file.\n\nSTEP 3 - SELECT 4 to 5 ITEMS\nPrioritize what a normal person finds exciting and can actually try:\n- 1-2 practical tools/apps (Windows, Android, macOS, or web) with a real everyday use\n- 1 free AI tool (image, video, voice, writing) - state clearly if it is free\n- 1 big news item (new AI model, flagship phone, major launch) with concrete details: name, key specs or capabilities, price if known, availability date\n- Occasionally (about twice a week) 1 \"hidden gem\" from the past year that is useful but not widely known in Iran\nOn slow news days, fall back to a well-explained flagship phone or a major software feature.\nAbout once a week, include one item about what Hermes Agent itself can do (automated daily reports, image generation, cron scheduling, controlling other AI coding agents, reading YouTube transcripts, etc.) framed as a capability the audience would find impressive.\n\nSTEP 4 - WRITE THE POST IN FLUENT PERSIAN (FARSI)\nFormat each item like this:\n- A short punchy Persian headline with one relevant emoji\n- 2 to 4 sentences of plain Persian explaining WHAT it does and WHY it matters to the reader. No jargon dumps. Explain the benefit.\n- The direct link (GitHub URL or official site)\nSeparate items with a blank line. Start the whole message with a short Persian intro line with today's Persian date context, and end with a one-line Persian call to action. Total length should fit comfortably in a Telegram message: roughly 250 to 400 Persian words. Do NOT use markdown headers. Use bold sparingly. Write naturally, like a human channel admin, not like a translated press release.\n\nSTEP 5 - LOG IT\nAppend one line per selected item to /data/workspace/tech-channel-history.txt in the format: YYYY-MM-DD | item name | source\n\nCRITICAL: Your FINAL RESPONSE (the assistant text you output at the end) IS the message delivered to the user, ready to copy-paste into the channel. Put the complete Persian post there. Writing to the history file is secondary. Do NOT end with only tool calls. Do NOT add English commentary or meta-explanation around the post - deliver the post text itself.",
+      "prompt": "You are a tech news curator for an Iranian Telegram channel (@abasmanesh222). The audience is general Persian-speaking users interested in practical technology: useful apps for laptop and phone, trending GitHub tools they can actually use, free AI websites (image/video generation), Windows and Android customization software, free AI model APIs (OpenAI, Google, Anthropic, Mistral, Meta, etc. offering free API tiers or free models), major tech news (new AI model launches, flagship phone reveals), and hidden gems from the past year that ordinary users find useful.\n\nSTEP 1 - AVOID REPEATS\nRead /data/workspace/tech-channel-history.txt to see what was already posted. Never repeat an item that appears there.\n\nSTEP 2 - GATHER (run these in parallel where possible)\na) Trending new GitHub repos from the last 10 days:\n   curl -s -m 25 \"https://api.github.com/search/repositories?q=created:%3E$(date -d '10 days ago' +%Y-%m-%d)+stars:%3E150&sort=stars&order=desc&per_page=20\"\nb) Trending repos created in the last year that are still hot (for the \"hidden gem\" slot):\n   curl -s -m 25 \"https://api.github.com/search/repositories?q=created:%3E$(date -d '1 year ago' +%Y-%m-%d)+stars:%3E3000&sort=updated&order=desc&per_page=20\"\nc) Hacker News top stories:\n   curl -s -m 25 \"https://hn.algolia.com/api/v1/search_by_date?tags=story&numericFilters=points%3E100&hitsPerPage=25\"\nd) Use web_search for fresh news on: new OpenAI / Google Gemini / Anthropic / Mistral / Meta model releases, new free AI image or video generation sites, free AI API tiers (search: \"free API AI model 2026\", \"free API tier GPT Gemini Claude Llama Mistral\", \"free AI API no credit card\"), newly announced flagship phones, and any notable Hermes Agent features or capabilities. Search in English.\ne) Optionally use gh CLI: gh search repos --sort stars --limit 15\n\nParse JSON with python3. Filter OUT: crypto/MEV bots, academic papers with no usable tool, pure libraries only developers care about, anything already in the history file.\n\nSTEP 3 - SELECT 4 to 5 ITEMS\nPrioritize what a normal person finds exciting and can actually try:\n- 1-2 practical tools/apps (Windows, Android, macOS, or web) with a real everyday use\n- 1 free AI tool (image, video, voice, writing) - state clearly if it is free\n- 1 free AI API opportunity: which providers offer free tiers, what models are available for free, how many requests per day/month, and what a normal person can build or try with them. Be specific: name the provider, model name, free limits, and one practical use case.\n- 1 big news item (new AI model, flagship phone, major launch) with concrete details: name, key specs or capabilities, price if known, availability date\nOn slow news days, fall back to a well-explained flagship phone or a major software feature.\nAbout once a week, include one item about what Hermes Agent itself can do (automated daily reports, image generation, cron scheduling, controlling other AI coding agents, reading YouTube transcripts, etc.) framed as a capability the audience would find impressive.\n\nSTEP 4 - WRITE THE POST IN FLUENT PERSIAN (FARSI)\nFormat each item like this:\n- A short punchy Persian headline with one relevant emoji\n- 2 to 4 sentences of plain Persian explaining WHAT it does and WHY it matters to the reader. No jargon dumps. Explain the benefit.\n- The direct link (GitHub URL or official site)\nSeparate items with a blank line. Start the whole message with a short Persian intro line with today's Persian date context, and end with a one-line Persian call to action. Total length should fit comfortably in a Telegram message: roughly 250 to 400 Persian words. Do NOT use markdown headers. Use bold sparingly. Write naturally, like a human channel admin, not like a translated press release.\n\nSTEP 5 - LOG IT\nAppend one line per selected item to /data/workspace/tech-channel-history.txt in the format: YYYY-MM-DD | item name | source\n\nCRITICAL: Your FINAL RESPONSE (the assistant text you output at the end) IS the message delivered to the user, ready to copy-paste into the channel. Put the complete Persian post there. Writing to the history file is secondary. Do NOT end with only tool calls. Do NOT add English commentary or meta-explanation around the post - deliver the post text itself.",
       "skills": [
         "agent-reach"
       ],
@@ -259,15 +259,15 @@
       "schedule_display": "30 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 5
+        "completed": 6
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-31T13:36:55.875565+00:00",
-      "next_run_at": "2026-08-05T05:30:00+00:00",
-      "last_run_at": "2026-08-04T05:33:06.093779+00:00",
+      "next_run_at": "2026-08-06T05:30:00+00:00",
+      "last_run_at": "2026-08-05T05:34:14.004852+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -288,5 +288,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-08-05T03:00:00.308347+00:00"
+  "updated_at": "2026-08-06T03:00:18.252857+00:00"
 }
