@@ -22,15 +22,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:58:23.705132+00:00",
-      "next_run_at": "2026-08-07T03:00:00+00:00",
-      "last_run_at": "2026-08-05T03:00:06.119118+00:00",
+      "next_run_at": "2026-08-08T03:00:00+00:00",
+      "last_run_at": "2026-08-06T03:00:24.421852+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -68,15 +68,15 @@
       "schedule_display": "30 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 9
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:09.563787+00:00",
-      "next_run_at": "2026-08-06T04:30:00+00:00",
-      "last_run_at": "2026-08-05T04:30:37.112948+00:00",
+      "next_run_at": "2026-08-07T04:30:00+00:00",
+      "last_run_at": "2026-08-06T11:04:20.259480+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -114,15 +114,15 @@
       "schedule_display": "30 12 * * *",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 12
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:18.663789+00:00",
-      "next_run_at": "2026-08-06T12:30:00+00:00",
-      "last_run_at": "2026-08-05T12:31:07.301849+00:00",
+      "next_run_at": "2026-08-07T12:30:00+00:00",
+      "last_run_at": "2026-08-06T17:46:33.132051+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -162,17 +162,17 @@
       "schedule_display": "30 18 * * *",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 12
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:27.397407+00:00",
-      "next_run_at": "2026-08-06T18:30:00+00:00",
-      "last_run_at": "2026-08-05T18:31:30.408994+00:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 502: Application failed to respond",
+      "next_run_at": "2026-08-07T18:30:00+00:00",
+      "last_run_at": "2026-08-06T18:31:04.615522+00:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -208,15 +208,15 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 9
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-30T14:34:51.667618+00:00",
-      "next_run_at": "2026-08-06T08:00:00+00:00",
-      "last_run_at": "2026-08-05T08:01:07.515998+00:00",
+      "next_run_at": "2026-08-07T08:00:00+00:00",
+      "last_run_at": "2026-08-06T11:05:15.172096+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -243,8 +243,8 @@
         "agent-reach"
       ],
       "skill": "agent-reach",
-      "model": "claude-opus-5-thinking",
-      "provider": "custom:gorouter.app",
+      "model": "opencode",
+      "provider": "openai-api",
       "provider_snapshot": null,
       "model_snapshot": null,
       "base_url": null,
@@ -259,19 +259,19 @@
       "schedule_display": "30 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 6
+        "completed": 12
       },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-08-06T13:49:25.708413+00:00",
       "paused_reason": null,
       "created_at": "2026-07-31T13:36:55.875565+00:00",
-      "next_run_at": "2026-08-06T05:30:00+00:00",
-      "last_run_at": "2026-08-05T05:34:14.004852+00:00",
+      "next_run_at": "2026-08-07T05:30:00+00:00",
+      "last_run_at": "2026-08-06T10:43:20.894743+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
-      "deliver": "origin",
+      "deliver": "telegram:-1001378242402",
       "origin": {
         "platform": "telegram",
         "chat_id": "52615254",
@@ -286,7 +286,56 @@
       ],
       "workdir": null,
       "fire_claim": null
+    },
+    {
+      "id": "4d6a569725ca",
+      "name": "Daily Motivational Quote",
+      "prompt": "You are a curator of motivational quotes and wise sayings for an Iranian Telegram channel. Every day you deliver ONE powerful quote from a famous thinker, philosopher, leader, scientist, writer, or historical figure \u2014 in fluent Persian.\n\nSTEP 1 - AVOID REPEATS\nRead /data/workspace/quotes-history.txt to see what was already posted. Never repeat the same person or quote.\n\nSTEP 2 - PICK A QUOTE\nChoose ONE quote that is genuinely profound and useful for everyday life. Rotate between:\n- Classic philosophers (Rumi, Hafez, Saadi, Socrates, Marcus Aurelius, Nietzsche, Camus)\n- Scientists and innovators (Einstein, Tesla, Curie, Hawking, Steve Jobs)\n- Modern thinkers and leaders (Maya Angelou, Viktor Frankl, Carl Jung, Nassim Taleb)\n- Iranian greats (Dariush, Shahriar, Sadegh Hedayat, Simin Daneshvar)\n- Athletes and artists who said something universal\nDo NOT pick cliches that everyone has seen. Prioritize quotes that make someone stop and think.\n\nSTEP 3 - WRITE THE POST IN FLUENT PERSIAN\nKeep it extremely simple. Exactly this format, nothing more:\n\n- A short evocative line setting the mood (1 sentence, with 1 emoji)\n- Blank line\n- The quote itself in Persian, wrapped in quotation marks\n- Blank line\n- The name of the person who said it, followed by a brief 5-word max identifier (e.g. \"\u0641\u06cc\u0644\u0633\u0648\u0641 \u06cc\u0648\u0646\u0627\u0646\u06cc\", \"\u0634\u0627\u0639\u0631 \u0627\u06cc\u0631\u0627\u0646\u06cc\", \"\u0641\u06cc\u0632\u06cc\u06a9\u062f\u0627\u0646 \u0646\u0648\u0628\u0644\")\n\nDo NOT add translation notes. Do NOT add book names. Do NOT add \"\u0627\u0632 \u0627\u0646\u06af\u0644\u06cc\u0633\u06cc \u062a\u0631\u062c\u0645\u0647 \u0634\u062f\u0647\". Do NOT add any extra explanation. Keep it clean and minimal.\n\nSTEP 4 - LOG IT\nAppend one line to /data/workspace/quotes-history.txt: YYYY-MM-DD | author name | first 5 words of quote\n\nCRITICAL: Your FINAL RESPONSE is the quote post delivered to the user. Put it there directly. Do NOT end with only tool calls.",
+      "skills": [],
+      "skill": null,
+      "model": "opencode",
+      "provider": "openai-api",
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 4 * * *",
+        "display": "30 4 * * *"
+      },
+      "schedule_display": "30 4 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 8
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-08-06T13:49:24.696440+00:00",
+      "paused_reason": null,
+      "created_at": "2026-08-06T12:11:59.402772+00:00",
+      "next_run_at": "2026-08-07T04:30:00+00:00",
+      "last_run_at": "2026-08-06T12:57:00.892485+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "telegram:-1001378242402",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "52615254",
+        "chat_name": "\u0262\u0266",
+        "thread_id": "325697",
+        "user_id": "52615254"
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file"
+      ],
+      "workdir": null,
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-08-06T03:00:18.252857+00:00"
+  "updated_at": "2026-08-07T03:00:35.306537+00:00"
 }

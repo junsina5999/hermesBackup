@@ -117,6 +117,17 @@ Frame it as `This is a strict identity transfer, not a stylistic interpretation.
 | Midjourney `--cref` + `--sref` | Discord/web | sub | best artistic quality, cref for face + sref for style |
 | Grok Imagine | X app | free-ish | fast, medium quality |
 
+### Gemini Lite pitfall (critical)
+
+**Do NOT use the "Lite" variant.** When the user opens AI Studio and selects
+a model, they may see `Gemini 2.5 Flash Image Lite` or similar. Lite models
+trade identity fidelity for speed and lower compute — the result is the
+*style* reproduces but the *face* is reinvented as a generic attractive
+stranger. If the user reports "it got the background and clothes right but
+the face isn't him" and they are on Lite, the fix is switching to the
+non-Lite model. Instruct them to check Settings (slider icon, upper right)
+and ensure the model name does **not** contain "Lite" or "Preview".
+
 Gemini has a real ceiling on preserving a *specific real* face. When the first pass
 comes back as a different person, escalate to Flux Kontext rather than re-rolling.
 
@@ -142,6 +153,25 @@ with a prompt that says `Replace the face in image 1 with the exact face of the 
 in image 2. This is a strict identity transfer, not a stylistic interpretation.` and
 `Keep everything else from image 1 unchanged`. This preserves the style win already
 achieved instead of gambling on a fresh generation.
+
+### When "style right but face wrong": try the BASE-image inversion
+
+The two-block prompt (`From image 1 take face / From image 2 keep everything`) can
+cause the model to treat image 2 as the base and *reinterpret* image 1's face into
+it — producing a new face in the right style. If this happens, flip the framing:
+
+```
+Edit image 1. Image 1 is the base — keep the man in it
+exactly as he is. Image 2 is ONLY a lighting and wardrobe
+reference. Do not regenerate his face. Do not reinterpret it.
+<list the real traits to preserve>
+Change ONLY these things: <clothing, background, lighting,
+pose — all drawn from image 2>
+```
+
+This tells the model to start from the real face and modify the surroundings, not
+the other way around. Works better when the model has a strong stylistic
+"opinion" that overrides the input face.
 
 ## Pitfalls
 

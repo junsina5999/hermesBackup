@@ -7,6 +7,13 @@ AI sites, Windows/Android customization software, and major launch news.
 ## Data sources (all work without login)
 
 ```bash
+# Exa MCP web search (preferred when available — returns clean content, not raw HTML)
+# Available as MCP tools: mcp_exa_web_search_exa, mcp_exa_web_search_advanced_exa
+# Use for: finding recent product launches, free AI tools, app announcements
+# Query examples:
+#   "free AI image generator 2026" — tool discovery
+#   "Android app launch this week" — app news
+
 # New trending repos, last N days
 curl -s -m 25 "https://api.github.com/search/repositories?q=created:%3E$(date -d '10 days ago' +%Y-%m-%d)+stars:%3E150&sort=stars&order=desc&per_page=20"
 
@@ -62,6 +69,37 @@ The user runs a **digest → deep dive** pattern, not one-shot posts.
 When writing a deep dive, always pull the real README. Star counts and feature
 lists from the digest run go stale and the digest's 2-sentence summary is not
 enough material.
+
+## Content categories for the digest
+
+Each daily digest should aim for 4–5 items covering as many of these as possible:
+
+| Category | What to look for | Free/paid check |
+|----------|-----------------|-----------------|
+| Practical app | Windows/Android/macOS/web tool with everyday use | State if free, freemium, or paid |
+| Free AI tool | Image/video/voice/writing generator, prompt library | Clarify if the tool is free vs. the underlying model |
+| **Free AI API** | Provider offering free tier (see below) | Always: model name, requests/day or tokens/month, card required? |
+| Big news | Model launch, flagship phone, major update | Name, specs, price, availability |
+| Hidden gem | Useful tool from past year, not widely known in Iran | Full standalone post on request |
+
+### Free AI API sources to check
+
+When writing the "free AI API" slot, search with:
+```bash
+# Check what's currently free
+web_search("free AI API tier 2026 no credit card")
+web_search("free API GPT Gemini Claude Llama Mistral 2026")
+```
+
+Key providers to know (update limits periodically — they change):
+- **Google AI Studio** — Gemini Flash, 1500 req/day, 1M context, no card
+- **Groq** — Llama/Qwen/Gemma, 1000 req/day, 30 RPM, no card, also free Whisper
+- **OpenRouter** — 20+ free models via one key, 50 req/day free (1000 with $10 deposit)
+- **Mistral** — Experiment tier ~1B tokens/month, no card, but data used for training
+- **NVIDIA NIM** — 120+ open-weight models, ~40 RPM, no card
+- **OpenAI/Anthropic** — $5 trial credits that EXPIRE; no permanent free tier
+
+For each API, always state: (1) model name, (2) exact free limits, (3) whether data is used for training, (4) one practical use case a normal person would care about.
 
 ## Rules learned from user corrections
 

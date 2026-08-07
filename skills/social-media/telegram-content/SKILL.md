@@ -172,11 +172,62 @@ After generating images:
 3. Confirm Persian text is readable (not garbled/reversed)
 4. Send via MEDIA: path to confirm Telegram renders it correctly
 
+## Channel Delivery
+
+### Direct bot API (preferred for clean posts)
+
+To post directly to a Telegram channel without Hermes cron wrappers, use the
+Telegram Bot API via a `post_to_channel.py` helper script. This avoids the
+`Cronjob Response: ...` header and `To stop or manage this job...` footer that
+Hermes appends to cron deliveries.
+
+Setup pattern (do once):
+1. Create bot via @BotFather
+2. Add bot as admin of the channel (Post Messages only)
+3. Get channel chat_id via `getChat?chat_id=@channelusername` → `result.id`
+4. Create `post_to_channel.py` with BOT_TOKEN and CHANNEL_ID constants
+5. Usage: `python3 post_to_channel.py "your HTML message"`
+
+### Hermes cron delivery (has header/footer)
+
+Hermes cron jobs deliver to channels via `deliver: "telegram:-100CHATID"`.
+The message is automatically wrapped with:
+- Header: `Cronjob Response: <job_name> (job_id: <id>)`
+- Footer: `To stop or manage this job, send me a new message...`
+
+User has explicitly asked these be removed. Workaround: use direct bot API
+delivery instead. This means:
+- Cron job produces the content (writes to a file or outputs text)
+- A second step (or the cron script) calls the Bot API to post clean
+
+### Cron → channel workflow (header-free)
+
+**Best option (Hermes built-in):** Set `cron.wrap_response: false` in `config.yaml`:
+```bash
+hermes config set cron.wrap_response false
+```
+This delivers raw agent output — NO header, NO footer, no extra script needed.
+
+**Alternative — Script-only cron (no_agent=True):**
+```bash
+# Script generates content AND posts via Bot API
+# Header/footer never appear because no LLM agent runs
+```
+
+**Alternative — LLM cron + post script:**
+```python
+# 1. LLM generates post text, writes to /tmp/channel-post.txt
+# 2. Script reads file, posts via Bot API
+# Both happen inside the cron prompt
+```
+
 ## References
 
 - `references/persian-fonts.md` — font alternatives and fallbacks
 - `references/telegram-specs.md` — Telegram media size limits
 - `references/tech-news-curation.md` — daily tech digest: GitHub/HN/newsroom
   sources, spam filtering, repeat-protection log, digest → deep-dive pattern,
-  cron wiring for 09:00 Tehran
+  cron wiring for 09:00 Tehran, free AI API sources
+- `references/channel-delivery.md` — bot API setup, chat_id lookup, posting
+  script, cron header/footer limitation and workaround
 - `scripts/generate-post.py` — CLI tool: `python3 scripts/generate-post.py --quote "..." --palette deep_purple --output post.png`
