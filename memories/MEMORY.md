@@ -6,7 +6,7 @@ Agent Reach at /data/workspace/Agent-Reach (pip install -e). Zero-config: GitHub
 §
 Tech digest cron job 6e3a37165521 delivers a Persian tech-news post daily at 09:00 Tehran (30 5 * * * UTC). Repeat-protection log lives at /data/workspace/tech-channel-history.txt. Workflow details in telegram-content skill, references/tech-news-curation.md.
 §
-Host: Hermes venv /opt/venv, source /opt/hermes-agent; `hermes` not on PATH (export PATH=/opt/venv/bin:$PATH). /data small (~434MB); clear /data/.cache for ~290MB. User API proxy: 9router (OPENAI_BASE_URL in .env); cron jobs use openai-api + opencode.
+Host: /opt/venv (in PATH), /opt/hermes-agent; `hermes` not on PATH (export PATH=/opt/venv/bin:$PATH). /data ~434MB fills up (npm ENOSPC); clear .cache. mcp==1.29.0 pinned (2.0 breaks HTTP). Exa.ai configured with API key + agent_run. Cron jobs use openai-api + opencode via 9router.
 §
 User runs Persian Telegram channels: @abasmanesh222 and @GoldPackFree2. Bot: @GoldPackFree_PosterBot, chat_id: -1001378242402. Post script: /data/workspace/post_to_channel.py.
 §
