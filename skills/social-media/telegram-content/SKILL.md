@@ -78,13 +78,13 @@ pip3 install Pillow arabic-reshaper python-bidi
 
 #### Fonts
 
-Download Vazirmatn (Persian font family):
+Download Vazirmatn (Persian font family). **CRITICAL**: GitHub raw URLs return HTML error pages, NOT font files. Always use **jsDelivr CDN**:
 ```bash
 mkdir -p fonts
 cd fonts
-curl -sL "https://github.com/rastikerdar/vazirmatn/raw/main/fonts/ttf/Vazirmatn-Bold.ttf" -o Vazirmatn-Bold.ttf
-curl -sL "https://github.com/rastikerdar/vazirmatn/raw/main/fonts/ttf/Vazirmatn-Black.ttf" -o Vazirmatn-Black.ttf
-curl -sL "https://github.com/rastikerdar/vazirmatn/raw/main/fonts/ttf/Vazirmatn-Medium.ttf" -o Vazirmatn-Medium.ttf
+curl -sL "https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/ttf/Vazirmatn-Bold.ttf" -o Vazirmatn-Bold.ttf
+curl -sL "https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/ttf/Vazirmatn-Black.ttf" -o Vazirmatn-Black.ttf
+curl -sL "https://cdn.jsdelivr.net/gh/rastikerdar/vazirmatn@v33.003/fonts/ttf/Vazirmatn-Medium.ttf" -o Vazirmatn-Medium.ttf
 ```
 
 #### RTL Text Rendering (Critical)

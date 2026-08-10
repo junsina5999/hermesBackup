@@ -1,48 +1,58 @@
-model:
-  default: mimo-v2.5
-  provider: custom
-  base_url: https://opencode.ai/zen/go/v1
-  api_key: ${HERMES_CUSTOM_OPENCODE_AI_API_KEY}
-terminal:
-  backend: local
-  cwd: /data/workspace
-  timeout: 180
+_config_version: 33
 compression:
   enabled: true
   threshold: 0.85
+cron:
+  wrap_response: false
+custom_providers:
+- base_url: https://gorouter.app/v1
+  key_env: HERMES_CUSTOM_GOROUTER_APP_API_KEY
+  model: claude-opus-5-thinking
+  models:
+    claude-opus-5-thinking:
+      context_length: 1000000
+  name: gorouter.app
+- base_url: https://opencode.ai/zen/go/v1
+  key_env: HERMES_CUSTOM_OPENCODE_AI_API_KEY
+  model: mimo-v2.5
+  models:
+    mimo-v2.5:
+      context_length: 1000000
+  name: Opencode.ai
+- base_url: https://api.agentrouter.org/v1
+  key_env: AGENT_ROUTER_TOKEN
+  model: geminiM
+  models:
+    geminiM:
+      context_length: 1000000
+  name: AgentRouter
+mcp_servers:
+  exa:
+    enabled: true
+    headers:
+      Authorization: Bearer ${MCP_EXA_API_KEY}
+    url: https://mcp.exa.ai/mcp?tools=web_search_exa,web_fetch_exa,web_search_advanced_exa,agent_run
+  ticktick:
+    enabled: true
+    headers:
+      Authorization: Bearer ${MCP_TICKTICK_API_KEY}
+    url: https://mcp.ticktick.com
+model:
+  default: geminiM
+  provider: custom
 onboarding:
   seen:
-    profile_build_offered: true
     busy_input_prompt: true
-_config_version: 33
+    profile_build_offered: true
 platforms:
   telegram:
     enabled: true
     home_channel:
-      platform: telegram
       chat_id: '52615254'
       name: ɢɦ
+      platform: telegram
       user_id: '52615254'
-custom_providers:
-  - name: gorouter.app
-    base_url: https://gorouter.app/v1
-    key_env: HERMES_CUSTOM_GOROUTER_APP_API_KEY
-    model: claude-opus-5-thinking
-    models:
-      claude-opus-5-thinking:
-        context_length: 1000000
-  - name: Opencode.ai
-    base_url: https://opencode.ai/zen/go/v1
-    key_env: HERMES_CUSTOM_OPENCODE_AI_API_KEY
-    model: mimo-v2.5
-    models:
-      mimo-v2.5:
-        context_length: 1000000
-mcp_servers:
-  exa:
-    url: https://mcp.exa.ai/mcp?tools=web_search_exa,web_fetch_exa,web_search_advanced_exa,agent_run
-    headers:
-      Authorization: Bearer ${MCP_EXA_API_KEY}
-    enabled: true
-cron:
-  wrap_response: false
+terminal:
+  backend: local
+  cwd: /data/workspace
+  timeout: 180
