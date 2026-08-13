@@ -22,15 +22,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 16
+        "completed": 17
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:58:23.705132+00:00",
-      "next_run_at": "2026-08-13T03:00:00+00:00",
-      "last_run_at": "2026-08-11T03:00:50.364146+00:00",
+      "next_run_at": "2026-08-14T03:00:00+00:00",
+      "last_run_at": "2026-08-12T03:00:07.788412+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -68,15 +68,15 @@
       "schedule_display": "30 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 16
+        "completed": 17
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:09.563787+00:00",
-      "next_run_at": "2026-08-12T04:30:00+00:00",
-      "last_run_at": "2026-08-11T04:31:06.166369+00:00",
+      "next_run_at": "2026-08-13T04:30:00+00:00",
+      "last_run_at": "2026-08-12T04:30:17.630188+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -114,15 +114,15 @@
       "schedule_display": "30 12 * * *",
       "repeat": {
         "times": null,
-        "completed": 17
+        "completed": 18
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:18.663789+00:00",
-      "next_run_at": "2026-08-12T12:30:00+00:00",
-      "last_run_at": "2026-08-11T12:31:49.967004+00:00",
+      "next_run_at": "2026-08-13T12:30:00+00:00",
+      "last_run_at": "2026-08-12T12:33:13.733586+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -162,17 +162,17 @@
       "schedule_display": "30 18 * * *",
       "repeat": {
         "times": null,
-        "completed": 17
+        "completed": 18
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:27.397407+00:00",
-      "next_run_at": "2026-08-12T18:30:00+00:00",
-      "last_run_at": "2026-08-11T18:37:18.542586+00:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: Invalid API response after 3 retries: slow response (382s) \u2014 likely upstream timeout",
+      "next_run_at": "2026-08-13T18:30:00+00:00",
+      "last_run_at": "2026-08-12T18:30:49.572749+00:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -208,15 +208,15 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 16
+        "completed": 17
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-30T14:34:51.667618+00:00",
-      "next_run_at": "2026-08-12T08:00:00+00:00",
-      "last_run_at": "2026-08-11T08:04:10.959050+00:00",
+      "next_run_at": "2026-08-13T08:00:00+00:00",
+      "last_run_at": "2026-08-12T08:08:23.320470+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -231,58 +231,6 @@
       "enabled_toolsets": [
         "file",
         "terminal"
-      ],
-      "workdir": null,
-      "fire_claim": null
-    },
-    {
-      "id": "6e3a37165521",
-      "name": "Daily Tech Digest for Telegram Channel",
-      "prompt": "You are a tech news curator for an Iranian Telegram channel (@abasmanesh222). The audience is general Persian-speaking users interested in practical technology: useful apps for laptop and phone, trending GitHub tools they can actually use, free AI websites (image/video generation), Windows and Android customization software, free AI model APIs (OpenAI, Google, Anthropic, Mistral, Meta, etc. offering free API tiers or free models), major tech news (new AI model launches, flagship phone reveals), and hidden gems from the past year that ordinary users find useful.\n\nSTEP 1 - AVOID REPEATS\nRead /data/workspace/tech-channel-history.txt to see what was already posted. Never repeat an item that appears there.\n\nSTEP 2 - GATHER (run these in parallel where possible)\na) Trending new GitHub repos from the last 10 days:\n   curl -s -m 25 \"https://api.github.com/search/repositories?q=created:%3E$(date -d '10 days ago' +%Y-%m-%d)+stars:%3E150&sort=stars&order=desc&per_page=20\"\nb) Trending repos created in the last year that are still hot (for the \"hidden gem\" slot):\n   curl -s -m 25 \"https://api.github.com/search/repositories?q=created:%3E$(date -d '1 year ago' +%Y-%m-%d)+stars:%3E3000&sort=updated&order=desc&per_page=20\"\nc) Hacker News top stories:\n   curl -s -m 25 \"https://hn.algolia.com/api/v1/search_by_date?tags=story&numericFilters=points%3E100&hitsPerPage=25\"\nd) Use web_search for fresh news on: new OpenAI / Google Gemini / Anthropic / Mistral / Meta model releases, new free AI image or video generation sites, free AI API tiers (search: \"free API AI model 2026\", \"free API tier GPT Gemini Claude Llama Mistral\", \"free AI API no credit card\"), newly announced flagship phones, and any notable Hermes Agent features or capabilities. Search in English.\ne) Optionally use gh CLI: gh search repos --sort stars --limit 15\n\nParse JSON with python3. Filter OUT: crypto/MEV bots, academic papers with no usable tool, pure libraries only developers care about, anything already in the history file.\n\nSTEP 3 - SELECT 4 to 5 ITEMS\nPrioritize what a normal person finds exciting and can actually try:\n- 1-2 practical tools/apps (Windows, Android, macOS, or web) with a real everyday use\n- 1 free AI tool (image, video, voice, writing) - state clearly if it is free\n- 1 free AI API opportunity: which providers offer free tiers, what models are available for free, how many requests per day/month, and what a normal person can build or try with them. Be specific: name the provider, model name, free limits, and one practical use case.\n- 1 big news item (new AI model, flagship phone, major launch) with concrete details: name, key specs or capabilities, price if known, availability date\nOn slow news days, fall back to a well-explained flagship phone or a major software feature.\nAbout once a week, include one item about what Hermes Agent itself can do (automated daily reports, image generation, cron scheduling, controlling other AI coding agents, reading YouTube transcripts, etc.) framed as a capability the audience would find impressive.\n\nSTEP 4 - WRITE THE POST IN FLUENT PERSIAN (FARSI)\nFormat each item like this:\n- A short punchy Persian headline with one relevant emoji\n- 2 to 4 sentences of plain Persian explaining WHAT it does and WHY it matters to the reader. No jargon dumps. Explain the benefit.\n- The direct link (GitHub URL or official site)\nSeparate items with a blank line. Start the whole message with a short Persian intro line with today's Persian date context, and end with a one-line Persian call to action. Total length should fit comfortably in a Telegram message: roughly 250 to 400 Persian words. Do NOT use markdown headers. Use bold sparingly. Write naturally, like a human channel admin, not like a translated press release.\n\nSTEP 5 - LOG IT\nAppend one line per selected item to /data/workspace/tech-channel-history.txt in the format: YYYY-MM-DD | item name | source\n\nCRITICAL: Your FINAL RESPONSE (the assistant text you output at the end) IS the message delivered to the user, ready to copy-paste into the channel. Put the complete Persian post there. Writing to the history file is secondary. Do NOT end with only tool calls. Do NOT add English commentary or meta-explanation around the post - deliver the post text itself.",
-      "skills": [
-        "agent-reach"
-      ],
-      "skill": "agent-reach",
-      "model": "opencode",
-      "provider": "openai-api",
-      "provider_snapshot": null,
-      "model_snapshot": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "context_from": null,
-      "schedule": {
-        "kind": "cron",
-        "expr": "30 5 * * *",
-        "display": "30 5 * * *"
-      },
-      "schedule_display": "30 5 * * *",
-      "repeat": {
-        "times": null,
-        "completed": 14
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-07-31T13:36:55.875565+00:00",
-      "next_run_at": "2026-08-12T05:30:00+00:00",
-      "last_run_at": "2026-08-11T05:35:34.588049+00:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "deliver": "telegram:-1001378242402",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "52615254",
-        "chat_name": "\u0262\u0266",
-        "thread_id": "325697",
-        "user_id": "52615254"
-      },
-      "enabled_toolsets": [
-        "terminal",
-        "file",
-        "web"
       ],
       "workdir": null,
       "fire_claim": null
@@ -309,15 +257,15 @@
       "schedule_display": "30 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 10
+        "completed": 11
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-06T12:11:59.402772+00:00",
-      "next_run_at": "2026-08-12T04:30:00+00:00",
-      "last_run_at": "2026-08-11T04:31:20.766196+00:00",
+      "next_run_at": "2026-08-13T04:30:00+00:00",
+      "last_run_at": "2026-08-12T04:30:18.172368+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -335,7 +283,162 @@
       ],
       "workdir": null,
       "fire_claim": null
+    },
+    {
+      "id": "83df173842f4",
+      "name": "Channel Post - Morning (AI News & Models)",
+      "prompt": "You are a tech curator for an Iranian Telegram channel (@GoldPackFree2). Create ONE short, focused post in Persian.\n\nCRITICAL SINGLE-SUBJECT RULE:\nFocus on EXACTLY ONE app, tool, or news item per post. NEVER mix multiple different products/services into a single post.\nThe link at the bottom MUST be the exact, direct URL to that specific item. Never use generic or unrelated URLs.\n\nRULES:\n1. Format:\n\ud83d\udca5 [Hook headline]\n[1 sentence intro about THIS SINGLE TOOL]\n\n\ud83c\udfaf [Feature 1]\n\u26a1 [Feature 2]\n\ud83d\udd17 [Feature 3]\n\ud83d\udd12 [Feature 4]\n\n[Conclusion line]\n@GoldPackFree2\n[EXACT DIRECT URL FOR THIS TOOL ONLY]\n\n2. NO line may start with English text (EMOJIS at the start of a line ARE ALLOWED and encouraged!).\n3. Keep it brief (8-10 lines total).\n4. Do NOT use markdown headers.\n5. FINAL RESPONSE IS THE POST. Deliver the post directly.",
+      "skills": [
+        "agent-reach"
+      ],
+      "skill": "agent-reach",
+      "model": "opencode",
+      "provider": "openai-api",
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 5 * * *",
+        "display": "30 5 * * *"
+      },
+      "schedule_display": "30 5 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-12T11:31:31.406243+00:00",
+      "next_run_at": "2026-08-13T05:30:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "52615254",
+        "chat_name": "\u0262\u0266",
+        "thread_id": "325697",
+        "user_id": "52615254"
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file",
+        "web"
+      ],
+      "workdir": null
+    },
+    {
+      "id": "e5f0cfaaef60",
+      "name": "Channel Post - Afternoon (Free AI Image/Video & API)",
+      "prompt": "You are a tech curator for an Iranian Telegram channel (@GoldPackFree2). Create ONE short, focused post in Persian.\n\nCRITICAL SINGLE-SUBJECT RULE:\nFocus on EXACTLY ONE tool per post (e.g. ONLY Google AI Studio, or ONLY Groq Console, or ONLY OpenRouter, or ONLY ONE free AI image/video site). NEVER list 4 different providers in one post. Pick ONE, explain it deeply, and provide its exact direct URL.\n\nRULES:\n1. Format:\n\ud83d\udca5 [Hook headline]\n[1 sentence intro about THIS SINGLE TOOL]\n\n\ud83c\udfaf [Feature 1]\n\u26a1 [Feature 2]\n\ud83d\udd17 [Feature 3]\n\ud83d\udd12 [Feature 4]\n\n[Conclusion line]\n@GoldPackFree2\n[EXACT DIRECT URL FOR THIS ONE TOOL]\n\n2. NO line may start with English text (EMOJIS at the start of a line ARE ALLOWED and encouraged!).\n3. Keep it brief (8-10 lines total).\n4. Do NOT use markdown headers.\n5. FINAL RESPONSE IS THE POST. Deliver the post directly.",
+      "skills": [
+        "agent-reach"
+      ],
+      "skill": "agent-reach",
+      "model": "opencode",
+      "provider": "openai-api",
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 12 * * *",
+        "display": "0 12 * * *"
+      },
+      "schedule_display": "0 12 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-12T11:31:32.433755+00:00",
+      "next_run_at": "2026-08-13T12:00:00+00:00",
+      "last_run_at": "2026-08-12T12:04:13.299443+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "52615254",
+        "chat_name": "\u0262\u0266",
+        "thread_id": "325697",
+        "user_id": "52615254"
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file",
+        "web"
+      ],
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "86e02f205caa",
+      "name": "Channel Post - Evening (Hidden Gem Photo/Video Apps)",
+      "prompt": "You are a tech curator for an Iranian Telegram channel (@GoldPackFree2). Create ONE short, focused post in Persian.\n\nCRITICAL SINGLE-SUBJECT RULE:\nFocus on EXACTLY ONE photo or video editing app/tool per post (from GitHub or web). NEVER mix multiple apps into one post. Pick ONE app, explain its features, and provide its exact direct URL (GitHub repo or official site).\n\nRULES:\n1. Format:\n\ud83d\udca5 [Hook headline]\n[1 sentence intro about THIS SINGLE APP]\n\n\ud83c\udfaf [Feature 1]\n\u26a1 [Feature 2]\n\ud83d\udd17 [Feature 3]\n\ud83d\udd12 [Feature 4]\n\n[Conclusion line]\n@GoldPackFree2\n[EXACT DIRECT URL FOR THIS SINGLE APP]\n\n2. NO line may start with English text (EMOJIS at the start of a line ARE ALLOWED and encouraged!).\n3. Keep it brief (8-10 lines total).\n4. Do NOT use markdown headers.\n5. FINAL RESPONSE IS THE POST. Deliver the post directly.",
+      "skills": [
+        "agent-reach"
+      ],
+      "skill": "agent-reach",
+      "model": "opencode",
+      "provider": "openai-api",
+      "provider_snapshot": null,
+      "model_snapshot": null,
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 17 * * *",
+        "display": "0 17 * * *"
+      },
+      "schedule_display": "0 17 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 2
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-12T11:31:33.448502+00:00",
+      "next_run_at": "2026-08-13T17:00:00+00:00",
+      "last_run_at": "2026-08-12T17:01:18.252137+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "52615254",
+        "chat_name": "\u0262\u0266",
+        "thread_id": "325697",
+        "user_id": "52615254"
+      },
+      "enabled_toolsets": [
+        "terminal",
+        "file",
+        "web"
+      ],
+      "workdir": null,
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-08-12T03:00:01.680231+00:00"
+  "updated_at": "2026-08-13T03:00:19.884283+00:00"
 }
