@@ -5,27 +5,28 @@ compression:
 cron:
   wrap_response: false
 custom_providers:
-- base_url: https://gorouter.app/v1
-  key_env: HERMES_CUSTOM_GOROUTER_APP_API_KEY
-  model: claude-opus-5-thinking
-  models:
-    claude-opus-5-thinking:
-      context_length: 1000000
-  name: gorouter.app
-- base_url: https://opencode.ai/zen/go/v1
-  key_env: HERMES_CUSTOM_OPENCODE_AI_API_KEY
-  model: mimo-v2.5
-  models:
-    mimo-v2.5:
-      context_length: 1000000
-  name: Opencode.ai
-- base_url: https://api.agentrouter.org/v1
-  key_env: AGENT_ROUTER_TOKEN
-  model: geminiM
-  models:
-    geminiM:
-      context_length: 1000000
-  name: AgentRouter
+  - base_url: https://gorouter.app/v1
+    key_env: HERMES_CUSTOM_GOROUTER_APP_API_KEY
+    model: claude-opus-5-thinking
+    models:
+      claude-opus-5-thinking:
+        context_length: 1000000
+    name: gorouter.app
+  - base_url: https://opencode.ai/zen/go/v1
+    key_env: HERMES_CUSTOM_OPENCODE_AI_API_KEY
+    model: mimo-v2.5
+    models:
+      mimo-v2.5:
+        context_length: 1000000
+    name: Opencode.ai
+  - base_url: https://api.agentrouter.org/v1
+    key_env: AGENT_ROUTER_TOKEN
+    model: geminiM
+    models:
+      geminiM:
+        context_length: 1000000
+      Qwen: '{"context_length": 32768}'
+    name: AgentRouter
 mcp_servers:
   exa:
     enabled: true

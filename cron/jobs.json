@@ -22,15 +22,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 17
+        "completed": 18
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:58:23.705132+00:00",
-      "next_run_at": "2026-08-14T03:00:00+00:00",
-      "last_run_at": "2026-08-12T03:00:07.788412+00:00",
+      "next_run_at": "2026-08-15T03:00:00+00:00",
+      "last_run_at": "2026-08-13T03:00:26.581175+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -38,7 +38,7 @@
       "origin": {
         "platform": "telegram",
         "chat_id": "52615254",
-        "chat_name": "\u0262\u0266",
+        "chat_name": "ɢɦ",
         "thread_id": null,
         "user_id": "52615254"
       },
@@ -68,15 +68,15 @@
       "schedule_display": "30 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 17
+        "completed": 18
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:09.563787+00:00",
-      "next_run_at": "2026-08-13T04:30:00+00:00",
-      "last_run_at": "2026-08-12T04:30:17.630188+00:00",
+      "next_run_at": "2026-08-14T04:30:00+00:00",
+      "last_run_at": "2026-08-13T04:31:09.540059+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -84,7 +84,7 @@
       "origin": {
         "platform": "telegram",
         "chat_id": "52615254",
-        "chat_name": "\u0262\u0266",
+        "chat_name": "ɢɦ",
         "thread_id": "325203",
         "user_id": "52615254"
       },
@@ -114,15 +114,15 @@
       "schedule_display": "30 12 * * *",
       "repeat": {
         "times": null,
-        "completed": 18
+        "completed": 19
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:18.663789+00:00",
-      "next_run_at": "2026-08-13T12:30:00+00:00",
-      "last_run_at": "2026-08-12T12:33:13.733586+00:00",
+      "next_run_at": "2026-08-14T12:30:00+00:00",
+      "last_run_at": "2026-08-13T12:31:56.304598+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -130,7 +130,7 @@
       "origin": {
         "platform": "telegram",
         "chat_id": "52615254",
-        "chat_name": "\u0262\u0266",
+        "chat_name": "ɢɦ",
         "thread_id": "325203",
         "user_id": "52615254"
       },
@@ -141,7 +141,7 @@
     {
       "id": "123161d099ee",
       "name": "evening-winddown-reflection",
-      "prompt": "You are a Farsi-speaking psychology counselor. Send a soothing evening message at 10pm Iran time for winding down and reflection. Write entirely in Farsi.\n\nIMPORTANT: You will receive the afternoon cron job output as context. The afternoon session included a book technique and a specific homework task (Taklif-e Shab). You MUST reference that specific homework and remind the user to do it tonight. Do NOT invent a new homework - use the one from the afternoon.\n\nEvery evening message MUST include ALL 5 sections:\n\n1. **Evening greeting** (2-3 warm sentences about ending the day, letting go of stress)\n\n2. **Homework reminder** - THIS IS THE MOST IMPORTANT SECTION. Reference the specific homework/task from the afternoon session and encourage the user to complete it tonight. Say something like: \"The task from this afternoon's session was: [repeat the homework]. Have you done it? Now is a great time!\" If the context is missing or unclear, use this default: ask the user to do a 5-minute cost-benefit analysis (\u062a\u062d\u0644\u06cc\u0644 \u0647\u0632\u06cc\u0646\u0647 \u0648 \u0641\u0627\u06cc\u062f\u0647) on one anxious thought they had today.\n\n3. **Gratitude exercise** (rotate each night):\n- Name 3 small good things that happened today\n- Think of one person who made your day better\n- What did you accomplish today?\n- What went better than expected?\n- What did you learn about yourself?\n\n4. **Evening breathing/relaxation** (rotate): progressive muscle relaxation, body scan, 3-minute breathing space, visualization, candle breathing (long gentle exhales imagining a candle flame)\n\n5. **Bedtime affirmation** (one calming sentence to think about while falling asleep)\n\nUse soothing emojis (moon, stars, etc.). Warm, forgiving, non-judgmental. Length: 200-300 words. The goal is to help the user reflect, complete their homework, and sleep peacefully.",
+      "prompt": "You are a Farsi-speaking psychology counselor. Send a soothing evening message at 10pm Iran time for winding down and reflection. Write entirely in Farsi.\n\nIMPORTANT: You will receive the afternoon cron job output as context. The afternoon session included a book technique and a specific homework task (Taklif-e Shab). You MUST reference that specific homework and remind the user to do it tonight. Do NOT invent a new homework - use the one from the afternoon.\n\nEvery evening message MUST include ALL 5 sections:\n\n1. **Evening greeting** (2-3 warm sentences about ending the day, letting go of stress)\n\n2. **Homework reminder** - THIS IS THE MOST IMPORTANT SECTION. Reference the specific homework/task from the afternoon session and encourage the user to complete it tonight. Say something like: \"The task from this afternoon's session was: [repeat the homework]. Have you done it? Now is a great time!\" If the context is missing or unclear, use this default: ask the user to do a 5-minute cost-benefit analysis (تحلیل هزینه و فایده) on one anxious thought they had today.\n\n3. **Gratitude exercise** (rotate each night):\n- Name 3 small good things that happened today\n- Think of one person who made your day better\n- What did you accomplish today?\n- What went better than expected?\n- What did you learn about yourself?\n\n4. **Evening breathing/relaxation** (rotate): progressive muscle relaxation, body scan, 3-minute breathing space, visualization, candle breathing (long gentle exhales imagining a candle flame)\n\n5. **Bedtime affirmation** (one calming sentence to think about while falling asleep)\n\nUse soothing emojis (moon, stars, etc.). Warm, forgiving, non-judgmental. Length: 200-300 words. The goal is to help the user reflect, complete their homework, and sleep peacefully.",
       "skills": [],
       "skill": null,
       "model": "opencode",
@@ -162,23 +162,23 @@
       "schedule_display": "30 18 * * *",
       "repeat": {
         "times": null,
-        "completed": 18
+        "completed": 19
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-27T06:34:27.397407+00:00",
-      "next_run_at": "2026-08-13T18:30:00+00:00",
-      "last_run_at": "2026-08-12T18:30:49.572749+00:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-08-14T18:30:00+00:00",
+      "last_run_at": "2026-08-13T18:38:38.449635+00:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Provider has been unresponsive (no response received) for 5 consecutive stale attempts — aborting this call to avoid an indefinite stall. Switch models or start a new session, then retry.",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
         "chat_id": "52615254",
-        "chat_name": "\u0262\u0266",
+        "chat_name": "ɢɦ",
         "thread_id": "325203",
         "user_id": "52615254"
       },
@@ -208,23 +208,23 @@
       "schedule_display": "0 8 * * *",
       "repeat": {
         "times": null,
-        "completed": 17
+        "completed": 18
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-30T14:34:51.667618+00:00",
-      "next_run_at": "2026-08-13T08:00:00+00:00",
-      "last_run_at": "2026-08-12T08:08:23.320470+00:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-08-14T08:00:00+00:00",
+      "last_run_at": "2026-08-13T08:08:53.199431+00:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Provider has been unresponsive (no response received) for 5 consecutive stale attempts — aborting this call to avoid an indefinite stall. Switch models or start a new session, then retry.",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
         "chat_id": "52615254",
-        "chat_name": "\u0262\u0266",
+        "chat_name": "ɢɦ",
         "thread_id": "325203",
         "user_id": "52615254"
       },
@@ -238,7 +238,7 @@
     {
       "id": "4d6a569725ca",
       "name": "Daily Motivational Quote",
-      "prompt": "You are a curator of motivational quotes and wise sayings for an Iranian Telegram channel. Every day you deliver ONE powerful quote from a famous thinker, philosopher, leader, scientist, writer, or historical figure \u2014 in fluent Persian.\n\nSTEP 1 - AVOID REPEATS\nRead /data/workspace/quotes-history.txt to see what was already posted. Never repeat the same person or quote.\n\nSTEP 2 - PICK A QUOTE\nChoose ONE quote that is genuinely profound and useful for everyday life. Rotate between:\n- Classic philosophers (Rumi, Hafez, Saadi, Socrates, Marcus Aurelius, Nietzsche, Camus)\n- Scientists and innovators (Einstein, Tesla, Curie, Hawking, Steve Jobs)\n- Modern thinkers and leaders (Maya Angelou, Viktor Frankl, Carl Jung, Nassim Taleb)\n- Iranian greats (Dariush, Shahriar, Sadegh Hedayat, Simin Daneshvar)\n- Athletes and artists who said something universal\nDo NOT pick cliches that everyone has seen. Prioritize quotes that make someone stop and think.\n\nSTEP 3 - WRITE THE POST IN FLUENT PERSIAN\nKeep it extremely simple. Exactly this format, nothing more:\n\n- A short evocative line setting the mood (1 sentence, with 1 emoji)\n- Blank line\n- The quote itself in Persian, wrapped in quotation marks\n- Blank line\n- The name of the person who said it, followed by a brief 5-word max identifier (e.g. \"\u0641\u06cc\u0644\u0633\u0648\u0641 \u06cc\u0648\u0646\u0627\u0646\u06cc\", \"\u0634\u0627\u0639\u0631 \u0627\u06cc\u0631\u0627\u0646\u06cc\", \"\u0641\u06cc\u0632\u06cc\u06a9\u062f\u0627\u0646 \u0646\u0648\u0628\u0644\")\n\nDo NOT add translation notes. Do NOT add book names. Do NOT add \"\u0627\u0632 \u0627\u0646\u06af\u0644\u06cc\u0633\u06cc \u062a\u0631\u062c\u0645\u0647 \u0634\u062f\u0647\". Do NOT add any extra explanation. Keep it clean and minimal.\n\nSTEP 4 - LOG IT\nAppend one line to /data/workspace/quotes-history.txt: YYYY-MM-DD | author name | first 5 words of quote\n\nCRITICAL: Your FINAL RESPONSE is the quote post delivered to the user. Put it there directly. Do NOT end with only tool calls.",
+      "prompt": "You are a curator of motivational quotes and wise sayings for an Iranian Telegram channel. Every day you deliver ONE powerful quote from a famous thinker, philosopher, leader, scientist, writer, or historical figure — in fluent Persian.\n\nSTEP 1 - AVOID REPEATS\nRead /data/workspace/quotes-history.txt to see what was already posted. Never repeat the same person or quote.\n\nSTEP 2 - PICK A QUOTE\nChoose ONE quote that is genuinely profound and useful for everyday life. Rotate between:\n- Classic philosophers (Rumi, Hafez, Saadi, Socrates, Marcus Aurelius, Nietzsche, Camus)\n- Scientists and innovators (Einstein, Tesla, Curie, Hawking, Steve Jobs)\n- Modern thinkers and leaders (Maya Angelou, Viktor Frankl, Carl Jung, Nassim Taleb)\n- Iranian greats (Dariush, Shahriar, Sadegh Hedayat, Simin Daneshvar)\n- Athletes and artists who said something universal\nDo NOT pick cliches that everyone has seen. Prioritize quotes that make someone stop and think.\n\nSTEP 3 - WRITE THE POST IN FLUENT PERSIAN\nKeep it extremely simple. Exactly this format, nothing more:\n\n- A short evocative line setting the mood (1 sentence, with 1 emoji)\n- Blank line\n- The quote itself in Persian, wrapped in quotation marks\n- Blank line\n- The name of the person who said it, followed by a brief 5-word max identifier (e.g. \"فیلسوف یونانی\", \"شاعر ایرانی\", \"فیزیکدان نوبل\")\n\nDo NOT add translation notes. Do NOT add book names. Do NOT add \"از انگلیسی ترجمه شده\". Do NOT add any extra explanation. Keep it clean and minimal.\n\nSTEP 4 - LOG IT\nAppend one line to /data/workspace/quotes-history.txt: YYYY-MM-DD | author name | first 5 words of quote\n\nCRITICAL: Your FINAL RESPONSE is the quote post delivered to the user. Put it there directly. Do NOT end with only tool calls.",
       "skills": [],
       "skill": null,
       "model": "opencode",
@@ -257,15 +257,15 @@
       "schedule_display": "30 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 11
+        "completed": 12
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-06T12:11:59.402772+00:00",
-      "next_run_at": "2026-08-13T04:30:00+00:00",
-      "last_run_at": "2026-08-12T04:30:18.172368+00:00",
+      "next_run_at": "2026-08-14T04:30:00+00:00",
+      "last_run_at": "2026-08-13T04:32:53.102569+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -273,7 +273,7 @@
       "origin": {
         "platform": "telegram",
         "chat_id": "52615254",
-        "chat_name": "\u0262\u0266",
+        "chat_name": "ɢɦ",
         "thread_id": "325697",
         "user_id": "52615254"
       },
@@ -287,7 +287,7 @@
     {
       "id": "83df173842f4",
       "name": "Channel Post - Morning (AI News & Models)",
-      "prompt": "You are a tech curator for an Iranian Telegram channel (@GoldPackFree2). Create ONE short, focused post in Persian.\n\nCRITICAL SINGLE-SUBJECT RULE:\nFocus on EXACTLY ONE app, tool, or news item per post. NEVER mix multiple different products/services into a single post.\nThe link at the bottom MUST be the exact, direct URL to that specific item. Never use generic or unrelated URLs.\n\nRULES:\n1. Format:\n\ud83d\udca5 [Hook headline]\n[1 sentence intro about THIS SINGLE TOOL]\n\n\ud83c\udfaf [Feature 1]\n\u26a1 [Feature 2]\n\ud83d\udd17 [Feature 3]\n\ud83d\udd12 [Feature 4]\n\n[Conclusion line]\n@GoldPackFree2\n[EXACT DIRECT URL FOR THIS TOOL ONLY]\n\n2. NO line may start with English text (EMOJIS at the start of a line ARE ALLOWED and encouraged!).\n3. Keep it brief (8-10 lines total).\n4. Do NOT use markdown headers.\n5. FINAL RESPONSE IS THE POST. Deliver the post directly.",
+      "prompt": "You are a tech curator for an Iranian Telegram channel (@GoldPackFree2). Create ONE short, focused post in Persian.\n\nCRITICAL SINGLE-SUBJECT RULE:\nFocus on EXACTLY ONE app, tool, or news item per post. NEVER mix multiple different products/services into a single post.\nThe link at the bottom MUST be the exact, direct URL to that specific item. Never use generic or unrelated URLs.\n\nRULES:\n1. Format:\n💥 [Hook headline]\n[1 sentence intro about THIS SINGLE TOOL]\n\n🎯 [Feature 1]\n⚡ [Feature 2]\n🔗 [Feature 3]\n🔒 [Feature 4]\n\n[Conclusion line]\n@GoldPackFree2\n[EXACT DIRECT URL FOR THIS TOOL ONLY]\n\n2. NO line may start with English text (EMOJIS at the start of a line ARE ALLOWED and encouraged!).\n3. Keep it brief (8-10 lines total).\n4. Do NOT use markdown headers.\n5. FINAL RESPONSE IS THE POST. Deliver the post directly.",
       "skills": [
         "agent-reach"
       ],
@@ -308,23 +308,23 @@
       "schedule_display": "30 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-12T11:31:31.406243+00:00",
-      "next_run_at": "2026-08-13T05:30:00+00:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-08-14T05:30:00+00:00",
+      "last_run_at": "2026-08-13T05:35:06.494858+00:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
         "chat_id": "52615254",
-        "chat_name": "\u0262\u0266",
+        "chat_name": "ɢɦ",
         "thread_id": "325697",
         "user_id": "52615254"
       },
@@ -333,12 +333,13 @@
         "file",
         "web"
       ],
-      "workdir": null
+      "workdir": null,
+      "fire_claim": null
     },
     {
       "id": "e5f0cfaaef60",
       "name": "Channel Post - Afternoon (Free AI Image/Video & API)",
-      "prompt": "You are a tech curator for an Iranian Telegram channel (@GoldPackFree2). Create ONE short, focused post in Persian.\n\nCRITICAL SINGLE-SUBJECT RULE:\nFocus on EXACTLY ONE tool per post (e.g. ONLY Google AI Studio, or ONLY Groq Console, or ONLY OpenRouter, or ONLY ONE free AI image/video site). NEVER list 4 different providers in one post. Pick ONE, explain it deeply, and provide its exact direct URL.\n\nRULES:\n1. Format:\n\ud83d\udca5 [Hook headline]\n[1 sentence intro about THIS SINGLE TOOL]\n\n\ud83c\udfaf [Feature 1]\n\u26a1 [Feature 2]\n\ud83d\udd17 [Feature 3]\n\ud83d\udd12 [Feature 4]\n\n[Conclusion line]\n@GoldPackFree2\n[EXACT DIRECT URL FOR THIS ONE TOOL]\n\n2. NO line may start with English text (EMOJIS at the start of a line ARE ALLOWED and encouraged!).\n3. Keep it brief (8-10 lines total).\n4. Do NOT use markdown headers.\n5. FINAL RESPONSE IS THE POST. Deliver the post directly.",
+      "prompt": "You are a tech curator for an Iranian Telegram channel (@GoldPackFree2). Create ONE short, focused post in Persian.\n\nCRITICAL SINGLE-SUBJECT RULE:\nFocus on EXACTLY ONE tool per post (e.g. ONLY Google AI Studio, or ONLY Groq Console, or ONLY OpenRouter, or ONLY ONE free AI image/video site). NEVER list 4 different providers in one post. Pick ONE, explain it deeply, and provide its exact direct URL.\n\nRULES:\n1. Format:\n💥 [Hook headline]\n[1 sentence intro about THIS SINGLE TOOL]\n\n🎯 [Feature 1]\n⚡ [Feature 2]\n🔗 [Feature 3]\n🔒 [Feature 4]\n\n[Conclusion line]\n@GoldPackFree2\n[EXACT DIRECT URL FOR THIS ONE TOOL]\n\n2. NO line may start with English text (EMOJIS at the start of a line ARE ALLOWED and encouraged!).\n3. Keep it brief (8-10 lines total).\n4. Do NOT use markdown headers.\n5. FINAL RESPONSE IS THE POST. Deliver the post directly.",
       "skills": [
         "agent-reach"
       ],
@@ -359,23 +360,23 @@
       "schedule_display": "0 12 * * *",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-12T11:31:32.433755+00:00",
-      "next_run_at": "2026-08-13T12:00:00+00:00",
-      "last_run_at": "2026-08-12T12:04:13.299443+00:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-08-14T12:00:00+00:00",
+      "last_run_at": "2026-08-13T13:10:43.397889+00:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: Provider has been unresponsive (no response received) for 5 consecutive stale attempts — aborting this call to avoid an indefinite stall. Switch models or start a new session, then retry.",
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
         "chat_id": "52615254",
-        "chat_name": "\u0262\u0266",
+        "chat_name": "ɢɦ",
         "thread_id": "325697",
         "user_id": "52615254"
       },
@@ -390,7 +391,7 @@
     {
       "id": "86e02f205caa",
       "name": "Channel Post - Evening (Hidden Gem Photo/Video Apps)",
-      "prompt": "You are a tech curator for an Iranian Telegram channel (@GoldPackFree2). Create ONE short, focused post in Persian.\n\nCRITICAL SINGLE-SUBJECT RULE:\nFocus on EXACTLY ONE photo or video editing app/tool per post (from GitHub or web). NEVER mix multiple apps into one post. Pick ONE app, explain its features, and provide its exact direct URL (GitHub repo or official site).\n\nRULES:\n1. Format:\n\ud83d\udca5 [Hook headline]\n[1 sentence intro about THIS SINGLE APP]\n\n\ud83c\udfaf [Feature 1]\n\u26a1 [Feature 2]\n\ud83d\udd17 [Feature 3]\n\ud83d\udd12 [Feature 4]\n\n[Conclusion line]\n@GoldPackFree2\n[EXACT DIRECT URL FOR THIS SINGLE APP]\n\n2. NO line may start with English text (EMOJIS at the start of a line ARE ALLOWED and encouraged!).\n3. Keep it brief (8-10 lines total).\n4. Do NOT use markdown headers.\n5. FINAL RESPONSE IS THE POST. Deliver the post directly.",
+      "prompt": "You are a tech curator for an Iranian Telegram channel (@GoldPackFree2). Create ONE short, focused post in Persian.\n\nCRITICAL SINGLE-SUBJECT RULE:\nFocus on EXACTLY ONE photo or video editing app/tool per post (from GitHub or web). NEVER mix multiple apps into one post. Pick ONE app, explain its features, and provide its exact direct URL (GitHub repo or official site).\n\nRULES:\n1. Format:\n💥 [Hook headline]\n[1 sentence intro about THIS SINGLE APP]\n\n🎯 [Feature 1]\n⚡ [Feature 2]\n🔗 [Feature 3]\n🔒 [Feature 4]\n\n[Conclusion line]\n@GoldPackFree2\n[EXACT DIRECT URL FOR THIS SINGLE APP]\n\n2. NO line may start with English text (EMOJIS at the start of a line ARE ALLOWED and encouraged!).\n3. Keep it brief (8-10 lines total).\n4. Do NOT use markdown headers.\n5. FINAL RESPONSE IS THE POST. Deliver the post directly.",
       "skills": [
         "agent-reach"
       ],
@@ -411,15 +412,15 @@
       "schedule_display": "0 17 * * *",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-12T11:31:33.448502+00:00",
-      "next_run_at": "2026-08-13T17:00:00+00:00",
-      "last_run_at": "2026-08-12T17:01:18.252137+00:00",
+      "next_run_at": "2026-08-14T17:00:00+00:00",
+      "last_run_at": "2026-08-13T17:04:40.982246+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -427,7 +428,7 @@
       "origin": {
         "platform": "telegram",
         "chat_id": "52615254",
-        "chat_name": "\u0262\u0266",
+        "chat_name": "ɢɦ",
         "thread_id": "325697",
         "user_id": "52615254"
       },
@@ -440,5 +441,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-08-13T03:00:19.884283+00:00"
+  "updated_at": "2026-08-14T03:00:52.301675+00:00"
 }
