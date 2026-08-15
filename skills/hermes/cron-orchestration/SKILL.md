@@ -105,7 +105,7 @@ Models can be changed after creation with `cronjob action=update, model={...}`.
 The model is NOT permanently fixed — update it when the user changes their
 provider setup, API keys, or default model.
 
-## Provider Migration
+### Provider Migration
 
 When the user switches infrastructure (e.g. drops one API provider for another),
 existing cron jobs keep pointing at the old provider and fail silently or with
@@ -126,6 +126,46 @@ provider config and the `.env` key it references.
 
 **Quick diagnosis**: If a cron job fails with "HTTP 401/403/404", the model or
 provider is wrong — not the prompt. Update the model, don't rewrite the prompt.
+
+### 9Router Multi-Provider Quirks (Troubleshooting)
+
+When using 9Router (or similar multi-provider proxies) as the OpenAI-compatible
+endpoint, the same API key can serve multiple upstream "providers" (e.g.,
+`multiai`, `multiai2`, `tokenrouter`, `gorouter`, `llmtr`, `ar`, `gemini`,
+`groq`). **Each upstream provider has its own API key status and validity.**
+
+**Key discovery from debugging:**
+- A single 9Router key can work for `multiai2/*` models (Anthropic-style
+  upstream) but fail with 401 for `multiai/*` models (OpenAI-style upstream).
+- The `/v1/models` endpoint lists ALL models from all upstreams, but doesn't
+  validate which upstream keys are actually working.
+- **Error pattern**: `[multiai/...] [401]: "The provided API Key is invalid or
+  has been revoked"` while `multiai2/...` streams successfully.
+
+**Diagnosis steps:**
+```bash
+# 1. List all available models
+KEY=$(grep OPENAI_API_KEY ~/.hermes/.env | cut -d= -f2)
+curl -s -H "Authorization: Bearer $KEY" "$OPENAI_BASE_URL/models" | jq '.data[].id'
+
+# 2. Test a specific model (streaming endpoint catches upstream errors better)
+curl -s -X POST -H "Authorization: Bearer $KEY" -H "Content-Type: application/json" \
+  -d '{"model":"multiai/mimo-v2.5-free","messages":[{"role":"user","content":"test"}],"max_tokens":10}' \
+  "$OPENAI_BASE_URL/chat/completions"
+
+# 3. Compare with multiai2 variant
+curl -s -X POST ... -d '{"model":"multiai2/mimo-v2.5-free",...}' ...
+```
+
+**Resolution:**
+- If a model family (e.g., all `multiai/*`) fails, regenerate the upstream key
+  in the 9Router dashboard for that specific provider.
+- Or switch to the working family (`multiai2/*`, `llmtr/*`, `tokenrouter/*`, etc.)
+- Add the working model aliases to `model_aliases` in `config.yaml` for easy access.
+
+**Best practice for cron jobs**: Test the exact model string from the cron
+config via the API first. If it returns 401/403, the cron will fail — fix the
+model or the upstream key before scheduling.
 
 ## Multi-Job Coordination Patterns
 

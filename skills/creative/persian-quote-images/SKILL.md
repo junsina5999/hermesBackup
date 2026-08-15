@@ -75,6 +75,27 @@ def wrap_persian(text, max_chars=22):
 - **6 palettes**: deep_purple, warm_gold, ocean_blue, midnight, rose, dark_teal
 - **Font sizing**: Quote marks 110pt, main text 50pt decreasing, author 38pt, subtext 32pt, watermark 26pt
 
+## Premium Glassmorphism Style (v3)
+
+Beyond simple flat gradients, use the **Glassmorphism** style for higher-end channel assets:
+- **Card**: Centered 900x750 rounded rectangle with blur (`ImageFilter.GaussianBlur(radius=20)`), semi-transparent dark fill (e.g. `(40,40,50,100)`), and subtle white border (`outline=(255,255,255,40)`).
+- **Texture**: Add light noise/grain to the background image for a tactile, printed feel (`random.randint(-5, 5)` added to RGB pixel values).
+- **Lighting**: Add soft radial glow ovals in background corners matching the accent color.
+- **Typography**: Text shadow (offset +2, +2 with semi-transparent black fill) for deep text legibility over glass cards.
+
+## Workflow & User Interaction Rules
+
+1. **Text Approval First**: When working with the user on channel content, **always present the proposed text draft (Main quote + Subtext/Caption) FIRST for user review/editing** before calling the Python image generation script.
+2. **Audio-Cover Workflow**:
+   - For audio/podcast posts, generate a **matching Premium cover image** (main quote title in large bold font).
+   - Write a structured Telegram caption: **Title/Topic**, **Intro**, **Bullet points of audio content**, **Actionable exercise/takeaway**, and hashtags + channel handle.
+   - Provide an AI image generation prompt (e.g., for Bing Image Creator / Midjourney) for conceptual/artistic alternatives.
+
+- **Canvas**: 1080x1080 PNG, quality=95
+- **Layout**: gradient bg, accent line, opening quote, main text, closing quote, author, watermark
+- **6 palettes**: deep_purple, warm_gold, ocean_blue, midnight, rose, dark_teal
+- **Font sizing**: Quote marks 110pt, main text 50pt decreasing, author 38pt, subtext 32pt, watermark 26pt
+
 ## Workflow
 
 1. Research topic aligned to channel theme

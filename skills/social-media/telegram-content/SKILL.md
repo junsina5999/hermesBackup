@@ -39,6 +39,43 @@ These apply to every post type, not just quote cards:
 5. **End with a question** to invite comments.
 6. **Deliver copy-paste-ready text.** No English commentary or meta-explanation
    wrapped around the post body — the user pastes it straight into the channel.
+7. **Persian-First Lines.** Every line of a post must start with a Persian word
+   (or emoji). Never start a line with English text or a raw URL, as it breaks
+   RTL alignment in many clients.
+
+## Three-Tier Daily Tech Workflow
+
+The channel runs on a three-post-per-day schedule:
+- **Morning (09:00 Tehran):** AI News & Frontier Models. Breakthroughs, new
+  releases, and major launches.
+- **Afternoon (15:30 Tehran):** Free AI Tools & APIs. Genuinely free (no-card)
+  API tiers, free image/video generators, and prompt libraries reframed as lessons.
+- **Evening (20:30 Tehran):** Hidden Gem Apps. Highly practical but
+  lesser-known photo/video editors, system utilities, or mobile tools.
+
+### Structured Post Template (The "Asha" Style)
+
+All tech posts must follow this 8-10 line format:
+```
+💥 [Hook headline with emoji]
+[1 sentence intro setting the stage]
+
+🎯 [Feature 1 / Benefit]
+⚡ [Feature 2 / Benefit]
+🔗 [Feature 3 / Benefit]
+🔒 [Feature 4 / Benefit]
+
+[Punchy conclusion / status]
+@GoldPackFree2
+[Official DIRECT link URL]
+```
+Note: Emojis are allowed at the start of lines, but the first *text* must be Persian.
+
+### Motivational Quotes
+
+- **Morning (08:00 Tehran):** One profound quote from a thinker/leader/artist.
+- **Format:** Emoji + Quote + Author (brief identifier). No translation notes or book blurbs.
+- **Tone:** Human, warm, and poetic. Avoid cliches; prioritize depth.
 
 ## Pipeline
 
@@ -156,13 +193,54 @@ def wrap_persian_text(text, max_chars=22):
 - Also provide the text version (copy-pasteable) as a separate block
 - Offer multiple image variants with different color palettes for variety
 
-## Pitfalls
+### Pitfalls
 
 1. **RTL text rendering** — Never skip `arabic_reshaper` + `bidi`. Without it, Persian letters appear disconnected and backward. This is the #1 mistake.
 2. **Font availability** — Vazirmatn fonts must be downloaded before running. Check with `ls fonts/Vazirmatn-*.ttf`.
 3. **Small file sizes** — If generated PNGs are under 50KB for 1080×1080, something went wrong (likely text not rendering). Check font loading.
 4. **Text overflow** — Persian text with many characters can overflow the image. Use `wrap_persian_text()` and adjust `max_chars` based on total quote length.
 5. **Gradient banding** — For smooth gradients, use 1-pixel-wide horizontal lines rather than large filled rectangles.
+
+### Telegram Channel Cloning (Telethon)
+
+To clone an entire channel's history to another channel without forward tags (preserving media on Telegram servers, no download/upload):
+
+```python
+import asyncio
+from telethon import TelegramClient
+
+api_id = YOUR_API_ID
+api_hash = 'YOUR_API_HASH'
+source = 'source_channel_username'
+target = 'target_channel_username'
+
+client = TelegramClient('session_name', api_id, api_hash)
+
+async def clone_channel(min_id=0):
+    await client.start()
+    async for msg in client.iter_messages(source, min_id=min_id, reverse=True):
+        try:
+            await client.send_message(target, msg)
+            # Progress tracking
+            with open('last_copied_id.txt', 'w') as f:
+                f.write(str(msg.id))
+            await asyncio.sleep(0.5)  # Rate limit safety
+        except Exception as e:
+            print(f"Error {msg.id}: {e}")
+            await asyncio.sleep(5)
+
+with client:
+    client.loop.run_until_complete(clone_channel(min_id=LAST_COPIED_ID))
+```
+
+**Key points:**
+- `send_message(target, message)` = server-side copy (no download, preserves file_ids)
+- `min_id=N` starts from message N+1 (exclusive). Use last copied ID.
+- `reverse=True` processes oldest→newest (chronological order).
+- Save `last_copied_id.txt` every ~10 messages for resumability.
+- **CRITICAL**: Don't name the script `copy.py` — conflicts with Python's `copy` stdlib module. Use `tg_copy.py`, `clone.py`, etc.
+- Rate limit: 0.5-1s delay between messages to avoid FloodWait.
+- If interrupted, re-run with same `min_id` from saved file.
 
 ## Verification
 
@@ -181,7 +259,7 @@ Telegram Bot API via a `post_to_channel.py` helper script. This avoids the
 `Cronjob Response: ...` header and `To stop or manage this job...` footer that
 Hermes appends to cron deliveries.
 
-Setup pattern (do once):
+**Setup pattern (do once):**
 1. Create bot via @BotFather
 2. Add bot as admin of the channel (Post Messages only)
 3. Get channel chat_id via `getChat?chat_id=@channelusername` → `result.id`
@@ -195,10 +273,15 @@ The message is automatically wrapped with:
 - Header: `Cronjob Response: <job_name> (job_id: <id>)`
 - Footer: `To stop or manage this job, send me a new message...`
 
-User has explicitly asked these be removed. Workaround: use direct bot API
-delivery instead. This means:
-- Cron job produces the content (writes to a file or outputs text)
-- A second step (or the cron script) calls the Bot API to post clean
+**Removing Headers/Footers:**
+User has explicitly asked these be removed. To deliver clean posts via cron:
+1. **Built-in setting:** Run `hermes config set cron.wrap_response false`.
+   This is the cleanest method and applies globally to all cron jobs.
+2. **Bot API Fallback:** If the built-in setting is insufficient, use the
+   `post_to_channel.py` script inside the cron prompt.
+3. **Manual Review:** For high-quality channels, deliver to the user's origin
+   session instead (`deliver: "origin"`). The agent generates the draft, and
+   the user copy-pastes manually.
 
 ### Cron → channel workflow (header-free)
 

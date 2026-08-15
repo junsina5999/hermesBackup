@@ -4,12 +4,10 @@ Cron prompt validator blocks invisible Unicode (U+200C ZWNJ) common in Persian/A
 §
 Agent Reach at /data/workspace/Agent-Reach (pip install -e). Zero-config: GitHub, YouTube, V2EX, RSS, Jina Reader, Bilibili. Twitter/Reddit/XHS/FB/IG need cookies. `agent-reach doctor`.
 §
-Tech digest cron job 6e3a37165521 delivers a Persian tech-news post daily at 09:00 Tehran (30 5 * * * UTC). Repeat-protection log lives at /data/workspace/tech-channel-history.txt. Workflow details in telegram-content skill, references/tech-news-curation.md.
-§
 Host: /opt/venv (in PATH), /opt/hermes-agent; `hermes` not on PATH (export PATH=/opt/venv/bin:$PATH). /data ~434MB fills up (npm ENOSPC); clear .cache. mcp==1.29.0 pinned (2.0 breaks HTTP). Exa.ai configured with API key + agent_run. Cron jobs use openai-api + opencode via 9router.
-§
-User runs Persian Telegram channels: @abasmanesh222 (motivational/inspirational based on Seyed Hossein Abbasmanesh teachings) and @GoldPackFree2. Bot: @GoldPackFree_PosterBot, chat_id: -1001378242402. Post script: /data/workspace/post_to_channel.py. Cron posts: no header/footer, use Bot API directly. Style: no markdown headers, minimal bold, natural Persian tone. User has audio files from Abbasmanesh to post daily (one per day). Workflow: user sends audio → agent writes caption + generates cover → user posts manually. Always preview text before generating images.
 §
 User prefers quick direct answers, gets frustrated by slow responses. Wants practical content for general Persian audience. No excessive research rounds.
 §
 Premium image gen: /data/workspace/premium_generator.py, output: /data/workspace/posts_premium/. Palettes: luxury_gold, royal_purple, emerald_night. Vazirmatn font in /data/workspace/fonts/. Telegram format: short text on image + secondary text in caption. User is on Windows (PowerShell). API proxy: AgentRouter (agentrouter.org), default model set to geminiM.
+§
+User runs Persian Telegram channel @GoldPackFree2. Bot: @GoldPackFree_PosterBot (-1001378242402). 3 scheduled channel posts per day (morning AI news, afternoon free AI APIs/tools, evening hidden-gem photo/video apps), plus a morning motivational quote. Style: punchy hook + 1 sentence intro + 4 emoji bullets + conclusion + handle + direct URL. Every line must start with a Persian word (no leading English or raw URLs at the start of lines). Model: geminiM on openai-api (9router) with opencode fallback on openai-api.
