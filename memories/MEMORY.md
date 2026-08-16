@@ -11,3 +11,5 @@ User prefers quick direct answers, gets frustrated by slow responses. Wants prac
 Premium image gen: /data/workspace/premium_generator.py, output: /data/workspace/posts_premium/. Palettes: luxury_gold, royal_purple, emerald_night. Vazirmatn font in /data/workspace/fonts/. Telegram format: short text on image + secondary text in caption. User is on Windows (PowerShell). API proxy: AgentRouter (agentrouter.org), default model set to geminiM.
 §
 User runs Persian Telegram channel @GoldPackFree2. Bot: @GoldPackFree_PosterBot (-1001378242402). 3 scheduled channel posts per day (morning AI news, afternoon free AI APIs/tools, evening hidden-gem photo/video apps), plus a morning motivational quote. Style: punchy hook + 1 sentence intro + 4 emoji bullets + conclusion + handle + direct URL. Every line must start with a Persian word (no leading English or raw URLs at the start of lines). Model: geminiM on openai-api (9router) with opencode fallback on openai-api.
+§
+Parse.bot MCP server configured with API key (X-API-Key: ${PARSE_BOT_API_KEY}). Multiai2 provider (Anthropic architecture) on 9Router is active and operational for combo models.
