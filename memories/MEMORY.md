@@ -12,4 +12,4 @@ Premium image gen: /data/workspace/premium_generator.py, output: /data/workspace
 §
 User runs Persian Telegram channel @GoldPackFree2. Bot: @GoldPackFree_PosterBot (-1001378242402). 3 scheduled channel posts per day (morning AI news, afternoon free AI APIs/tools, evening hidden-gem photo/video apps), plus a morning motivational quote. Style: punchy hook + 1 sentence intro + 4 emoji bullets + conclusion + handle + direct URL. Every line must start with a Persian word (no leading English or raw URLs at the start of lines). Model: geminiM on openai-api (9router) with opencode fallback on openai-api.
 §
-Parse.bot MCP server configured with API key (X-API-Key: ${PARSE_BOT_API_KEY}). Multiai2 provider (Anthropic architecture) on 9Router is active and operational for combo models.
+Parse.bot MCP server configured with API key. Multiai2 provider on 9Router is active for combo models.
