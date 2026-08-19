@@ -1,6 +1,12 @@
 model:
   default: geminiM
   provider: openai-api
+  aliases:
+    mimoM: openai-api/mimoM
+    opencode: openai-api/opencode
+    geminiM: openai-api/geminiM
+    ClaudeM: openai-api/ClaudeM
+    QwenM: openai-api/QwenM
 terminal:
   backend: local
   cwd: /data/workspace
