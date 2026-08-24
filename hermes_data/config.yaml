@@ -1,0 +1,67 @@
+model:
+  default: geminiM
+  provider: openai-api
+  aliases:
+    mimoM: openai-api/mimoM
+    opencode: openai-api/opencode
+    geminiM: openai-api/geminiM
+    ClaudeM: openai-api/ClaudeM
+    QwenM: openai-api/QwenM
+    MimoM: openai-api/MimoM
+    opencodeM: openai-api/opencodeM
+terminal:
+  backend: local
+  cwd: /data/workspace
+  timeout: 180
+compression:
+  enabled: true
+  threshold: 0.85
+command_allowlist:
+  - script execution via -e/-c flag
+cron:
+  wrap_response: false
+onboarding:
+  seen:
+    busy_input_prompt: true
+    profile_build_offered: true
+_config_version: 33
+custom_providers:
+  - base_url: https://gorouter.app/v1
+    key_env: HERMES_CUSTOM_GOROUTER_APP_API_KEY
+    model: claude-opus-5-thinking
+    models:
+      claude-opus-5-thinking:
+        context_length: 1000000
+    name: gorouter.app
+  - base_url: https://api.agentrouter.org/v1
+    key_env: AGENT_ROUTER_TOKEN
+    model: geminiM
+    models:
+      geminiM:
+        context_length: 1000000
+      Qwen: '{"context_length": 32768}'
+    name: AgentRouter
+mcp_servers:
+  exa:
+    enabled: true
+    headers:
+      Authorization: Bearer ${MCP_EXA_API_KEY}
+    url: https://mcp.exa.ai/mcp?tools=web_search_exa,web_fetch_exa,web_search_advanced_exa,agent_run
+  ticktick:
+    enabled: true
+    headers:
+      Authorization: Bearer ${MCP_TICKTICK_API_KEY}
+    url: https://mcp.ticktick.com
+  parse:
+    enabled: true
+    url: https://api.parse.bot/mcp
+    headers:
+      X-API-Key: ${PARSE_BOT_API_KEY}
+platforms:
+  telegram:
+    enabled: true
+    home_channel:
+      chat_id: '52615254'
+      name: ɢɦ
+      platform: telegram
+      user_id: '52615254'
