@@ -22,17 +22,17 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 31
+        "completed": 32
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:58:23.705132+00:00",
-      "next_run_at": "2026-08-25T03:00:00+00:00",
-      "last_run_at": "2026-08-24T05:28:06.862204+00:00",
-      "last_status": "error",
-      "last_error": "Script exited with code 1\nstderr:\nCloning into '/tmp/hermes_backup_repo'...\nremote: error: GH013: Repository rule violations found for refs/heads/main.        \nremote: \nremote: - GITHUB PUSH PROTECTION        \nremote:   —————————————————————————————————————————        \nremote:     Resolve the following violations before pushing again        \nremote: \nremote:     - Push cannot contain secrets        \nremote: \nremote:             \nremote:      (?) Learn how to resolve a blocked push        \nremote:      https://docs.github.com/code-security/secret-scanning/working-with-secret-scanning-and-push-protection/working-with-push-protection-from-the-command-line#resolving-a-blocked-push        \nremote:             \nremote:      (?) This repository does not have Secret Scanning enabled, but is eligible. Enable Secret Scanning to view and manage detected secrets.        \nremote:      Visit the repository settings page, https://github.com/junsina5999/hermesBackup/settings/security_analysis        \nremote:             \nremote:             \nremote:       —— GitHub Personal Access Token ——————————————————————        \nremote:        locations:        \nremote:          - commit: 9240b4fce726fbf763c5bcdbff984c95f9efa455        \nremote:            path: hermes_data/state.db:17973        \nremote:             \nremote:        (?) To push, remove secret from commit(s) or follow this URL to allow the secret.        \nremote:        https://github.com/junsina5999/hermesBackup/security/secret-scanning/unblock-secret/3ILgVTldTxmkqsS3CeH2k6gFR3W        \nremote:             \nremote: \nremote: \nTo https://github.com/junsina5999/hermesBackup.git\n ! [remote rejected] main -> main (push declined due to repository rule violations)\nerror: failed to push some refs to 'https://github.com/junsina5999/hermesBackup.git'\nstdout:\n=== شروع فرآیند بکاپ Hermes ===\nMon Aug 24 05:27:58 UTC 2026\nدر حال ایجاد بکاپ محلی فشرده...\nبکاپ محلی با موفقیت ایجاد شد: /data/backups/hermes_backup_20260824_052758.tar.gz\nدر حال تلاش برای اتصال و آپلود روی GitHub...\n[main 9240b4f] Auto Backup: 2026-08-24 05:28:01 UTC\n 598 files changed, 151996 insertions(+)\n create mode 100644 hermes_data/.env\n create mode 100644 hermes_data/.hermes_history\n create mode 100644 hermes_data/.initialized\n create mode 100644 hermes_data/.skills_prompt_snapshot.json\n create mode 100644 hermes_data/.update_check\n create mode 100644 hermes_data/SOUL.md\n create mode 100644 hermes_data/auth.json\n create mode 100755 hermes_data/bin/tirith\n create mode 100644 hermes_data/channel_directory.json\n create mode 100644 hermes_data/config.yaml\n create mode 100644 hermes_data/cron/catch_up_occurrences\n create mode 100644 hermes_data/cron/executions.db\n create mode 100644 hermes_data/cron/jobs.json\n create mode 100644 hermes_data/cron/notepad.db\n create mode 100644 hermes_data/cron/output/00c53e258c8a/2026-08-23_03-00-53.md\n create mode 100644 hermes_data/cron/output/00c53e258c8a/2026-08-23_03-40-27.md\n create mode 100644 hermes_data/cron/output/00c53e258c8a/2026-08-24_03-00-15.md\n create mode 100644 hermes_data/cron/output/00c53e258c8a/2026-08-24_05-11-50.md\n create mode 100644 hermes_data/cron/output/00c53e258c8a_20260824_051150.txt\n create mode 100644 hermes_data/cron/output/123161d099ee/2026-08-22_18-30-14.md\n create mode 100644 hermes_data/cron/output/123161d099ee/2026-08-23_18-30-31.md\n create mode 100644 hermes_data/cron/output/4d6a569725ca/2026-08-22_15-37-27.md\n create mode 100644 hermes_data/cron/output/4d6a569725ca/2026-08-23_04-30-23.md\n create mode 100644 hermes_data/cron/output/4d6a569725ca/2026-08-24_04-30-47.md\n create mode 100644 hermes_data/cron/output/6069d41f9a01/2026-08-22_15-37-31.md\n create mode 100644 hermes_data/cron/output/6069d41f9a01/2026-08-23_04-30-23.md\n create mode 100644 hermes_data/cron/output/6069d41f9a01/2026-08-24_04-30-47.md\n create mode 100644 hermes_data/cron/output/83df173842f4/2026-08-22_15-37-27.md\n create mode 100644 hermes_data/cron/output/83df173842f4/2026-08-23_05-30-36.md\n create mode 100644 hermes_data/cron/output/86e02f205caa/2026-08-22_17-00-27.md\n create mode 100644 hermes_data/cron/output/86e02f205caa/2026-08-23_17-00-11.md\n create mode 100644 hermes_data/cron/output/d0f05ac07414/2026-08-22_15-37-31.md\n create mode 100644 hermes_data/cron/output/d0f05ac07414/2026-08-23_12-30-10.md\n create mode 100644 hermes_data/cron/output/d7ae34d23f47/2026-08-22_15-37-27.md\n create mode 100644 hermes_data/cron/output/d7ae34d23f47/2026-08-23_08-00-57.md\n create mode 100644 hermes_data/cron/output/e5f0cfaaef60/2026-08-22_15-37-27.md\n create mode 100644 hermes_data/cron/output/e5f0cfaaef60/2026-08-23_12-01-04.md\n create mode 100644 hermes_data/cron/ticker_heartbeat\n create mode 100644 hermes_data/cron/ticker_last_success\n create mode 100644 hermes_data/cron/usage_audit.jsonl\n create mode 100644 hermes_data/gateway-starts.log\n create mode 100644 hermes_data/gateway_state.json\n create mode 100644 hermes_data/kanban.db\n create mode 100644 hermes_data/memories/MEMORY.md\n create mode 100644 hermes_data/memories/USER.md\n create mode 100644 hermes_data/models_dev_cache.etag\n create mode 100644 hermes_data/models_dev_cache.json\n create mode 100644 hermes_data/ollama_cloud_models_cache.json\n create mode 100644 hermes_data/provider_models_cache.json\n create mode 100755 hermes_data/scripts/hermes-backup.sh\n create mode 100644 hermes_data/sessions/request_dump_20260821_211203_5121376f_20260821_211210_932509.json\n create mode 100644 hermes_data/sessions/request_dump_20260821_211203_5121376f_20260821_211254_918818.json\n create mode 100644 hermes_data/sessions/request_dump_20260821_211203_5121376f_20260822_162204_332478.json\n create mode 100644 hermes_data/sessions/request_dump_20260821_211203_5121376f_20260822_162427_162352.json\n create mode 100644 hermes_data/sessions/request_dump_20260821_211203_5121376f_20260822_170322_544138.json\n create mode 100644 hermes_data/sessions/request_dump_20260822_140526_9b6d15_20260822_140744_027449.json\n create mode 100644 hermes_data/sessions/request_dump_20260822_140526_9b6d15_20260822_141232_429388.json\n create mode 100644 hermes_data/sessions/request_dump_20260822_140941_2957f09f_20260822_140953_549423.json\n create mode 100644 hermes_data/sessions/request_dump_20260822_171405_073b69_20260822_171419_334445.json\n create mode 100644 hermes_data/sessions/request_dump_20260822_171421_f525ae_20260822_171434_869334.json\n create mode 100644 hermes_data/sessions/request_dump_20260822_171600_f2cf6f_20260822_171612_603587.json\n create mode 100644 hermes_data/sessions/request_dump_20260822_171802_457591_20260822_171817_679561.json\n create mode 100644 hermes_data/sessions/request_dump_20260822_180730_f38a1f80_20260823_174310_064330.json\n create mode 100644 hermes_data/sessions/request_dump_cron_123161d099ee_20260822_183000_20260822_183014_203510.json\n create mode 100644 hermes_data/sessions/request_dump_cron_123161d099ee_20260823_183020_20260823_183030_980529.json\n create mode 100644 hermes_data/sessions/request_dump_cron_4d6a569725ca_20260822_153725_20260822_153726_858927.json\n create mode 100644 hermes_data/sessions/request_dump_cron_4d6a569725ca_20260823_043013_20260823_043023_662271.json\n create mode 100644 hermes_data/sessions/request_dump_cron_4d6a569725ca_20260824_043036_20260824_043046_958477.json\n create mode 100644 hermes_data/sessions/request_dump_cron_6069d41f9a01_20260822_153725_20260822_153731_147623.json\n create mode 100644 hermes_data/sessions/request_dump_cron_6069d41f9a01_20260823_043013_20260823_043023_415359.json\n create mode 100644 hermes_data/sessions/request_dump_cron_6069d41f9a01_20260824_043036_20260824_043047_014904.json\n create mode 100644 hermes_data/sessions/request_dump_cron_83df173842f4_20260822_153725_20260822_153727_619574.json\n create mode 100644 hermes_data/sessions/request_dump_cron_83df173842f4_20260823_053026_20260823_053036_055742.json\n create mode 100644 hermes_data/sessions/request_dump_cron_86e02f205caa_20260822_170026_20260822_170027_124577.json\n create mode 100644 hermes_data/sessions/request_dump_cron_86e02f205caa_20260823_170001_20260823_170011_478383.json\n create mode 100644 hermes_data/sessions/request_dump_cron_d0f05ac07414_20260822_153725_20260822_153731_221771.json\n create mode 100644 hermes_data/sessions/request_dump_cron_d0f05ac07414_20260823_123000_20260823_123010_721131.json\n create mode 100644 hermes_data/sessions/request_dump_cron_d7ae34d23f47_20260822_153725_20260822_153727_114715.json\n create mode 100644 hermes_data/sessions/request_dump_cron_d7ae34d23f47_20260823_080047_20260823_080057_774036.json\n create mode 100644 hermes_data/sessions/request_dump_cron_e5f0cfaaef60_20260822_153725_20260822_153727_494925.json\n create mode 100644 hermes_data/sessions/request_dump_cron_e5f0cfaaef60_20260823_120054_20260823_120104_479253.json\n create mode 100644 hermes_data/sessions/sessions.json\n create mode 100644 hermes_data/skills/.bundled_manifest\n create mode 100644 hermes_data/skills/.curator_state\n create mode 100644 hermes_data/skills/.usage.json\n create mode 100644 hermes_data/skills/apple/DESCRIPTION.md\n create mode 100644 hermes_data/skills/apple/apple-notes/SKILL.md\n create mode 100644 hermes_data/skills/apple/apple-reminders/SKILL.md\n create mode 100644 hermes_data/skills/apple/findmy/SKILL.md\n create mode 100644 hermes_data/skills/apple/imessage/SKILL.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/DESCRIPTION.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/claude-code/SKILL.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/codex/SKILL.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/computer-use/SKILL.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/SKILL.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/background-systems.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/cli-reference.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/configuration.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/contributor-guide.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/delegate-task-concurrency-diagnosis.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/desktop-plugins.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/native-mcp.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/petdex.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/portal-auth-for-third-party-apps.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/project-context-files.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/providers-and-models.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/security-privacy.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/slash-commands.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/themes.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/troubleshooting.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/tui-widgets.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/webhooks.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/references/windows-quirks.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/templates/clock.mjs\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/templates/plugin.js\n create mode 100644 hermes_data/skills/autonomous-ai-agents/hermes-agent/templates/skin.yaml\n create mode 100644 hermes_data/skills/autonomous-ai-agents/merge-reconciler/SKILL.md\n create mode 100644 hermes_data/skills/autonomous-ai-agents/opencode/SKILL.md\n create mode 100644 hermes_data/skills/creative/DESCRIPTION.md\n create mode 100644 hermes_data/skills/creative/ai-image-prompt-authoring/SKILL.md\n create mode 100644 hermes_data/skills/creative/ai-image-prompt-authoring/references/identity-preserving-face-swap.md\n create mode 100644 hermes_data/skills/creative/architecture-diagram/SKILL.md\n create mode 100644 hermes_data/skills/creative/architecture-diagram/templates/template.html\n create mode 100644 hermes_data/skills/creative/ascii-art/SKILL.md\n create mode 100644 hermes_data/skills/creative/ascii-video/README.md\n create mode 100644 hermes_data/skills/creative/ascii-video/SKILL.md\n create mode 100644 hermes_data/skills/creative/ascii-video/references/architecture.md\n create mode 100644 hermes_data/skills/creative/ascii-video/references/composition.md\n create mode 100644 hermes_data/skills/creative/ascii-video/references/effects.md\n create mode 100644 hermes_data/skills/creative/ascii-video/references/inputs.md\n create mode 100644 hermes_data/skills/creative/ascii-video/references/optimization.md\n create mode 100644 hermes_data/skills/creative/ascii-video/references/scenes.md\n create mode 100644 hermes_data/skills/creative/ascii-video/references/shaders.md\n create mode 100644 hermes_data/skills/creative/ascii-video/references/troubleshooting.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/PORT_NOTES.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/SKILL.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/analysis-framework.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/base-prompt.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/bento-grid.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/binary-comparison.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/bridge.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/circular-flow.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/comic-strip.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/comparison-matrix.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/dashboard.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/dense-modules.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/funnel.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/hierarchical-layers.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/hub-spoke.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/iceberg.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/isometric-map.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/jigsaw.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/linear-progression.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/periodic-table.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/story-mountain.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/structural-breakdown.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/tree-branching.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/venn-diagram.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/layouts/winding-roadmap.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/structured-content-template.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/aged-academia.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/bold-graphic.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/chalkboard.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/claymation.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/corporate-memphis.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/craft-handmade.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/cyberpunk-neon.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/hand-drawn-edu.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/ikea-manual.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/kawaii.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/knolling.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/lego-brick.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/morandi-journal.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/origami.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/pixel-art.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/pop-laboratory.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/retro-pop-grid.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/storybook-watercolor.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/subway-map.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/technical-schematic.md\n create mode 100644 hermes_data/skills/creative/baoyu-infographic/references/styles/ui-wireframe.md\n create mode 100644 hermes_data/skills/creative/claude-design/SKILL.md\n create mode 100644 hermes_data/skills/creative/comfyui/SKILL.md\n create mode 100644 hermes_data/skills/creative/comfyui/references/official-cli.md\n create mode 100644 hermes_data/skills/creative/comfyui/references/rest-api.md\n create mode 100644 hermes_data/skills/creative/comfyui/references/template-integrity.md\n create mode 100644 hermes_data/skills/creative/comfyui/references/workflow-format.md\n create mode 100644 hermes_data/skills/creative/comfyui/scripts/_common.py\n create mode 100755 hermes_data/skills/creative/comfyui/scripts/auto_fix_deps.py\n create mode 100755 hermes_data/skills/creative/comfyui/scripts/check_deps.py\n create mode 100755 hermes_data/skills/creative/comfyui/scripts/comfyui_setup.sh\n create mode 100755 hermes_data/skills/creative/comfyui/scripts/extract_schema.py\n create mode 100755 hermes_data/skills/creative/comfyui/scripts/fetch_logs.py\n create mode 100755 hermes_data/skills/creative/comfyui/scripts/hardware_check.py\n create mode 100755 hermes_data/skills/creative/comfyui/scripts/health_check.py\n create mode 100755 hermes_data/skills/creative/comfyui/scripts/run_batch.py\n create mode 100755 hermes_data/skills/creative/comfyui/scripts/run_workflow.py\n create mode 100755 hermes_data/skills/creative/comfyui/scripts/ws_monitor.py\n create mode 100644 hermes_data/skills/creative/comfyui/tests/README.md\n create mode 100644 hermes_data/skills/creative/comfyui/tests/conftest.py\n create mode 100644 hermes_data/skills/creative/comfyui/tests/pytest.ini\n create mode 100644 hermes_data/skills/creative/comfyui/tests/test_check_deps.py\n create mode 100644 hermes_data/skills/creative/comfyui/tests/test_cloud_integration.py\n create mode 100644 hermes_data/skills/creative/comfyui/tests/test_common.py\n create mode 100644 hermes_data/skills/creative/comfyui/tests/test_extract_schema.py\n create mode 100644 hermes_data/skills/creative/comfyui/tests/test_run_workflow.py\n create mode 100644 hermes_data/skills/creative/comfyui/workflows/README.md\n create mode 100644 hermes_data/skills/creative/comfyui/workflows/animatediff_video.json\n create mode 100644 hermes_data/skills/creative/comfyui/workflows/flux_dev_txt2img.json\n create mode 100644 hermes_data/skills/creative/comfyui/workflows/sd15_txt2img.json\n create mode 100644 hermes_data/skills/creative/comfyui/workflows/sdxl_img2img.json\n create mode 100644 hermes_data/skills/creative/comfyui/workflows/sdxl_inpaint.json\n create mode 100644 hermes_data/skills/creative/comfyui/workflows/sdxl_txt2img.json\n create mode 100644 hermes_data/skills/creative/comfyui/workflows/upscale_4x.json\n create mode 100644 hermes_data/skills/creative/comfyui/workflows/wan_video_t2v.json\n create mode 100644 hermes_data/skills/creative/design-md/SKILL.md\n create mode 100644 hermes_data/skills/creative/design-md/templates/starter.md\n create mode 100644 hermes_data/skills/creative/excalidraw/SKILL.md\n create mode 100644 hermes_data/skills/creative/excalidraw/references/colors.md\n create mode 100644 hermes_data/skills/creative/excalidraw/references/dark-mode.md\n create mode 100644 hermes_data/skills/creative/excalidraw/references/examples.md\n create mode 100644 hermes_data/skills/creative/excalidraw/scripts/upload.py\n create mode 100644 hermes_data/skills/creative/humanizer/LICENSE\n create mode 100644 hermes_data/skills/creative/humanizer/SKILL.md\n create mode 100644 hermes_data/skills/creative/manim-video/README.md\n create mode 100644 hermes_data/skills/creative/manim-video/SKILL.md\n create mode 100644 hermes_data/skills/creative/manim-video/references/animation-design-thinking.md\n create mode 100644 hermes_data/skills/creative/manim-video/references/animations.md\n create mode 100644 hermes_data/skills/creative/manim-video/references/camera-and-3d.md\n create mode 100644 hermes_data/skills/creative/manim-video/references/decorations.md\n create mode 100644 hermes_data/skills/creative/manim-video/references/equations.md\n create mode 100644 hermes_data/skills/creative/manim-video/references/graphs-and-data.md\n create mode 100644 hermes_data/skills/creative/manim-video/references/mobjects.md\n create mode 100644 hermes_data/skills/creative/manim-video/references/paper-explainer.md\n create mode 100644 hermes_data/skills/creative/manim-video/references/production-quality.md\n create mode 100644 hermes_data/skills/creative/manim-video/references/rendering.md\n create mode 100644 hermes_data/skills/creative/manim-video/references/scene-planning.md\n create mode 100644 hermes_data/skills/creative/manim-video/references/troubleshooting.md\n create mode 100644 hermes_data/skills/creative/manim-video/references/updaters-and-trackers.md\n create mode 100644 hermes_data/skills/creative/manim-video/references/visual-design.md\n create mode 100755 hermes_data/skills/creative/manim-video/scripts/setup.sh\n create mode 100644 hermes_data/skills/creative/motivational-content-generation/SKILL.md\n create mode 100644 hermes_data/skills/creative/motivational-content-generation/scripts/premium_generator.py\n create mode 100644 hermes_data/skills/creative/p5js/README.md\n create mode 100644 hermes_data/skills/creative/p5js/SKILL.md\n create mode 100644 hermes_data/skills/creative/p5js/references/animation.md\n create mode 100644 hermes_data/skills/creative/p5js/references/color-systems.md\n create mode 100644 hermes_data/skills/creative/p5js/references/core-api.md\n create mode 100644 hermes_data/skills/creative/p5js/references/export-pipeline.md\n create mode 100644 hermes_data/skills/creative/p5js/references/interaction.md\n create mode 100644 hermes_data/skills/creative/p5js/references/shapes-and-geometry.md\n create mode 100644 hermes_data/skills/creative/p5js/references/troubleshooting.md\n create mode 100644 hermes_data/skills/creative/p5js/references/typography.md\n create mode 100644 hermes_data/skills/creative/p5js/references/visual-effects.md\n create mode 100644 hermes_data/skills/creative/p5js/references/webgl-and-3d.md\n create mode 100755 hermes_data/skills/creative/p5js/scripts/export-frames.js\n create mode 100755 hermes_data/skills/creative/p5js/scripts/render.sh\n create mode 100755 hermes_data/skills/creative/p5js/scripts/serve.sh\n create mode 100755 hermes_data/skills/creative/p5js/scripts/setup.sh\n create mode 100644 hermes_data/skills/creative/p5js/templates/viewer.html\n create mode 100644 hermes_data/skills/creative/persian-quote-images/SKILL.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/SKILL.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/airbnb.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/airtable.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/apple.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/bmw.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/cal.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/claude.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/clay.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/clickhouse.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/cohere.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/coinbase.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/composio.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/cursor.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/elevenlabs.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/expo.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/figma.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/framer.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/hashicorp.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/ibm.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/intercom.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/kraken.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/linear.app.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/lovable.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/minimax.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/mintlify.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/miro.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/mistral.ai.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/mongodb.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/notion.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/nvidia.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/ollama.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/opencode.ai.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/pinterest.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/posthog.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/raycast.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/replicate.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/resend.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/revolut.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/runwayml.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/sanity.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/sentry.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/spacex.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/spotify.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/stripe.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/supabase.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/superhuman.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/together.ai.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/uber.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/vercel.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/voltagent.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/warp.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/webflow.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/wise.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/x.ai.md\n create mode 100644 hermes_data/skills/creative/popular-web-designs/templates/zapier.md\n create mode 100644 hermes_data/skills/creative/pretext/SKILL.md\n create mode 100644 hermes_data/skills/creative/pretext/references/patterns.md\n create mode 100644 hermes_data/skills/creative/pretext/templates/donut-orbit.html\n create mode 100644 hermes_data/skills/creative/pretext/templates/hello-orb-flow.html\n create mode 100644 hermes_data/skills/creative/sketch/SKILL.md\n create mode 100644 hermes_data/skills/creative/songwriting-and-ai-music/SKILL.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/SKILL.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/3d-scene.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/animation.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/audio-reactive.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/dat-scripting.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/external-data.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/geometry-comp.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/glsl.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/layout-compositor.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/mcp-tools.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/midi-osc.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/network-patterns.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/operator-tips.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/operators.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/panel-ui.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/particles.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/pitfalls.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/postfx.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/projection-mapping.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/python-api.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/replicator.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/references/troubleshooting.md\n create mode 100644 hermes_data/skills/creative/touchdesigner-mcp/scripts/setup.sh\n create mode 100644 hermes_data/skills/devops/sdlc-review/SKILL.md\n create mode 100644 hermes_data/skills/email/DESCRIPTION.md\n create mode 100644 hermes_data/skills/email/email-inbox-triage/SKILL.md\n create mode 100644 hermes_data/skills/email/himalaya/SKILL.md\n create mode 100644 hermes_data/skills/email/himalaya/references/configuration.md\n create mode 100644 hermes_data/skills/email/himalaya/references/message-composition.md\n create mode 100644 hermes_data/skills/github/DESCRIPTION.md\n create mode 100644 hermes_data/skills/github/codebase-inspection/SKILL.md\n create mode 100644 hermes_data/skills/github/github-auth/SKILL.md\n create mode 100755 hermes_data/skills/github/github-auth/scripts/gh-env.sh\n create mode 100644 hermes_data/skills/github/github-auth/scripts/git-credential-token.py\n create mode 100644 hermes_data/skills/github/github-code-review/SKILL.md\n create mode 100644 hermes_data/skills/github/github-code-review/references/review-output-template.md\n create mode 100644 hermes_data/skills/github/github-issue-to-pr/SKILL.md\n create mode 100644 hermes_data/skills/github/github-issues/SKILL.md\n create mode 100644 hermes_data/skills/github/github-issues/templates/bug-report.md\n create mode 100644 hermes_data/skills/github/github-issues/templates/feature-request.md\n create mode 100644 hermes_data/skills/github/github-pr-workflow/SKILL.md\n create mode 100644 hermes_data/skills/github/github-pr-workflow/references/ci-troubleshooting.md\n create mode 100644 hermes_data/skills/github/github-pr-workflow/references/conventional-commits.md\n create mode 100644 hermes_data/skills/github/github-pr-workflow/templates/pr-body-bugfix.md\n create mode 100644 hermes_data/skills/github/github-pr-workflow/templates/pr-body-feature.md\n create mode 100644 hermes_data/skills/github/github-repo-management/SKILL.md\n create mode 100644 hermes_data/skills/github/github-repo-management/references/github-api-cheatsheet.md\n create mode 100644 hermes_data/skills/hermes/cron-orchestration/SKILL.md\n create mode 100644 hermes_data/skills/media/DESCRIPTION.md\n create mode 100644 hermes_data/skills/media/gif-search/SKILL.md\n create mode 100644 hermes_data/skills/media/songsee/SKILL.md\n create mode 100644 hermes_data/skills/media/youtube-content/SKILL.md\n create mode 100644 hermes_data/skills/media/youtube-content/references/output-formats.md\n create mode 100644 hermes_data/skills/media/youtube-content/scripts/fetch_transcript.py\n create mode 100644 hermes_data/skills/mlops/DESCRIPTION.md\n create mode 100644 hermes_data/skills/mlops/evaluation/DESCRIPTION.md\n create mode 100644 hermes_data/skills/mlops/evaluation/evaluating-llms-harness/SKILL.md\n create mode 100644 hermes_data/skills/mlops/evaluation/evaluating-llms-harness/references/api-evaluation.md\n create mode 100644 hermes_data/skills/mlops/evaluation/evaluating-llms-harness/references/benchmark-guide.md\n create mode 100644 hermes_data/skills/mlops/evaluation/evaluating-llms-harness/references/custom-tasks.md\n create mode 100644 hermes_data/skills/mlops/evaluation/evaluating-llms-harness/references/distributed-eval.md\n create mode 100644 hermes_data/skills/mlops/evaluation/weights-and-biases/SKILL.md\n create mode 100644 hermes_data/skills/mlops/evaluation/weights-and-biases/references/artifacts.md\n create mode 100644 hermes_data/skills/mlops/evaluation/weights-and-biases/references/integrations.md\n create mode 100644 hermes_data/skills/mlops/evaluation/weights-and-biases/references/sweeps.md\n create mode 100644 hermes_data/skills/mlops/huggingface-hub/SKILL.md\n create mode 100644 hermes_data/skills/mlops/inference/DESCRIPTION.md\n create mode 100644 hermes_data/skills/mlops/inference/llama-cpp/SKILL.md\n create mode 100644 hermes_data/skills/mlops/inference/llama-cpp/references/advanced-usage.md\n create mode 100644 hermes_data/skills/mlops/inference/llama-cpp/references/hub-discovery.md\n create mode 100644 hermes_data/skills/mlops/inference/llama-cpp/references/optimization.md\n create mode 100644 hermes_data/skills/mlops/inference/llama-cpp/references/quantization.md\n create mode 100644 hermes_data/skills/mlops/inference/llama-cpp/references/server.md\n create mode 100644 hermes_data/skills/mlops/inference/llama-cpp/references/troubleshooting.md\n create mode 100644 hermes_data/skills/mlops/inference/serving-llms-vllm/SKILL.md\n create mode 100644 hermes_data/skills/mlops/inference/serving-llms-vllm/references/optimization.md\n create mode 100644 hermes_data/skills/mlops/inference/serving-llms-vllm/references/quantization.md\n create mode 100644 hermes_data/skills/mlops/inference/serving-llms-vllm/references/server-deployment.md\n create mode 100644 hermes_data/skills/mlops/inference/serving-llms-vllm/references/troubleshooting.md\n create mode 100644 hermes_data/skills/mlops/models/DESCRIPTION.md\n create mode 100644 hermes_data/skills/note-taking/DESCRIPTION.md\n create mode 100644 hermes_data/skills/note-taking/obsidian/SKILL.md\n create mode 100644 hermes_data/skills/productivity/DESCRIPTION.md\n create mode 100644 hermes_data/skills/productivity/airtable/SKILL.md\n create mode 100644 hermes_data/skills/productivity/box/SKILL.md\n create mode 100644 hermes_data/skills/productivity/box/references/bulk-operations.md\n create mode 100644 hermes_data/skills/productivity/box/references/cli-guide.md\n create mode 100644 hermes_data/skills/productivity/box/references/content-workflows.md\n create mode 100644 hermes_data/skills/productivity/box/references/hubs.md\n create mode 100644 hermes_data/skills/productivity/box/references/oauth-setup.md\n create mode 100644 hermes_data/skills/productivity/box/references/rest-api.md\n create mode 100644 hermes_data/skills/productivity/box/references/sdk-development.md\n create mode 100644 hermes_data/skills/productivity/box/references/search-and-ai.md\n create mode 100644 hermes_data/skills/productivity/box/references/troubleshooting.md\n create mode 100644 hermes_data/skills/productivity/box/references/webhooks-and-events.md\n create mode 100644 hermes_data/skills/productivity/document-to-action-items/SKILL.md\n create mode 100644 hermes_data/skills/productivity/docx/LICENSE\n create mode 100644 hermes_data/skills/productivity/docx/SKILL.md\n create mode 100644 hermes_data/skills/productivity/docx/references/revisions-and-comments.md\n create mode 100644 hermes_data/skills/productivity/docx/scripts/docx_comments.py\n create mode 100644 hermes_data/skills/productivity/docx/scripts/docx_common.py\n create mode 100644 hermes_data/skills/productivity/docx/scripts/docx_create.py\n create mode 100644 hermes_data/skills/productivity/docx/scripts/docx_edit.py\n create mode 100644 hermes_data/skills/productivity/docx/scripts/docx_read.py\n create mode 100644 hermes_data/skills/productivity/docx/scripts/docx_revisions.py\n create mode 100644 hermes_data/skills/productivity/docx/scripts/docx_template.py\n create mode 100644 hermes_data/skills/productivity/docx/scripts/docx_validate.py\n create mode 100644 hermes_data/skills/productivity/docx/tests/test_docx_skill.py\n create mode 100644 hermes_data/skills/productivity/google-workspace/SKILL.md\n create mode 100644 hermes_data/skills/productivity/google-workspace/references/daily-brief.md\n create mode 100644 hermes_data/skills/productivity/google-workspace/references/gmail-search-syntax.md\n create mode 100644 hermes_data/skills/productivity/google-workspace/scripts/_hermes_home.py\n create mode 100644 hermes_data/skills/productivity/google-workspace/scripts/google_api.py\n create mode 100755 hermes_data/skills/productivity/google-workspace/scripts/gws_bridge.py\n create mode 100644 hermes_data/skills/productivity/google-workspace/scripts/setup.py\n create mode 100644 hermes_data/skills/productivity/maps/SKILL.md\n create mode 100644 hermes_data/skills/productivity/maps/scripts/maps_client.py\n create mode 100644 hermes_data/skills/productivity/meeting-action-items/SKILL.md\n create mode 100644 hermes_data/skills/productivity/nano-pdf/SKILL.md\n create mode 100644 hermes_data/skills/productivity/notion/SKILL.md\n create mode 100644 hermes_data/skills/productivity/notion/references/block-types.md\n create mode 100644 hermes_data/skills/productivity/ocr-and-documents/DESCRIPTION.md\n create mode 100644 hermes_data/skills/productivity/ocr-and-documents/SKILL.md\n create mode 100644 hermes_data/skills/productivity/ocr-and-documents/scripts/extract_marker.py\n create mode 100644 hermes_data/skills/productivity/ocr-and-documents/scripts/extract_pymupdf.py\n create mode 100644 hermes_data/skills/productivity/pdf/LICENSE\n create mode 100644 hermes_data/skills/productivity/pdf/SKILL.md\n create mode 100644 hermes_data/skills/productivity/pdf/references/forms.md\n create mode 100644 hermes_data/skills/productivity/pdf/scripts/_raster.py\n create mode 100644 hermes_data/skills/productivity/pdf/scripts/pdf_create.py\n create mode 100644 hermes_data/skills/productivity/pdf/scripts/pdf_fill_form.py\n create mode 100644 hermes_data/skills/productivity/pdf/scripts/pdf_form_layout.py\n create mode 100644 hermes_data/skills/productivity/pdf/scripts/pdf_make_form.py\n create mode 100644 hermes_data/skills/productivity/pdf/scripts/pdf_merge.py\n create mode 100644 hermes_data/skills/productivity/pdf/scripts/pdf_meta.py\n create mode 100644 hermes_data/skills/productivity/pdf/scripts/pdf_page_image.py\n create mode 100644 hermes_data/skills/productivity/pdf/scripts/pdf_read.py\n create mode 100644 hermes_data/skills/productivity/pdf/scripts/pdf_secure.py\n create mode 100644 hermes_data/skills/productivity/pdf/scripts/pdf_split.py\n create mode 100644 hermes_data/skills/productivity/pdf/scripts/pdf_stamp.py\n create mode 100644 hermes_data/skills/productivity/pdf/scripts/pdf_watermark.py\n create mode 100644 hermes_data/skills/productivity/pdf/tests/test_pdf_skill.py\n create mode 100644 hermes_data/skills/productivity/powerpoint/LICENSE\n create mode 100644 hermes_data/skills/productivity/powerpoint/SKILL.md\n create mode 100644 hermes_data/skills/productivity/powerpoint/scripts/pptx_create.py\n create mode 100644 hermes_data/skills/productivity/powerpoint/scripts/pptx_edit.py\n create mode 100644 hermes_data/skills/productivity/powerpoint/scripts/pptx_from_template.py\n create mode 100644 hermes_data/skills/productivity/powerpoint/scripts/pptx_read.py\n create mode 100644 hermes_data/skills/productivity/powerpoint/scripts/pptx_render.py\n create mode 100644 hermes_data/skills/productivity/powerpoint/tests/test_powerpoint_skill.py\n create mode 100644 hermes_data/skills/productivity/product-price-monitor/SKILL.md\n create mode 100644 hermes_data/skills/productivity/session-librarian/SKILL.md\n create mode 100644 hermes_data/skills/productivity/teams-meeting-pipeline/SKILL.md\n create mode 100644 hermes_data/skills/productivity/ticktick-mcp/SKILL.md\n create mode 100644 hermes_data/skills/productivity/ticktick-mcp/references/user-ticktick-data.md\n create mode 100644 hermes_data/skills/productivity/weekly-review-planning/SKILL.md\n create mode 100644 hermes_data/skills/productivity/xlsx/LICENSE\n create mode 100644 hermes_data/skills/productivity/xlsx/SKILL.md\n create mode 100644 hermes_data/skills/productivity/xlsx/references/restructuring.md\n create mode 100644 hermes_data/skills/productivity/xlsx/scripts/csv_to_xlsx.py\n create mode 100644 hermes_data/skills/productivity/xlsx/scripts/xlsx_create.py\n create mode 100644 hermes_data/skills/productivity/xlsx/scripts/xlsx_edit.py\n create mode 100644 hermes_data/skills/productivity/xlsx/scripts/xlsx_read.py\n create mode 100644 hermes_data/skills/productivity/xlsx/scripts/xlsx_recalc.py\n create mode 100644 hermes_data/skills/productivity/xlsx/scripts/xlsx_restructure.py\n create mode 100644 hermes_data/skills/productivity/xlsx/scripts/xlsx_to_csv.py\n create mode 100644 hermes_data/skills/productivity/xlsx/tests/test_xlsx_skill.py\n create mode 100644 hermes_data/skills/research/DESCRIPTION.md\n create mode 100644 hermes_data/skills/research/agent-reach/SKILL.md\n create mode 100644 hermes_data/skills/research/agent-reach/references/career.md\n create mode 100644 hermes_data/skills/research/agent-reach/references/dev.md\n create mode 100644 hermes_data/skills/research/agent-reach/references/search.md\n create mode 100644 hermes_data/skills/research/agent-reach/references/social.md\n create mode 100644 hermes_data/skills/research/agent-reach/references/video.md\n create mode 100644 hermes_data/skills/research/agent-reach/references/web.md\n create mode 100644 hermes_data/skills/research/arxiv/SKILL.md\n create mode 100644 hermes_data/skills/research/arxiv/scripts/search_arxiv.py\n create mode 100644 hermes_data/skills/research/blocked-page-recovery/SKILL.md\n create mode 100644 hermes_data/skills/research/blocked-page-recovery/scripts/recover_page.py\n create mode 100644 hermes_data/skills/research/blogwatcher/SKILL.md\n create mode 100644 hermes_data/skills/research/competitor-news-monitor/SKILL.md\n create mode 100644 hermes_data/skills/research/grounded-citations/SKILL.md\n create mode 100644 hermes_data/skills/research/grounded-citations/references/citation-formats.md\n create mode 100644 hermes_data/skills/research/grounded-citations/references/grounding-rationale.md\n create mode 100644 hermes_data/skills/research/grounded-citations/scripts/_hermes_home.py\n create mode 100644 hermes_data/skills/research/grounded-citations/scripts/sources.py\n create mode 100644 hermes_data/skills/research/llm-wiki/SKILL.md\n create mode 100644 hermes_data/skills/research/polymarket/SKILL.md\n create mode 100644 hermes_data/skills/research/polymarket/references/api-endpoints.md\n create mode 100644 hermes_data/skills/research/polymarket/scripts/polymarket.py\n create mode 100644 hermes_data/skills/research/research-paper-writing/SKILL.md\n create mode 100644 hermes_data/skills/research/research-paper-writing/references/autoreason-methodology.md\n create mode 100644 hermes_data/skills/research/research-paper-writing/references/checklists.md\n create mode 100644 hermes_data/skills/research/research-paper-writing/references/citation-workflow.md\n create mode 100644 hermes_data/skills/research/research-paper-writing/references/experiment-patterns.md\n create mode 100644 hermes_data/skills/research/research-paper-writing/references/human-evaluation.md\n create mode 100644 hermes_data/skills/research/research-paper-writing/references/paper-types.md\n create mode 100644 hermes_data/skills/research/research-paper-writing/references/phase5-paper-drafting.md\n create mode 100644 hermes_data/skills/research/research-paper-writing/references/reviewer-guidelines.md\n create mode 100644 hermes_data/skills/research/research-paper-writing/references/sources.md\n create mode 100644 hermes_data/skills/research/research-paper-writing/references/writing-guide.md\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/README.md\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/aaai2026/README.md\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/aaai2026/aaai2026-unified-supp.tex\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/aaai2026/aaai2026-unified-template.tex\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/aaai2026/aaai2026.bib\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/aaai2026/aaai2026.bst\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/aaai2026/aaai2026.sty\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/acl/README.md\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/acl/acl.sty\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/acl/acl_latex.tex\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/acl/acl_lualatex.tex\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/acl/acl_natbib.bst\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/acl/anthology.bib.txt\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/acl/custom.bib\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/acl/formatting.md\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/colm2025/README.md\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/colm2025/colm2025_conference.bib\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/colm2025/colm2025_conference.bst\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/colm2025/colm2025_conference.pdf\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/colm2025/colm2025_conference.sty\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/colm2025/colm2025_conference.tex\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/colm2025/fancyhdr.sty\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/colm2025/math_commands.tex\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/colm2025/natbib.sty\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/iclr2026/fancyhdr.sty\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/iclr2026/iclr2026_conference.bib\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/iclr2026/iclr2026_conference.bst\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/iclr2026/iclr2026_conference.pdf\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/iclr2026/iclr2026_conference.sty\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/iclr2026/iclr2026_conference.tex\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/iclr2026/math_commands.tex\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/iclr2026/natbib.sty\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/icml2026/algorithm.sty\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/icml2026/algorithmic.sty\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/icml2026/example_paper.bib\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/icml2026/example_paper.pdf\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/icml2026/example_paper.tex\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/icml2026/fancyhdr.sty\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/icml2026/icml2026.bst\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/icml2026/icml2026.sty\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/icml2026/icml_numpapers.pdf\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/neurips2025/Makefile\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/neurips2025/extra_pkgs.tex\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/neurips2025/main.tex\n create mode 100644 hermes_data/skills/research/research-paper-writing/templates/neurips2025/neurips.sty\n create mode 100644 hermes_data/skills/smart-home/DESCRIPTION.md\n create mode 100644 hermes_data/skills/smart-home/openhue/SKILL.md\n create mode 100644 hermes_data/skills/social-media/DESCRIPTION.md\n create mode 100644 hermes_data/skills/social-media/telegram-content/SKILL.md\n create mode 100644 hermes_data/skills/social-media/telegram-content/references/channel-delivery.md\n create mode 100644 hermes_data/skills/social-media/telegram-content/references/persian-fonts.md\n create mode 100644 hermes_data/skills/social-media/telegram-content/references/tech-news-curation.md\n create mode 100644 hermes_data/skills/social-media/telegram-content/references/telegram-specs.md\n create mode 100644 hermes_data/skills/social-media/telegram-content/scripts/generate-post.py\n create mode 100644 hermes_data/skills/social-media/xurl/SKILL.md\n create mode 100644 hermes_data/skills/software-development/dogfood/SKILL.md\n create mode 100644 hermes_data/skills/software-development/dogfood/references/issue-taxonomy.md\n create mode 100644 hermes_data/skills/software-development/dogfood/templates/dogfood-report-template.md\n create mode 100644 hermes_data/skills/software-development/hermes-agent-skill-authoring/SKILL.md\n create mode 100644 hermes_data/skills/software-development/inspecting-hermes-desktop-dom/SKILL.md\n create mode 100644 hermes_data/skills/software-development/node-inspect-debugger/SKILL.md\n create mode 100644 hermes_data/skills/software-development/plan/SKILL.md\n create mode 100644 hermes_data/skills/software-development/python-bot-deployment/SKILL.md\n create mode 100644 hermes_data/skills/software-development/python-debugpy/SKILL.md\n create mode 100644 hermes_data/skills/software-development/requesting-code-review/SKILL.md\n create mode 100644 hermes_data/skills/software-development/simplify-code/SKILL.md\n create mode 100644 hermes_data/skills/software-development/spike/SKILL.md\n create mode 100644 hermes_data/skills/software-development/systematic-debugging/SKILL.md\n create mode 100644 hermes_data/skills/software-development/test-driven-development/SKILL.md\n create mode 100644 hermes_data/state.db\n create mode 100644 hermes_data/state/gateway.heartbeat\n create mode 100644 hermes_data/state/gateway.lifecycle.json\n create mode 100644 hermes_data/terminal-sessions/tty-dev-pts-0\n create mode 100644 workspace_data/cbt_program/current_day.txt\n create mode 100644 workspace_data/cbt_program/curriculum.txt\nخطا در Push به گیت‌هاب.",
+      "next_run_at": "2026-08-26T03:00:00+00:00",
+      "last_run_at": "2026-08-24T05:28:30.447106+00:00",
+      "last_status": "ok",
+      "last_error": null,
       "last_delivery_error": null,
       "deliver": "origin",
       "origin": {
@@ -45,423 +45,21 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-08-24T05:28:19.765380+00:00",
-        "by": "788d1ced33b1:2:cf28ea10471c4a1da76fa4ae02535863"
+        "at": "2026-08-25T03:00:49.002577+00:00",
+        "by": "788d1ced33b1:2:cecae094d04e4bd5a33b8efdd39fbaaf"
       },
-      "failure_streak": 1
+      "failure_streak": 0
     },
     {
-      "id": "6069d41f9a01",
-      "name": "morning-routine",
-      "prompt": "You are a kind and professional Farsi-speaking psychology counselor. Send a daily morning message at 8am Iran time. The user wants to gradually build discipline and reduce anxiety.\n\nEvery morning message must include these sections (in warm, supportive Farsi):\n\n1. **Good morning greeting and motivation** (2-3 uplifting sentences, not pushy)\n\n2. **Morning breathing exercise** (pick ONE from this rotation):\n- 4-7-8: inhale 4s, hold 7s, exhale 8s (3 cycles)\n- Box breathing: inhale 4s, hold 4s, exhale 4s, hold 4s (3-4 cycles)\n- Deep belly breathing: hand on belly, inhale 5s, exhale 7s (5 cycles)\n- 2-1-4 breathing: inhale 2s, hold 1s, exhale 4s (5 cycles)\n- Alternate nostril breathing (3 rounds each side)\nExplain each step clearly so the user can follow along.\n\n3. **Daily discipline task** (one small, practical exercise - beginner level):\nExamples to rotate through: organize a small part of your desk, write down 3 priorities for the day, cook one healthy meal, drink enough water, go for a 15-min walk, prepare tomorrow's clothes tonight, clean one room, write a shopping list, read 10 pages, do 10 minutes of stretching.\nEach day a different task. Tasks should be gentle and gradual, not overwhelming.\nExplain why this task matters.\n\n4. **Positive affirmation** for the user to repeat during the day.\n\nUse emoji. Keep the tone warm, supportive, positive, non-judgmental. Write entirely in Farsi (Persian). Length: 150-250 words.",
-      "skills": [],
-      "skill": null,
-      "model": "opencode",
-      "provider": "openai-api",
-      "provider_snapshot": null,
-      "model_snapshot": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "context_from": null,
-      "schedule": {
-        "kind": "cron",
-        "expr": "30 4 * * *",
-        "display": "30 4 * * *"
-      },
-      "schedule_display": "30 4 * * *",
-      "repeat": {
-        "times": null,
-        "completed": 29
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-07-27T06:34:09.563787+00:00",
-      "next_run_at": "2026-08-25T04:30:00+00:00",
-      "last_run_at": "2026-08-24T04:30:48.291002+00:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 404: No active credentials for provider: openai",
-      "last_delivery_error": "configured thread_id 325203 for telegram:52615254 was not found; delivered without thread_id",
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "52615254",
-        "chat_name": "ɢɦ",
-        "thread_id": "325203",
-        "user_id": "52615254"
-      },
-      "enabled_toolsets": null,
-      "workdir": null,
-      "fire_claim": null,
-      "failure_streak": 3
-    },
-    {
-      "id": "d0f05ac07414",
-      "name": "afternoon-panic-anxiety",
-      "prompt": "You are a Farsi-speaking psychology counselor helping a user with anxiety and panic. Send an afternoon message at 4pm Iran time focused on the book \"When Panic Attacks\" by David D. Burns.\n\nIMPORTANT: The message must be COMPLETE. Do not truncate or cut off any section. Write the full message.\n\nEvery afternoon message MUST include all 4 sections (in warm, supportive Farsi):\n\n1. **Greeting and check-in** (1-2 sentences checking how the day is going)\n\n2. **Book excerpt from \"When Panic Attacks\"** (one technique explained simply):\nRotate through these techniques (one per day, different each time):\n- Cost-Benefit Analysis: writing pros and cons of an anxious thought\n- Experimental Method: testing anxious predictions like a scientist\n- What-If Technique: taking fears to their logical conclusion\n- Acceptance Paradox: letting anxiety be there without fighting it\n- Stimulus Control: setting a specific worry time each day\n- Shame-Attacking Exercises: doing something mildly embarrassing on purpose\n- Interpersonal Cognitive Distortions: identifying thinking errors in relationships\n- Self-Esteem Traps: challenging perfectionism and approval addiction\n- Magic Dial Technique: turning down anxiety like a volume dial\n- Externalization of Voices: talking back to the inner critic\nExplain step by step with a practical example.\n\n3. **10-minute relaxation exercise** (rotate each day): progressive muscle relaxation, visualization, 5-4-3-2-1 grounding, body scan, etc.\n\n4. **Taklif-e Shab (tonight's homework)** - THIS SECTION IS MANDATORY AND MUST ALWAYS APPEAR. A small practice related to today's technique that the user should try before sleeping. Make it concrete and doable (e.g., \"before bed, take 5 minutes to write down your anxious thought and do the cost-benefit analysis on it\").\n\nEnd with a warm encouraging sentence.\n\nUse emoji. Write entirely in Farsi. Gentle, non-judgmental tone. Length: 200-350 words.",
-      "skills": [],
-      "skill": null,
-      "model": "opencode",
-      "provider": "openai-api",
-      "provider_snapshot": null,
-      "model_snapshot": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "context_from": null,
-      "schedule": {
-        "kind": "cron",
-        "expr": "30 12 * * *",
-        "display": "30 12 * * *"
-      },
-      "schedule_display": "30 12 * * *",
-      "repeat": {
-        "times": null,
-        "completed": 29
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-07-27T06:34:18.663789+00:00",
-      "next_run_at": "2026-08-24T12:30:00+00:00",
-      "last_run_at": "2026-08-23T12:30:11.868161+00:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 404: No active credentials for provider: openai",
-      "last_delivery_error": "configured thread_id 325203 for telegram:52615254 was not found; delivered without thread_id",
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "52615254",
-        "chat_name": "ɢɦ",
-        "thread_id": "325203",
-        "user_id": "52615254"
-      },
-      "enabled_toolsets": null,
-      "workdir": null,
-      "fire_claim": null,
-      "failure_streak": 2
-    },
-    {
-      "id": "123161d099ee",
-      "name": "evening-winddown-reflection",
-      "prompt": "You are a Farsi-speaking psychology counselor. Send a soothing evening message at 10pm Iran time for winding down and reflection. Write entirely in Farsi.\n\nIMPORTANT: You will receive the afternoon cron job output as context. The afternoon session included a book technique and a specific homework task (Taklif-e Shab). You MUST reference that specific homework and remind the user to do it tonight. Do NOT invent a new homework - use the one from the afternoon.\n\nEvery evening message MUST include ALL 5 sections:\n\n1. **Evening greeting** (2-3 warm sentences about ending the day, letting go of stress)\n\n2. **Homework reminder** - THIS IS THE MOST IMPORTANT SECTION. Reference the specific homework/task from the afternoon session and encourage the user to complete it tonight. Say something like: \"The task from this afternoon's session was: [repeat the homework]. Have you done it? Now is a great time!\" If the context is missing or unclear, use this default: ask the user to do a 5-minute cost-benefit analysis (تحلیل هزینه و فایده) on one anxious thought they had today.\n\n3. **Gratitude exercise** (rotate each night):\n- Name 3 small good things that happened today\n- Think of one person who made your day better\n- What did you accomplish today?\n- What went better than expected?\n- What did you learn about yourself?\n\n4. **Evening breathing/relaxation** (rotate): progressive muscle relaxation, body scan, 3-minute breathing space, visualization, candle breathing (long gentle exhales imagining a candle flame)\n\n5. **Bedtime affirmation** (one calming sentence to think about while falling asleep)\n\nUse soothing emojis (moon, stars, etc.). Warm, forgiving, non-judgmental. Length: 200-300 words. The goal is to help the user reflect, complete their homework, and sleep peacefully.",
-      "skills": [],
-      "skill": null,
-      "model": "opencode",
-      "provider": "openai-api",
-      "provider_snapshot": null,
-      "model_snapshot": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "context_from": [
-        "d0f05ac07414"
-      ],
-      "schedule": {
-        "kind": "cron",
-        "expr": "30 18 * * *",
-        "display": "30 18 * * *"
-      },
-      "schedule_display": "30 18 * * *",
-      "repeat": {
-        "times": null,
-        "completed": 29
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-07-27T06:34:27.397407+00:00",
-      "next_run_at": "2026-08-24T18:30:00+00:00",
-      "last_run_at": "2026-08-23T18:30:32.110399+00:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 404: No active credentials for provider: openai",
-      "last_delivery_error": "configured thread_id 325203 for telegram:52615254 was not found; delivered without thread_id",
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "52615254",
-        "chat_name": "ɢɦ",
-        "thread_id": "325203",
-        "user_id": "52615254"
-      },
-      "enabled_toolsets": null,
-      "workdir": null,
-      "fire_claim": null,
-      "failure_streak": 2
-    },
-    {
-      "id": "d7ae34d23f47",
-      "name": "burns-daily-chapter",
-      "prompt": "You are a Farsi-speaking psychology counselor. Every day you send a chapter summary from the book \"When Panic Attacks\" by David D. Burns, translated into fluent natural Persian (Farsi).\n\nCRITICAL RULES:\n- Save the summary to a .txt file (NOT .md)\n- Your FINAL RESPONSE must include the MEDIA: tag with the file path\n\nSTEPS:\n\n1. Read `/data/workspace/chapter-progress.txt` (single integer, 1-24).\n\n2. Read `/data/workspace/burns-chapters.txt` to find the topic for that chapter.\n\n3. Write a DETAILED summary of that chapter in FLUENT, NATURAL Farsi (400-600 words). Since each chapter is ~25 pages, cover main concepts, techniques, and examples thoroughly. Structure:\n   - Chapter number and title\n   - Main concepts with examples\n   - Practical exercises/techniques\n   - Key Points section with 3-5 bullet points (repeat the most important takeaways)\n   - Line saying next chapter comes tomorrow\n\n4. Save the summary to `/data/workspace/burns-chapter-N.txt` (use actual chapter number, .txt extension).\n\n5. In your FINAL RESPONSE (assistant text), write a brief 1-2 line intro in Farsi, then on a new line write: MEDIA:/data/workspace/burns-chapter-N.txt\n\n6. Update `/data/workspace/chapter-progress.txt` with NEXT number (current + 1). If current is 24, reset to 1.\n\n7. Also append the summary to `/data/workspace/burns-summaries.md` for PDF compilation.\n\nIMPORTANT: The file MUST be saved with .txt extension before you reference it with MEDIA:. All user-facing text must be in Farsi.",
-      "skills": [],
-      "skill": null,
-      "model": "opencode",
-      "provider": "openai-api",
-      "provider_snapshot": null,
-      "model_snapshot": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "context_from": null,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 8 * * *",
-        "display": "0 8 * * *"
-      },
-      "schedule_display": "0 8 * * *",
-      "repeat": {
-        "times": null,
-        "completed": 28
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-07-30T14:34:51.667618+00:00",
-      "next_run_at": "2026-08-24T08:00:00+00:00",
-      "last_run_at": "2026-08-23T08:00:59.717088+00:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 404: No active credentials for provider: openai",
-      "last_delivery_error": "configured thread_id 325203 for telegram:52615254 was not found; delivered without thread_id",
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "52615254",
-        "chat_name": "ɢɦ",
-        "thread_id": "325203",
-        "user_id": "52615254"
-      },
-      "enabled_toolsets": [
-        "file",
-        "terminal"
-      ],
-      "workdir": null,
-      "fire_claim": null,
-      "failure_streak": 2
-    },
-    {
-      "id": "4d6a569725ca",
-      "name": "Daily Motivational Quote",
-      "prompt": "You are a curator of motivational quotes and wise sayings for an Iranian Telegram channel. Every day you deliver ONE powerful quote from a famous thinker, philosopher, leader, scientist, writer, or historical figure — in fluent Persian.\n\nSTEP 1 - AVOID REPEATS\nRead /data/workspace/quotes-history.txt to see what was already posted. Never repeat the same person or quote.\n\nSTEP 2 - PICK A QUOTE\nChoose ONE quote that is genuinely profound and useful for everyday life. Rotate between:\n- Classic philosophers (Rumi, Hafez, Saadi, Socrates, Marcus Aurelius, Nietzsche, Camus)\n- Scientists and innovators (Einstein, Tesla, Curie, Hawking, Steve Jobs)\n- Modern thinkers and leaders (Maya Angelou, Viktor Frankl, Carl Jung, Nassim Taleb)\n- Iranian greats (Dariush, Shahriar, Sadegh Hedayat, Simin Daneshvar)\n- Athletes and artists who said something universal\nDo NOT pick cliches that everyone has seen. Prioritize quotes that make someone stop and think.\n\nSTEP 3 - WRITE THE POST IN FLUENT PERSIAN\nKeep it extremely simple. Exactly this format, nothing more:\n\n- A short evocative line setting the mood (1 sentence, with 1 emoji)\n- Blank line\n- The quote itself in Persian, wrapped in quotation marks\n- Blank line\n- The name of the person who said it, followed by a brief 5-word max identifier (e.g. \"فیلسوف یونانی\", \"شاعر ایرانی\", \"فیزیکدان نوبل\")\n\nDo NOT add translation notes. Do NOT add book names. Do NOT add \"از انگلیسی ترجمه شده\". Do NOT add any extra explanation. Keep it clean and minimal.\n\nSTEP 4 - LOG IT\nAppend one line to /data/workspace/quotes-history.txt: YYYY-MM-DD | author name | first 5 words of quote\n\nCRITICAL: Your FINAL RESPONSE is the quote post delivered to the user. Put it there directly. Do NOT end with only tool calls.",
-      "skills": [],
-      "skill": null,
-      "model": "opencode",
-      "provider": "openai-api",
-      "provider_snapshot": null,
-      "model_snapshot": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "context_from": null,
-      "schedule": {
-        "kind": "cron",
-        "expr": "30 4 * * *",
-        "display": "30 4 * * *"
-      },
-      "schedule_display": "30 4 * * *",
-      "repeat": {
-        "times": null,
-        "completed": 23
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-08-06T12:11:59.402772+00:00",
-      "next_run_at": "2026-08-25T04:30:00+00:00",
-      "last_run_at": "2026-08-24T04:30:48.033756+00:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 404: No active credentials for provider: openai",
-      "last_delivery_error": "live adapter send failed: Chat not found; live adapter delivery to telegram:-1001378242402 failed: Chat not found; delivery error: Telegram send failed: Chat not found (target telegram:-1001378242402)",
-      "deliver": "telegram:-1001378242402",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "52615254",
-        "chat_name": "ɢɦ",
-        "thread_id": "325697",
-        "user_id": "52615254"
-      },
-      "enabled_toolsets": [
-        "terminal",
-        "file"
-      ],
-      "workdir": null,
-      "fire_claim": null,
-      "failure_streak": 3
-    },
-    {
-      "id": "83df173842f4",
-      "name": "Channel Post - Morning (AI News & Models)",
-      "prompt": "You are a tech curator for an Iranian Telegram channel (@GoldPackFree2). Create ONE short, focused post in Persian.\n\nCRITICAL SINGLE-SUBJECT RULE:\nFocus on EXACTLY ONE app, tool, or news item per post. NEVER mix multiple different products/services into a single post.\nThe link at the bottom MUST be the exact, direct URL to that specific item. Never use generic or unrelated URLs.\n\nRULES:\n1. Format:\n💥 [Hook headline]\n[1 sentence intro about THIS SINGLE TOOL]\n\n🎯 [Feature 1]\n⚡ [Feature 2]\n🔗 [Feature 3]\n🔒 [Feature 4]\n\n[Conclusion line]\n@GoldPackFree2\n[EXACT DIRECT URL FOR THIS TOOL ONLY]\n\n2. NO line may start with English text (EMOJIS at the start of a line ARE ALLOWED and encouraged!).\n3. Keep it brief (8-10 lines total).\n4. Do NOT use markdown headers.\n5. FINAL RESPONSE IS THE POST. Deliver the post directly.",
-      "skills": [
-        "agent-reach"
-      ],
-      "skill": "agent-reach",
-      "model": "opencode",
-      "provider": "openai-api",
-      "provider_snapshot": null,
-      "model_snapshot": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "context_from": null,
-      "schedule": {
-        "kind": "cron",
-        "expr": "30 5 * * *",
-        "display": "30 5 * * *"
-      },
-      "schedule_display": "30 5 * * *",
-      "repeat": {
-        "times": null,
-        "completed": 11
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-08-12T11:31:31.406243+00:00",
-      "next_run_at": "2026-08-24T05:30:00+00:00",
-      "last_run_at": "2026-08-23T05:30:37.138867+00:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 404: No active credentials for provider: openai",
-      "last_delivery_error": "configured thread_id 325697 for telegram:52615254 was not found; delivered without thread_id",
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "52615254",
-        "chat_name": "ɢɦ",
-        "thread_id": "325697",
-        "user_id": "52615254"
-      },
-      "enabled_toolsets": [
-        "terminal",
-        "file",
-        "web"
-      ],
-      "workdir": null,
-      "fire_claim": null,
-      "failure_streak": 2
-    },
-    {
-      "id": "e5f0cfaaef60",
-      "name": "Channel Post - Afternoon (Free AI Image/Video & API)",
-      "prompt": "You are a tech curator for an Iranian Telegram channel (@GoldPackFree2). Create ONE short, focused post in Persian.\n\nCRITICAL SINGLE-SUBJECT RULE:\nFocus on EXACTLY ONE tool per post (e.g. ONLY Google AI Studio, or ONLY Groq Console, or ONLY OpenRouter, or ONLY ONE free AI image/video site). NEVER list 4 different providers in one post. Pick ONE, explain it deeply, and provide its exact direct URL.\n\nRULES:\n1. Format:\n💥 [Hook headline]\n[1 sentence intro about THIS SINGLE TOOL]\n\n🎯 [Feature 1]\n⚡ [Feature 2]\n🔗 [Feature 3]\n🔒 [Feature 4]\n\n[Conclusion line]\n@GoldPackFree2\n[EXACT DIRECT URL FOR THIS ONE TOOL]\n\n2. NO line may start with English text (EMOJIS at the start of a line ARE ALLOWED and encouraged!).\n3. Keep it brief (8-10 lines total).\n4. Do NOT use markdown headers.\n5. FINAL RESPONSE IS THE POST. Deliver the post directly.",
-      "skills": [
-        "agent-reach"
-      ],
-      "skill": "agent-reach",
-      "model": "opencode",
-      "provider": "openai-api",
-      "provider_snapshot": null,
-      "model_snapshot": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "context_from": null,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 12 * * *",
-        "display": "0 12 * * *"
-      },
-      "schedule_display": "0 12 * * *",
-      "repeat": {
-        "times": null,
-        "completed": 13
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-08-12T11:31:32.433755+00:00",
-      "next_run_at": "2026-08-24T12:00:00+00:00",
-      "last_run_at": "2026-08-23T12:01:05.610525+00:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 404: No active credentials for provider: openai",
-      "last_delivery_error": "configured thread_id 325697 for telegram:52615254 was not found; delivered without thread_id",
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "52615254",
-        "chat_name": "ɢɦ",
-        "thread_id": "325697",
-        "user_id": "52615254"
-      },
-      "enabled_toolsets": [
-        "terminal",
-        "file",
-        "web"
-      ],
-      "workdir": null,
-      "fire_claim": null,
-      "failure_streak": 2
-    },
-    {
-      "id": "86e02f205caa",
-      "name": "Channel Post - Evening (Hidden Gem Photo/Video Apps)",
-      "prompt": "You are a tech curator for an Iranian Telegram channel (@GoldPackFree2). Create ONE short, focused post in Persian.\n\nCRITICAL SINGLE-SUBJECT RULE:\nFocus on EXACTLY ONE photo or video editing app/tool per post (from GitHub or web). NEVER mix multiple apps into one post. Pick ONE app, explain its features, and provide its exact direct URL (GitHub repo or official site).\n\nRULES:\n1. Format:\n💥 [Hook headline]\n[1 sentence intro about THIS SINGLE APP]\n\n🎯 [Feature 1]\n⚡ [Feature 2]\n🔗 [Feature 3]\n🔒 [Feature 4]\n\n[Conclusion line]\n@GoldPackFree2\n[EXACT DIRECT URL FOR THIS SINGLE APP]\n\n2. NO line may start with English text (EMOJIS at the start of a line ARE ALLOWED and encouraged!).\n3. Keep it brief (8-10 lines total).\n4. Do NOT use markdown headers.\n5. FINAL RESPONSE IS THE POST. Deliver the post directly.",
-      "skills": [
-        "agent-reach"
-      ],
-      "skill": "agent-reach",
-      "model": "opencode",
-      "provider": "openai-api",
-      "provider_snapshot": null,
-      "model_snapshot": null,
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "context_from": null,
-      "schedule": {
-        "kind": "cron",
-        "expr": "0 17 * * *",
-        "display": "0 17 * * *"
-      },
-      "schedule_display": "0 17 * * *",
-      "repeat": {
-        "times": null,
-        "completed": 13
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-08-12T11:31:33.448502+00:00",
-      "next_run_at": "2026-08-24T17:00:00+00:00",
-      "last_run_at": "2026-08-23T17:00:12.853533+00:00",
-      "last_status": "error",
-      "last_error": "RuntimeError: HTTP 404: No active credentials for provider: openai",
-      "last_delivery_error": "configured thread_id 325697 for telegram:52615254 was not found; delivered without thread_id",
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "52615254",
-        "chat_name": "ɢɦ",
-        "thread_id": "325697",
-        "user_id": "52615254"
-      },
-      "enabled_toolsets": [
-        "terminal",
-        "file",
-        "web"
-      ],
-      "workdir": null,
-      "fire_claim": null,
-      "failure_streak": 2
-    },
-    {
-      "id": "74ca90c86008",
+      "id": "a87945670771",
       "name": "cbt-30days-morning",
-      "prompt": "You are an expert CBT & positive psychology coach.\nYou are running a structured 30-day self-esteem and confidence building program for the user.\n\nInstructions:\n1. Read the current day index from /data/workspace/cbt_program/current_day.txt\n2. Read the corresponding day topic from /data/workspace/cbt_program/curriculum.txt\n3. Generate the comprehensive daily module strictly in fluent, warm, empathetic Farsi.\nFormat required:\n- Header: Day number & Topic in Farsi\n- 1. Practical Exercise (under 10 minutes, concrete, step-by-step, actionable)\n- 2. Self-Awareness / Journaling Question (deep, reflective)\n- 3. Realistic & Empowering Affirmation in present tense\n\nCRITICAL RULES:\n- Every line of the Persian text must start with a Persian character or emoji (never English words or symbols at start).\n- Write with practical, realistic CBT tone (no toxic positivity, no clichés).\n- Your FINAL ASSISTANT RESPONSE is what gets delivered to the user via Telegram. Ensure all content is in your final response text.\n- Do NOT advance the current_day.txt here (the evening meditation job will advance the day index).",
+      "prompt": "You are an expert CBT & positive psychology coach. You are running a structured 30-day self-esteem and confidence building program for the user.\n\nInstructions:\n1. Read the current day index from /data/workspace/cbt_program/current_day.txt\n2. Read the corresponding day topic from /data/workspace/cbt_program/curriculum.txt (the file has one topic per line, line number matches day index)\n3. Based on the topic, generate a complete daily module in fluent, warm, empathetic Farsi. The module must include:\n   - Header: \"روز [شماره]: [عنوان]\" in Farsi\n   - 1. Practical Exercise: under 10 minutes, concrete, step-by-step, actionable\n   - 2. Self-Awareness / Journaling Question: deep, reflective\n   - 3. Realistic & Empowering Affirmation in present tense\n\nCRITICAL RULES:\n- Every line of the Persian text must start with a Persian character or emoji (never English words or symbols at line start).\n- Write with practical, realistic CBT tone (no toxic positivity, no clichés).\n- Your FINAL ASSISTANT RESPONSE is what gets delivered to the user via Telegram. Ensure all content is in your final response text.\n- Do NOT advance the current_day.txt here (the evening meditation job will advance the day index).",
       "skills": [],
       "skill": null,
       "model": null,
       "provider": null,
       "provider_snapshot": "openai-api",
-      "model_snapshot": "geminiM",
+      "model_snapshot": "ClaudeM",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -477,16 +75,16 @@
       "schedule_display": "30 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
-      "enabled": false,
-      "state": "paused",
-      "paused_at": "2026-08-23T22:13:07.999451+00:00",
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
       "paused_reason": null,
-      "created_at": "2026-08-23T22:13:04.279488+00:00",
-      "next_run_at": "2026-08-24T03:30:00+00:00",
-      "last_run_at": null,
-      "last_status": null,
+      "created_at": "2026-08-24T15:18:49.030820+00:00",
+      "next_run_at": "2026-08-25T03:30:00+00:00",
+      "last_run_at": "2026-08-24T17:13:43.286083+00:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "failure_streak": 0,
@@ -502,18 +100,19 @@
       "enabled_toolsets": [
         "file"
       ],
-      "workdir": "/data/workspace/cbt_program"
+      "workdir": "/data/workspace/cbt_program",
+      "fire_claim": null
     },
     {
-      "id": "4f10fe565750",
+      "id": "f65b96412575",
       "name": "cbt-30days-evening-meditation",
-      "prompt": "You are a calming, compassionate mindfulness & CBT guide.\nEvery night at 10:00 PM Iran time (18:30 UTC), you send a soothing guided evening meditation & reflection tailored to the user's 30-day self-esteem journey.\n\nInstructions:\n1. Read current day from /data/workspace/cbt_program/current_day.txt\n2. Read the day topic from /data/workspace/cbt_program/curriculum.txt\n3. Generate a deeply calming, grounding 5-minute evening meditation and release practice in fluent, warm Farsi.\nInclude:\n- 🌙 Gentle breathwork / body scan (releasing tension from the day)\n- 🕊️ Mindful reflection connected to today's topic (integrating the morning lesson)\n- 🕯️ Bedtime grounding & self-compassion thought to sleep with peace\n\n4. Advance the index in /data/workspace/cbt_program/current_day.txt by +1 (if index > 30, reset to 1).\n\nCRITICAL RULES:\n- Every line of Persian text must start with a Persian character or emoji (never English words at line start).\n- Your FINAL ASSISTANT RESPONSE is what gets delivered to the user via Telegram.\n- Keep tone soft, slow, peaceful, and reassuring.",
+      "prompt": "You are a calming, compassionate mindfulness & CBT guide. Every night at 10:00 PM Iran time (18:30 UTC), you send a soothing guided evening meditation & reflection tailored to the user's 30-day self-esteem journey.\n\nInstructions:\n1. Read current day from /data/workspace/cbt_program/current_day.txt\n2. Read the day topic from /data/workspace/cbt_program/curriculum.txt (line number = day index)\n3. Generate a deeply calming, grounding 5-minute evening meditation and release practice in fluent, warm Farsi.\nInclude:\n- 🌙 Gentle breathwork / body scan (releasing tension from the day)\n- 🕊️ Mindful reflection connected to today's topic (integrating the morning lesson)\n- 🕯️ Bedtime grounding & self-compassion thought to sleep with peace\n\n4. Advance the index in /data/workspace/cbt_program/current_day.txt by +1 (if index > 30, reset to 1).\n\nCRITICAL RULES:\n- Every line of Persian text must start with a Persian character or emoji (never English words at line start).\n- Your FINAL ASSISTANT RESPONSE is what gets delivered to the user via Telegram.\n- Keep tone soft, slow, peaceful, and reassuring.",
       "skills": [],
       "skill": null,
       "model": null,
       "provider": null,
       "provider_snapshot": "openai-api",
-      "model_snapshot": "geminiM",
+      "model_snapshot": "ClaudeM",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -521,7 +120,7 @@
       "monitor_url": null,
       "monitor_state": null,
       "context_from": [
-        "74ca90c86008"
+        "a87945670771"
       ],
       "schedule": {
         "kind": "cron",
@@ -531,16 +130,16 @@
       "schedule_display": "30 18 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
-      "enabled": false,
-      "state": "paused",
-      "paused_at": "2026-08-23T22:13:11.430913+00:00",
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
       "paused_reason": null,
-      "created_at": "2026-08-23T22:13:06.445672+00:00",
-      "next_run_at": "2026-08-24T18:30:00+00:00",
-      "last_run_at": null,
-      "last_status": null,
+      "created_at": "2026-08-24T15:19:32.389798+00:00",
+      "next_run_at": "2026-08-25T18:30:00+00:00",
+      "last_run_at": "2026-08-24T18:31:28.528925+00:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "failure_streak": 0,
@@ -556,18 +155,19 @@
       "enabled_toolsets": [
         "file"
       ],
-      "workdir": "/data/workspace/cbt_program"
+      "workdir": "/data/workspace/cbt_program",
+      "fire_claim": null
     },
     {
-      "id": "d894a60d9097",
+      "id": "50235acf81d1",
       "name": "activate-cbt-program",
-      "prompt": "This is an automated activation trigger.\nResume the paused CBT cron jobs:\n1. cbt-30days-morning (job_id: 74ca90c86008)\n2. cbt-30days-evening-meditation (job_id: 4f10fe565750)\nConfirm both are active.",
+      "prompt": "This is an automated activation trigger. Resume the paused CBT cron jobs:\n1. cbt-30days-morning (job_id: a87945670771)\n2. cbt-30days-evening-meditation (job_id: f65b96412575)\nConfirm both are active and scheduled.",
       "skills": [],
       "skill": null,
       "model": null,
       "provider": null,
       "provider_snapshot": "openai-api",
-      "model_snapshot": "geminiM",
+      "model_snapshot": "ClaudeM",
       "base_url": null,
       "script": null,
       "no_agent": false,
@@ -577,10 +177,10 @@
       "context_from": null,
       "schedule": {
         "kind": "once",
-        "run_at": "2026-08-25T03:00:00+00:00",
-        "display": "once at 2026-08-25 03:00"
+        "run_at": "2026-08-26T03:30:00+00:00",
+        "display": "once at 2026-08-26 03:30"
       },
-      "schedule_display": "once at 2026-08-25 03:00",
+      "schedule_display": "once at 2026-08-26 03:30",
       "repeat": {
         "times": 1,
         "completed": 0
@@ -589,8 +189,8 @@
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
-      "created_at": "2026-08-23T22:13:13.362410+00:00",
-      "next_run_at": "2026-08-25T03:00:00+00:00",
+      "created_at": "2026-08-24T15:19:37.605389+00:00",
+      "next_run_at": "2026-08-26T03:30:00+00:00",
       "last_run_at": null,
       "last_status": null,
       "last_error": null,
@@ -607,7 +207,113 @@
       },
       "enabled_toolsets": null,
       "workdir": null
+    },
+    {
+      "id": "8ebb115244d8",
+      "name": "Morning AI & Tech News",
+      "prompt": "You are a tech curator for an Iranian Telegram channel (@GoldPackFree2).\nSearch for the latest, exciting, and practical AI & Technology news from the past 24-48 hours (new free models, major AI releases, trending AI websites/tools, breakthroughs).\n\nPick ONE compelling and popular topic that appeals to general tech enthusiasts.\n\nCreate a high-quality Telegram post in fluent Persian adhering strictly to these rules:\n1. Maximum 10 lines total.\n2. Structure:\n   - Catchy Persian hook headline with emojis\n   - 1-2 sentence simple explanation of what it is / what changed\n   - 3-4 bullet points highlighting key features, why it matters, or how to use it\n   - Direct link or site address (placed cleanly at the end)\n   - Channel credit: @GoldPackFree2\n3. RTL / Formatting rule: Every single line must start with a Persian word or emoji (never start a line with English words or raw URLs).\n4. Tone: Energetic, practical, easy to understand for everyone (avoid heavy academic jargon).\n\nCRITICAL: Output ONLY the final Persian post text in your response. No preambles, no markdown codeblocks wrapping the whole message, no explanations.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "openai-api",
+      "model_snapshot": "ClaudeM",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 5 * * *",
+        "display": "30 5 * * *"
+      },
+      "schedule_display": "30 5 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-24T17:26:54.601652+00:00",
+      "next_run_at": "2026-08-25T05:30:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "52615254",
+        "chat_name": "ɢɦ",
+        "thread_id": "324893",
+        "user_id": "52615254",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "terminal"
+      ],
+      "workdir": null
+    },
+    {
+      "id": "e9960222b715",
+      "name": "Evening Practical Tools & Apps",
+      "prompt": "You are a tech and digital tools curator for an Iranian Telegram channel (@GoldPackFree2).\nFind a practical, high-utility tool, app, or service that is genuinely useful for everyday life, content creators, or digital users. Focus on categories like:\n- Free photo/video editing and generation tools (AI or non-AI)\n- Essential daily utility tools/apps (mobile or web)\n- Anti-censorship, proxy, v2ray, VPN tools, DNS, or bypass tools/protocols\n- Hidden gem apps that save time or solve real problems\n\nPick ONE specific, verified tool/app/method.\n\nCreate a high-quality Telegram post in fluent Persian adhering strictly to these rules:\n1. Maximum 10 lines total.\n2. Structure:\n   - Catchy Persian hook headline with emojis\n   - 1-2 sentence simple explanation of what problem it solves\n   - 3-4 bullet points highlighting key features, free tier perks, or platforms supported (Android/iOS/Web/Windows)\n   - Direct link or download/access method cleanly at the end\n   - Channel credit: @GoldPackFree2\n3. RTL / Formatting rule: Every single line must start with a Persian word or emoji (never start a line with English words or raw URLs).\n4. Tone: Highly practical, concise, engaging, and easy to follow.\n\nCRITICAL: Output ONLY the final Persian post text in your response. No preambles, no markdown codeblocks wrapping the whole message, no explanations.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "openai-api",
+      "model_snapshot": "ClaudeM",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 16 * * *",
+        "display": "30 16 * * *"
+      },
+      "schedule_display": "30 16 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-24T17:26:54.617929+00:00",
+      "next_run_at": "2026-08-25T16:30:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "52615254",
+        "chat_name": "ɢɦ",
+        "thread_id": "324893",
+        "user_id": "52615254",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "terminal"
+      ],
+      "workdir": null
     }
   ],
-  "updated_at": "2026-08-24T05:28:19.765621+00:00"
+  "updated_at": "2026-08-25T03:00:49.002953+00:00"
 }

@@ -8,7 +8,7 @@ Host: /opt/venv (in PATH), /opt/hermes-agent; `hermes` not on PATH (export PATH=
 §
 User prefers quick direct answers, gets frustrated by slow responses. Wants practical content for general Persian audience. No excessive research rounds.
 §
-Premium image gen: /data/workspace/premium_generator.py, output: /data/workspace/posts_premium/. Palettes: luxury_gold, royal_purple, emerald_night. Vazirmatn font in /data/workspace/fonts/. Telegram format: short text on image + secondary text in caption. User is on Windows (PowerShell). API proxy: AgentRouter (agentrouter.org), default model set to geminiM.
+Premium image gen: /data/workspace/premium_generator.py, output: /data/workspace/posts_premium/. Palettes: luxury_gold, royal_purple, emerald_night. Vazirmatn font in /data/workspace/fonts/. Used for @abasmanesh222.
 §
 User runs Persian Telegram channel @GoldPackFree2. Bot: @GoldPackFree_PosterBot (-1001378242402). 3 scheduled channel posts per day (morning AI news, afternoon free AI APIs/tools, evening hidden-gem photo/video apps), plus a morning motivational quote. Style: punchy hook + 1 sentence intro + 4 emoji bullets + conclusion + handle + direct URL. Every line must start with a Persian word (no leading English or raw URLs at the start of lines). Model: geminiM on openai-api (9router) with opencode fallback on openai-api.
 §

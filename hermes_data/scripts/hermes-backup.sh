@@ -13,7 +13,7 @@ REPO_URL="https://${GITHUB_TOKEN}@github.com/junsina5999/hermesBackup.git"
 echo "=== شروع فرآیند بکاپ Hermes ==="
 date -u
 
-# 1. بکاپ لوکال آرشیو فشرده
+# 1. بکاپ لوکال آرشیو فشرده (شامل همه چیز بدون استثنا برای ریکاوری کامل لوکال)
 mkdir -p "$LOCAL_BACKUP_DIR"
 TIMESTAMP=$(date -u '+%Y%m%d_%H%M%S')
 ARCHIVE_PATH="$LOCAL_BACKUP_DIR/hermes_backup_${TIMESTAMP}.tar.gz"
@@ -50,7 +50,7 @@ if git clone --depth 1 "$REPO_URL" "$BACKUP_DIR"; then
   rm -rf "$BACKUP_DIR/hermes_data" "$BACKUP_DIR/workspace_data"
   mkdir -p "$BACKUP_DIR/hermes_data" "$BACKUP_DIR/workspace_data"
 
-  # کپی اطلاعات هرمس بدون فایل‌های حاوی کلید حساس
+  # فقط فایل .env از بکاپ گیت‌هاب استثنا می‌شود (state.db و config.yaml و غیره کپی می‌شوند)
   tar -C "$HERMES_DIR" \
     --exclude='cache' \
     --exclude='audio_cache' \
@@ -59,9 +59,6 @@ if git clone --depth 1 "$REPO_URL" "$BACKUP_DIR"; then
     --exclude='*.pid' \
     --exclude='*.lock' \
     --exclude='.env' \
-    --exclude='auth.json' \
-    --exclude='state.db' \
-    --exclude='kanban.db' \
     -cf - . | tar -C "$BACKUP_DIR/hermes_data" -xf -
 
   if [ -d "$WORKSPACE_DIR" ]; then
@@ -80,8 +77,19 @@ if git clone --depth 1 "$REPO_URL" "$BACKUP_DIR"; then
     if git push origin main; then
       echo "بکاپ با موفقیت روی گیت‌هاب Push شد! 🎉"
     else
-      echo "خطا در Push به گیت‌هاب."
-      exit 1
+      echo "هشدار: Push به گیت‌هاب به دلیل وجود کلید حساس ناخواسته ناموفق بود."
+      echo "سعی مجدد: استثنا کردن state.db و آپلود مجدد..."
+      
+      # اگر Push شکست خورد، state.db را حذف کرده و مجدداً سعی می‌کنیم
+      rm -f "$BACKUP_DIR/hermes_data/state.db"
+      git add -A
+      git commit --amend -m "Auto Backup (excluding state.db): $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+      if git push origin main; then
+        echo "بکاپ با استثنا کردن state.db با موفقیت روی گیت‌هاب Push شد! 🎉"
+      else
+        echo "خطا در Push به گیت‌هاب."
+        exit 1
+      fi
     fi
   fi
   rm -rf "$BACKUP_DIR"
