@@ -1,0 +1,107 @@
+=== شروع فرآیند بکاپ Hermes ===
+Tue Aug 25 03:00:49 UTC 2026
+در حال ایجاد بکاپ محلی فشرده...
+بکاپ محلی با موفقیت ایجاد شد: /data/backups/hermes_backup_20260825_030049.tar.gz
+در حال تلاش برای اتصال و آپلود روی GitHub...
+[main 873fd33] Auto Backup: 2026-08-25 03:00:53 UTC
+ 68 files changed, 5057 insertions(+), 2152 deletions(-)
+ create mode 100644 hermes_data/auth.json
+ create mode 100644 hermes_data/cron/output/00c53e258c8a/2026-08-24_05-28-28.md
+ create mode 100644 hermes_data/cron/output/00c53e258c8a_20260824_052828.txt
+ delete mode 100644 hermes_data/cron/output/123161d099ee/2026-08-22_18-30-14.md
+ delete mode 100644 hermes_data/cron/output/123161d099ee/2026-08-23_18-30-31.md
+ delete mode 100644 hermes_data/cron/output/4d6a569725ca/2026-08-22_15-37-27.md
+ delete mode 100644 hermes_data/cron/output/4d6a569725ca/2026-08-23_04-30-23.md
+ delete mode 100644 hermes_data/cron/output/4d6a569725ca/2026-08-24_04-30-47.md
+ delete mode 100644 hermes_data/cron/output/6069d41f9a01/2026-08-22_15-37-31.md
+ delete mode 100644 hermes_data/cron/output/6069d41f9a01/2026-08-23_04-30-23.md
+ delete mode 100644 hermes_data/cron/output/6069d41f9a01/2026-08-24_04-30-47.md
+ delete mode 100644 hermes_data/cron/output/83df173842f4/2026-08-22_15-37-27.md
+ delete mode 100644 hermes_data/cron/output/83df173842f4/2026-08-23_05-30-36.md
+ delete mode 100644 hermes_data/cron/output/86e02f205caa/2026-08-22_17-00-27.md
+ delete mode 100644 hermes_data/cron/output/86e02f205caa/2026-08-23_17-00-11.md
+ create mode 100644 hermes_data/cron/output/a87945670771/2026-08-24_17-13-42.md
+ delete mode 100644 hermes_data/cron/output/d0f05ac07414/2026-08-22_15-37-31.md
+ delete mode 100644 hermes_data/cron/output/d0f05ac07414/2026-08-23_12-30-10.md
+ delete mode 100644 hermes_data/cron/output/d7ae34d23f47/2026-08-22_15-37-27.md
+ delete mode 100644 hermes_data/cron/output/d7ae34d23f47/2026-08-23_08-00-57.md
+ delete mode 100644 hermes_data/cron/output/e5f0cfaaef60/2026-08-22_15-37-27.md
+ delete mode 100644 hermes_data/cron/output/e5f0cfaaef60/2026-08-23_12-01-04.md
+ create mode 100644 hermes_data/cron/output/f65b96412575/2026-08-24_18-31-27.md
+ create mode 100644 hermes_data/kanban.db
+ create mode 100644 hermes_data/sessions/request_dump_20260821_211037_21832785_20260824_074336_588317.json
+ create mode 100644 hermes_data/sessions/request_dump_cron_83df173842f4_20260824_053049_20260824_053049_969288.json
+ create mode 100644 hermes_data/sessions/request_dump_cron_d0f05ac07414_20260824_123021_20260824_123032_090801.json
+ create mode 100644 hermes_data/sessions/request_dump_cron_d7ae34d23f47_20260824_080023_20260824_080033_286413.json
+ create mode 100644 hermes_data/sessions/request_dump_cron_e5f0cfaaef60_20260824_120015_20260824_120025_672452.json
+ create mode 100644 hermes_data/state.db
+ create mode 100644 workspace_data/fonts/Vazirmatn-Black.ttf
+ create mode 100644 workspace_data/fonts/Vazirmatn-Bold.ttf
+ create mode 100644 workspace_data/fonts/Vazirmatn-ExtraBold.ttf
+ create mode 100644 workspace_data/fonts/Vazirmatn-ExtraLight.ttf
+ create mode 100644 workspace_data/fonts/Vazirmatn-Light.ttf
+ create mode 100644 workspace_data/fonts/Vazirmatn-Medium.ttf
+ create mode 100644 workspace_data/fonts/Vazirmatn-Regular.ttf
+ create mode 100644 workspace_data/fonts/Vazirmatn-SemiBold.ttf
+ create mode 100644 workspace_data/fonts/Vazirmatn-Thin.ttf
+ create mode 100644 workspace_data/posts_premium/abasmanesh_dilemma.png
+ create mode 100644 workspace_data/posts_premium/abasmanesh_dilemma_updated.png
+ create mode 100644 workspace_data/posts_premium/dilemma_signs.png
+ create mode 100644 workspace_data/posts_premium/dilemma_signs_v2.png
+ create mode 100644 workspace_data/posts_premium/test_no_bidi.png
+ create mode 100644 workspace_data/premium_generator.py
+ create mode 100644 workspace_data/test.png
+ create mode 100644 workspace_data/test_nobidi.png
+هشدار: Push به گیت‌هاب به دلیل وجود کلید حساس ناخواسته ناموفق بود.
+سعی مجدد: استثنا کردن state.db و آپلود مجدد...
+[main 78f2c2b] Auto Backup (excluding state.db): 2026-08-25 03:00:55 UTC
+ Date: Tue Aug 25 03:00:53 2026 +0000
+ 67 files changed, 5057 insertions(+), 2152 deletions(-)
+ create mode 100644 hermes_data/auth.json
+ create mode 100644 hermes_data/cron/output/00c53e258c8a/2026-08-24_05-28-28.md
+ create mode 100644 hermes_data/cron/output/00c53e258c8a_20260824_052828.txt
+ delete mode 100644 hermes_data/cron/output/123161d099ee/2026-08-22_18-30-14.md
+ delete mode 100644 hermes_data/cron/output/123161d099ee/2026-08-23_18-30-31.md
+ delete mode 100644 hermes_data/cron/output/4d6a569725ca/2026-08-22_15-37-27.md
+ delete mode 100644 hermes_data/cron/output/4d6a569725ca/2026-08-23_04-30-23.md
+ delete mode 100644 hermes_data/cron/output/4d6a569725ca/2026-08-24_04-30-47.md
+ delete mode 100644 hermes_data/cron/output/6069d41f9a01/2026-08-22_15-37-31.md
+ delete mode 100644 hermes_data/cron/output/6069d41f9a01/2026-08-23_04-30-23.md
+ delete mode 100644 hermes_data/cron/output/6069d41f9a01/2026-08-24_04-30-47.md
+ delete mode 100644 hermes_data/cron/output/83df173842f4/2026-08-22_15-37-27.md
+ delete mode 100644 hermes_data/cron/output/83df173842f4/2026-08-23_05-30-36.md
+ delete mode 100644 hermes_data/cron/output/86e02f205caa/2026-08-22_17-00-27.md
+ delete mode 100644 hermes_data/cron/output/86e02f205caa/2026-08-23_17-00-11.md
+ create mode 100644 hermes_data/cron/output/a87945670771/2026-08-24_17-13-42.md
+ delete mode 100644 hermes_data/cron/output/d0f05ac07414/2026-08-22_15-37-31.md
+ delete mode 100644 hermes_data/cron/output/d0f05ac07414/2026-08-23_12-30-10.md
+ delete mode 100644 hermes_data/cron/output/d7ae34d23f47/2026-08-22_15-37-27.md
+ delete mode 100644 hermes_data/cron/output/d7ae34d23f47/2026-08-23_08-00-57.md
+ delete mode 100644 hermes_data/cron/output/e5f0cfaaef60/2026-08-22_15-37-27.md
+ delete mode 100644 hermes_data/cron/output/e5f0cfaaef60/2026-08-23_12-01-04.md
+ create mode 100644 hermes_data/cron/output/f65b96412575/2026-08-24_18-31-27.md
+ create mode 100644 hermes_data/kanban.db
+ create mode 100644 hermes_data/sessions/request_dump_20260821_211037_21832785_20260824_074336_588317.json
+ create mode 100644 hermes_data/sessions/request_dump_cron_83df173842f4_20260824_053049_20260824_053049_969288.json
+ create mode 100644 hermes_data/sessions/request_dump_cron_d0f05ac07414_20260824_123021_20260824_123032_090801.json
+ create mode 100644 hermes_data/sessions/request_dump_cron_d7ae34d23f47_20260824_080023_20260824_080033_286413.json
+ create mode 100644 hermes_data/sessions/request_dump_cron_e5f0cfaaef60_20260824_120015_20260824_120025_672452.json
+ create mode 100644 workspace_data/fonts/Vazirmatn-Black.ttf
+ create mode 100644 workspace_data/fonts/Vazirmatn-Bold.ttf
+ create mode 100644 workspace_data/fonts/Vazirmatn-ExtraBold.ttf
+ create mode 100644 workspace_data/fonts/Vazirmatn-ExtraLight.ttf
+ create mode 100644 workspace_data/fonts/Vazirmatn-Light.ttf
+ create mode 100644 workspace_data/fonts/Vazirmatn-Medium.ttf
+ create mode 100644 workspace_data/fonts/Vazirmatn-Regular.ttf
+ create mode 100644 workspace_data/fonts/Vazirmatn-SemiBold.ttf
+ create mode 100644 workspace_data/fonts/Vazirmatn-Thin.ttf
+ create mode 100644 workspace_data/posts_premium/abasmanesh_dilemma.png
+ create mode 100644 workspace_data/posts_premium/abasmanesh_dilemma_updated.png
+ create mode 100644 workspace_data/posts_premium/dilemma_signs.png
+ create mode 100644 workspace_data/posts_premium/dilemma_signs_v2.png
+ create mode 100644 workspace_data/posts_premium/test_no_bidi.png
+ create mode 100644 workspace_data/premium_generator.py
+ create mode 100644 workspace_data/test.png
+ create mode 100644 workspace_data/test_nobidi.png
+بکاپ با استثنا کردن state.db با موفقیت روی گیت‌هاب Push شد! 🎉
+=== پایان عملیات بکاپ با موفقیت ===
