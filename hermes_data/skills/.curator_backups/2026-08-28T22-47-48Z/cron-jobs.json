@@ -29,7 +29,7 @@
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:58:23.705132+00:00",
-      "next_run_at": "2026-08-30T03:00:00+00:00",
+      "next_run_at": "2026-08-29T03:00:00+00:00",
       "last_run_at": "2026-08-28T03:00:22.429817+00:00",
       "last_status": "ok",
       "last_error": null,
@@ -44,10 +44,7 @@
       },
       "enabled_toolsets": null,
       "workdir": null,
-      "fire_claim": {
-        "at": "2026-08-29T03:00:51.146419+00:00",
-        "by": "788d1ced33b1:2:7d55a56d60094184a2d7b30e1ab10a76"
-      },
+      "fire_claim": null,
       "failure_streak": 0
     },
     {
@@ -211,6 +208,60 @@
       "fire_claim": null
     },
     {
+      "id": "8ebb115244d8",
+      "name": "Morning AI & Tech News",
+      "prompt": "You are a tech curator for an Iranian Telegram channel (@GoldPackFree2).\nSearch for the latest, exciting, and practical AI & Technology news from the past 24-48 hours (new free models, major AI releases, trending AI websites/tools, breakthroughs).\n\nPick ONE compelling and popular topic that appeals to general tech enthusiasts.\n\nCreate a high-quality Telegram post in fluent Persian adhering strictly to these rules:\n1. Maximum 10 lines total.\n2. Structure:\n   - Catchy Persian hook headline with emojis\n   - 1-2 sentence simple explanation of what it is / what changed\n   - 3-4 bullet points highlighting key features, why it matters, or how to use it\n   - Direct link or site address (placed cleanly at the end)\n   - Channel credit: @GoldPackFree2\n3. RTL / Formatting rule: Every single line must start with a Persian word or emoji (never start a line with English words or raw URLs).\n4. Tone: Energetic, practical, easy to understand for everyone (avoid heavy academic jargon).\n\nCRITICAL: Output ONLY the final Persian post text in your response. No preambles, no markdown codeblocks wrapping the whole message, no explanations.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "openai-api",
+      "model_snapshot": "ClaudeM",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 5 * * *",
+        "display": "30 5 * * *"
+      },
+      "schedule_display": "30 5 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 4
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-24T17:26:54.601652+00:00",
+      "next_run_at": "2026-08-29T05:30:00+00:00",
+      "last_run_at": "2026-08-28T05:31:04.639713+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "52615254",
+        "chat_name": "ɢɦ",
+        "thread_id": "324893",
+        "user_id": "52615254",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "web",
+        "terminal"
+      ],
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
       "id": "e9960222b715",
       "name": "Evening Practical Tools & Apps",
       "prompt": "You are a tech and digital tools curator for an Iranian Telegram channel (@GoldPackFree2).\nFind a practical, high-utility tool, app, or service that is genuinely useful for everyday life, content creators, or digital users. Focus on categories like:\n- Free photo/video editing and generation tools (AI or non-AI)\n- Essential daily utility tools/apps (mobile or web)\n- Anti-censorship, proxy, v2ray, VPN tools, DNS, or bypass tools/protocols\n- Hidden gem apps that save time or solve real problems\n\nPick ONE specific, verified tool/app/method.\n\nCreate a high-quality Telegram post in fluent Persian adhering strictly to these rules:\n1. Maximum 10 lines total.\n2. Structure:\n   - Catchy Persian hook headline with emojis\n   - 1-2 sentence simple explanation of what problem it solves\n   - 3-4 bullet points highlighting key features, free tier perks, or platforms supported (Android/iOS/Web/Windows)\n   - Direct link or download/access method cleanly at the end\n   - Channel credit: @GoldPackFree2\n3. RTL / Formatting rule: Every single line must start with a Persian word or emoji (never start a line with English words or raw URLs).\n4. Tone: Highly practical, concise, engaging, and easy to follow.\n\nCRITICAL: Output ONLY the final Persian post text in your response. No preambles, no markdown codeblocks wrapping the whole message, no explanations.",
@@ -319,5 +370,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-08-29T03:00:51.147061+00:00"
+  "updated_at": "2026-08-28T18:31:19.862259+00:00"
 }

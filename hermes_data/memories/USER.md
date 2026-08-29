@@ -4,4 +4,4 @@ Model config: geminiM (primary) with opencode fallback (both via openai-api prov
 §
 Always express/display times in Tehran time (Iran Standard Time, UTC+3:30 or IRST) by default. Specify the timezone explicitly only when mentioning non-Iran time.
 §
-Workflow: Tech/quote crons: 08:00 (Quote), 09:00 (AI News), 15:30 (Free AI), 20:30 (Gems). Format: hook + bullets + link, max 10 lines. Abbasmanesh audio posts: 1) short text on glassmorphism quote image, 2) detailed caption/summary, 3) DALL-E 3 visual prompt. Send texts for review first.
+Workflow: Crons: 08:00 (Quote), 09:00 (AI News), 15:30 (Free AI), 20:30 (Gems). TG post style: punchy hook + 1 sentence intro + 4 emoji bullets + URL + @handle. NO headers/codeblocks/questions. Link before handle. Tone: simple/excited like telling a friend. Match user's reference style exactly.
