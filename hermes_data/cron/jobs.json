@@ -22,15 +22,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 36
+        "completed": 37
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:58:23.705132+00:00",
-      "next_run_at": "2026-08-30T03:00:00+00:00",
-      "last_run_at": "2026-08-28T03:00:22.429817+00:00",
+      "next_run_at": "2026-08-31T03:00:00+00:00",
+      "last_run_at": "2026-08-29T03:01:01.056127+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -45,118 +45,10 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-08-29T03:00:51.146419+00:00",
-        "by": "788d1ced33b1:2:7d55a56d60094184a2d7b30e1ab10a76"
+        "at": "2026-08-30T03:00:31.770674+00:00",
+        "by": "788d1ced33b1:2:e090c399758f44a49d93f720d5df81bf"
       },
       "failure_streak": 0
-    },
-    {
-      "id": "a87945670771",
-      "name": "cbt-30days-morning",
-      "prompt": "You are an expert CBT & positive psychology coach. You are running a structured 30-day self-esteem and confidence building program for the user.\n\nInstructions:\n1. Read the current day index from /data/workspace/cbt_program/current_day.txt\n2. Read the corresponding day topic from /data/workspace/cbt_program/curriculum.txt (the file has one topic per line, line number matches day index)\n3. Based on the topic, generate a complete daily module in fluent, warm, empathetic Farsi. The module must include:\n   - Header: \"روز [شماره]: [عنوان]\" in Farsi\n   - 1. Practical Exercise: under 10 minutes, concrete, step-by-step, actionable\n   - 2. Self-Awareness / Journaling Question: deep, reflective\n   - 3. Realistic & Empowering Affirmation in present tense\n\nCRITICAL RULES:\n- Every line of the Persian text must start with a Persian character or emoji (never English words or symbols at line start).\n- Write with practical, realistic CBT tone (no toxic positivity, no clichés).\n- Your FINAL ASSISTANT RESPONSE is what gets delivered to the user via Telegram. Ensure all content is in your final response text.\n- Do NOT advance the current_day.txt here (the evening meditation job will advance the day index).",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "provider_snapshot": "openai-api",
-      "model_snapshot": "ClaudeM",
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "monitor_script": null,
-      "monitor_url": null,
-      "monitor_state": null,
-      "context_from": null,
-      "schedule": {
-        "kind": "cron",
-        "expr": "30 3 * * *",
-        "display": "30 3 * * *"
-      },
-      "schedule_display": "30 3 * * *",
-      "repeat": {
-        "times": null,
-        "completed": 5
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-08-24T15:18:49.030820+00:00",
-      "next_run_at": "2026-08-29T03:30:00+00:00",
-      "last_run_at": "2026-08-28T03:30:54.511425+00:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "failure_streak": 0,
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "52615254",
-        "chat_name": "ɢɦ",
-        "thread_id": "327836",
-        "user_id": "52615254",
-        "scope_id": null
-      },
-      "enabled_toolsets": [
-        "file"
-      ],
-      "workdir": "/data/workspace/cbt_program",
-      "fire_claim": null
-    },
-    {
-      "id": "f65b96412575",
-      "name": "cbt-30days-evening-meditation",
-      "prompt": "You are a calming, compassionate mindfulness & CBT guide. Every night at 10:00 PM Iran time (18:30 UTC), you send a soothing guided evening meditation & reflection tailored to the user's 30-day self-esteem journey.\n\nInstructions:\n1. Read current day from /data/workspace/cbt_program/current_day.txt\n2. Read the day topic from /data/workspace/cbt_program/curriculum.txt (line number = day index)\n3. Generate a deeply calming, grounding 5-minute evening meditation and release practice in fluent, warm Farsi.\nInclude:\n- 🌙 Gentle breathwork / body scan (releasing tension from the day)\n- 🕊️ Mindful reflection connected to today's topic (integrating the morning lesson)\n- 🕯️ Bedtime grounding & self-compassion thought to sleep with peace\n\n4. Advance the index in /data/workspace/cbt_program/current_day.txt by +1 (if index > 30, reset to 1).\n\nCRITICAL RULES:\n- Every line of Persian text must start with a Persian character or emoji (never English words at line start).\n- Your FINAL ASSISTANT RESPONSE is what gets delivered to the user via Telegram.\n- Keep tone soft, slow, peaceful, and reassuring.",
-      "skills": [],
-      "skill": null,
-      "model": null,
-      "provider": null,
-      "provider_snapshot": "openai-api",
-      "model_snapshot": "ClaudeM",
-      "base_url": null,
-      "script": null,
-      "no_agent": false,
-      "monitor_script": null,
-      "monitor_url": null,
-      "monitor_state": null,
-      "context_from": [
-        "a87945670771"
-      ],
-      "schedule": {
-        "kind": "cron",
-        "expr": "30 18 * * *",
-        "display": "30 18 * * *"
-      },
-      "schedule_display": "30 18 * * *",
-      "repeat": {
-        "times": null,
-        "completed": 5
-      },
-      "enabled": true,
-      "state": "scheduled",
-      "paused_at": null,
-      "paused_reason": null,
-      "created_at": "2026-08-24T15:19:32.389798+00:00",
-      "next_run_at": "2026-08-29T18:30:00+00:00",
-      "last_run_at": "2026-08-28T18:31:19.860602+00:00",
-      "last_status": "ok",
-      "last_error": null,
-      "last_delivery_error": null,
-      "failure_streak": 0,
-      "deliver": "origin",
-      "origin": {
-        "platform": "telegram",
-        "chat_id": "52615254",
-        "chat_name": "ɢɦ",
-        "thread_id": "327836",
-        "user_id": "52615254",
-        "scope_id": null
-      },
-      "enabled_toolsets": [
-        "file"
-      ],
-      "workdir": "/data/workspace/cbt_program",
-      "fire_claim": null
     },
     {
       "id": "50235acf81d1",
@@ -235,19 +127,19 @@
       "schedule_display": "30 16 * * *",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-24T17:26:54.617929+00:00",
-      "next_run_at": "2026-08-29T16:30:00+00:00",
-      "last_run_at": "2026-08-28T16:30:49.017132+00:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-08-30T16:30:00+00:00",
+      "last_run_at": "2026-08-29T16:30:46.110202+00:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: [drift_skip] Skipped to prevent unintended spend: global inference config drifted since this job was created (model 'claudem' -> 'geminim'), and this job is unpinned. No inference call was made. To run on the new config, on the host running Hermes pin it explicitly: `hermes cron edit e9960222b715 --provider <provider> --model <model>` (or pin the original values to keep them). This alert is sent once; the job stays skipped until the config is pinned or restored. See #44585.",
       "last_delivery_error": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -262,7 +154,8 @@
         "terminal"
       ],
       "workdir": null,
-      "fire_claim": null
+      "fire_claim": null,
+      "drift_alerted": true
     },
     {
       "id": "048a411acc7d",
@@ -289,15 +182,15 @@
       "schedule_display": "30 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-28T11:09:50.488159+00:00",
-      "next_run_at": "2026-08-29T05:30:00+00:00",
-      "last_run_at": "2026-08-28T11:11:47.486556+00:00",
+      "next_run_at": "2026-08-30T05:30:00+00:00",
+      "last_run_at": "2026-08-29T05:31:32.365256+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -317,7 +210,266 @@
       ],
       "workdir": null,
       "fire_claim": null
+    },
+    {
+      "id": "f666a59f3a8b",
+      "name": "Daily Mindful Morning",
+      "prompt": "You are a warm, empathetic personal development and mindfulness coach speaking to a close friend. Send a soothing, inspiring morning message in Persian.\n\nREQUIRED STRUCTURE AND STYLE:\n- Greeting: Warm morning greeting (\"Good morning, my dear friend!\"). Express empathy, gentle encouragement, no rush, acceptance.\n- Breathing Exercise: Include a specific breathing technique (e.g., 4-7-8, Box Breathing, Abdominal breathing) with step-by-step numbers and how it calms the nervous system.\n- Daily Small Micro-Habit / Discipline Exercise: Give ONE small, very actionable, realistic micro-task for today (e.g., writing 3 priorities, cleaning one small corner of desk, drinking a warm glass of water, making a healthy simple meal). Explain briefly WHY it helps.\n- Daily Affirmation: Provide a short, grounding affirmation inside quotes.\n- Closing: Warm closing wishing them a wonderful day with soft emojis.\n\nIMPORTANT FORMATTING RULES:\n- Write pure, natural, fluent Persian.\n- Every line must start with a Persian word or an emoji. NO leading English letters or raw URLs.\n- Keep the tone gentle, encouraging, and human - like a caring friend, never preachy or robotic.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "openai-api",
+      "model_snapshot": "geminiM",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 4 * * *",
+        "display": "30 4 * * *"
+      },
+      "schedule_display": "30 4 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-29T14:46:07.886049+00:00",
+      "next_run_at": "2026-08-30T04:30:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "failure_streak": 0,
+      "deliver": "telegram:52615254:327836",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "52615254",
+        "chat_name": "ɢɦ",
+        "thread_id": "324488",
+        "user_id": "52615254",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "b18497376c98",
+      "name": "Daily Mindful Afternoon",
+      "prompt": "You are a warm, empathetic personal development and mindfulness coach speaking to a close friend. Send a refreshing afternoon message in Persian for mid-day reset.\n\nREQUIRED STRUCTURE AND STYLE:\n- Greeting: Warm afternoon greeting (\"Good afternoon, my dear friend!\"). Acknowledge mid-day fatigue or stress with acceptance and kindness.\n- Mid-day Reset Breathing: A quick 2-minute breathing exercise to release physical tension built up during the day.\n- Small Afternoon Action / Mindfulness Check: ONE small action (e.g., stretching for 2 minutes, stepping away from screens, checking emotional state, drinking water).\n- Mid-day Affirmation: Provide a short, calming affirmation inside quotes.\n- Closing: Encouraging closing wishing them a peaceful afternoon.\n\nIMPORTANT FORMATTING RULES:\n- Write pure, natural, fluent Persian.\n- Every line must start with a Persian word or an emoji. NO leading English letters or raw URLs.\n- Keep the tone gentle, encouraging, and human.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "openai-api",
+      "model_snapshot": "geminiM",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 12 * * *",
+        "display": "0 12 * * *"
+      },
+      "schedule_display": "0 12 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 0
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-29T14:46:07.908604+00:00",
+      "next_run_at": "2026-08-30T12:00:00+00:00",
+      "last_run_at": null,
+      "last_status": null,
+      "last_error": null,
+      "last_delivery_error": null,
+      "failure_streak": 0,
+      "deliver": "telegram:52615254:327836",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "52615254",
+        "chat_name": "ɢɦ",
+        "thread_id": "324488",
+        "user_id": "52615254",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null
+    },
+    {
+      "id": "4dc6abd39a6b",
+      "name": "Daily Mindful Evening",
+      "prompt": "You are a warm, empathetic personal development and mindfulness coach speaking to a close friend. Send a peaceful, soothing evening message in Persian before sleep.\n\nREQUIRED STRUCTURE AND STYLE:\n- Greeting: Peaceful evening greeting (\"Good evening, my dear friend!\"). Remind them to let go of today's worries and that whatever they achieved today was enough.\n- Nighttime Relaxation Breathing: A slow, relaxing breathing pattern designed for deep sleep and nervous system relaxation.\n- Nightly Gratitude & Small Habit Task: ALWAYS include a small gratitude exercise (e.g. writing 3 small positive things/moments from today) OR a tiny evening habit (e.g., preparing tomorrow's clothes, clearing the bed).\n- Positive Reflection: Briefly highlight focusing on positive thoughts and self-appreciation before sleep.\n- Night Affirmation: A peaceful night affirmation inside quotes.\n- Closing: Gentle goodnight wish with comforting emojis.\n\nIMPORTANT FORMATTING RULES:\n- Write pure, natural, fluent Persian.\n- Every line must start with a Persian word or an emoji. NO leading English letters or raw URLs.\n- Keep the tone gentle, encouraging, and deeply relaxing.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "openai-api",
+      "model_snapshot": "geminiM",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "0 18 * * *",
+        "display": "0 18 * * *"
+      },
+      "schedule_display": "0 18 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": true,
+      "state": "scheduled",
+      "paused_at": null,
+      "paused_reason": null,
+      "created_at": "2026-08-29T14:46:07.928421+00:00",
+      "next_run_at": "2026-08-30T18:00:00+00:00",
+      "last_run_at": "2026-08-29T18:01:23.504142+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "failure_streak": 0,
+      "deliver": "telegram:52615254:327836",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "52615254",
+        "chat_name": "ɢɦ",
+        "thread_id": "324488",
+        "user_id": "52615254",
+        "scope_id": null
+      },
+      "enabled_toolsets": null,
+      "workdir": null,
+      "fire_claim": null
+    },
+    {
+      "id": "2c6d2e0118dd",
+      "name": "cbt-30days-morning",
+      "prompt": "You are an expert CBT & positive psychology coach. You are running a structured 30-day self-esteem and confidence building program for the user.\n\nInstructions:\n1. Read the current day index from /data/workspace/cbt_program/current_day.txt\n2. Read the corresponding day topic from /data/workspace/cbt_program/curriculum.txt (the file has one topic per line, line number matches day index)\n3. Based on the topic, generate a complete daily module in fluent, warm, empathetic Farsi. The module must include:\n   - Header: \"روز [شماره]: [عنوان]\" in Farsi\n   - 1. Practical Exercise: under 10 minutes, concrete, step-by-step, actionable\n   - 2. Self-Awareness / Journaling Question: deep, reflective\n   - 3. Realistic & Empowering Affirmation in present tense\n\nCRITICAL RULES:\n- Every line of the Persian text must start with a Persian character or emoji (never English words or symbols at line start).\n- Write with practical, realistic CBT tone (no toxic positivity, no clichés).\n- Your FINAL ASSISTANT RESPONSE is what gets delivered to the user via Telegram. Ensure all content is in your final response text.\n- Do NOT advance the current_day.txt here (the evening meditation job will advance the day index).",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "openai-api",
+      "model_snapshot": "geminiM",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": null,
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 3 * * *",
+        "display": "30 3 * * *"
+      },
+      "schedule_display": "30 3 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-08-29T15:44:35.228159+00:00",
+      "paused_reason": null,
+      "created_at": "2026-08-29T15:09:59.107646+00:00",
+      "next_run_at": "2026-08-30T03:30:00+00:00",
+      "last_run_at": "2026-08-29T15:10:51.986988+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "52615254",
+        "chat_name": "ɢɦ",
+        "thread_id": "327836",
+        "user_id": "52615254",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "file"
+      ],
+      "workdir": "/data/workspace/cbt_program",
+      "fire_claim": null
+    },
+    {
+      "id": "bf841fb0fa46",
+      "name": "cbt-30days-evening-meditation",
+      "prompt": "You are a calming, compassionate mindfulness & CBT guide. Every night at 10:00 PM Iran time (18:30 UTC), you send a soothing guided evening meditation & reflection tailored to the user's 30-day self-esteem journey.\n\nInstructions:\n1. Read current day from /data/workspace/cbt_program/current_day.txt\n2. Read the day topic from /data/workspace/cbt_program/curriculum.txt (line number = day index)\n3. Generate a deeply calming, grounding 5-minute evening meditation and release practice in fluent, warm Farsi.\nInclude:\n- 🌙 Gentle breathwork / body scan (releasing tension from the day)\n- 🕊️ Mindful reflection connected to today's topic (integrating the morning lesson)\n- 🕯️ Bedtime grounding & self-compassion thought to sleep with peace\n\n4. Advance the index in /data/workspace/cbt_program/current_day.txt by +1 (if index > 30, reset to 1).\n\nCRITICAL RULES:\n- Every line of Persian text must start with a Persian character or emoji (never English words at line start).\n- Your FINAL ASSISTANT RESPONSE is what gets delivered to the user via Telegram.\n- Keep tone soft, slow, peaceful, and reassuring.",
+      "skills": [],
+      "skill": null,
+      "model": null,
+      "provider": null,
+      "provider_snapshot": "openai-api",
+      "model_snapshot": "geminiM",
+      "base_url": null,
+      "script": null,
+      "no_agent": false,
+      "monitor_script": null,
+      "monitor_url": null,
+      "monitor_state": null,
+      "context_from": [
+        "2c6d2e0118dd"
+      ],
+      "schedule": {
+        "kind": "cron",
+        "expr": "30 18 * * *",
+        "display": "30 18 * * *"
+      },
+      "schedule_display": "30 18 * * *",
+      "repeat": {
+        "times": null,
+        "completed": 1
+      },
+      "enabled": false,
+      "state": "paused",
+      "paused_at": "2026-08-29T15:44:35.242177+00:00",
+      "paused_reason": null,
+      "created_at": "2026-08-29T15:10:06.192009+00:00",
+      "next_run_at": "2026-08-29T18:30:00+00:00",
+      "last_run_at": "2026-08-29T15:11:39.311068+00:00",
+      "last_status": "ok",
+      "last_error": null,
+      "last_delivery_error": null,
+      "failure_streak": 0,
+      "deliver": "origin",
+      "origin": {
+        "platform": "telegram",
+        "chat_id": "52615254",
+        "chat_name": "ɢɦ",
+        "thread_id": "327836",
+        "user_id": "52615254",
+        "scope_id": null
+      },
+      "enabled_toolsets": [
+        "file"
+      ],
+      "workdir": "/data/workspace/cbt_program",
+      "fire_claim": null
     }
   ],
-  "updated_at": "2026-08-29T03:00:51.147061+00:00"
+  "updated_at": "2026-08-30T03:00:31.770811+00:00"
 }

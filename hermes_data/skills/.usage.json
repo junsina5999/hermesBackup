@@ -290,14 +290,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-26T03:31:33.307792+00:00",
-    "last_viewed_at": "2026-08-26T03:31:33.303398+00:00",
+    "last_used_at": "2026-08-29T15:10:20.353704+00:00",
+    "last_viewed_at": "2026-08-29T15:10:20.342854+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 3,
-    "view_count": 3
+    "use_count": 7,
+    "view_count": 7
   },
   "design-md": {
     "archived_at": null,
@@ -755,14 +755,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-24T06:25:40.992378+00:00",
-    "last_viewed_at": "2026-08-24T06:25:40.987561+00:00",
+    "last_used_at": "2026-08-29T15:10:20.347482+00:00",
+    "last_viewed_at": "2026-08-29T15:10:20.335269+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 3,
-    "view_count": 3
+    "use_count": 5,
+    "view_count": 5
   },
   "nano-pdf": {
     "archived_at": null,
