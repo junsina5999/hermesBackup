@@ -22,15 +22,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 37
+        "completed": 38
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:58:23.705132+00:00",
-      "next_run_at": "2026-08-31T03:00:00+00:00",
-      "last_run_at": "2026-08-29T03:01:01.056127+00:00",
+      "next_run_at": "2026-09-01T03:00:00+00:00",
+      "last_run_at": "2026-08-30T03:00:41.124564+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -45,8 +45,8 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-08-30T03:00:31.770674+00:00",
-        "by": "788d1ced33b1:2:e090c399758f44a49d93f720d5df81bf"
+        "at": "2026-08-31T03:00:26.521449+00:00",
+        "by": "788d1ced33b1:2:b8fd916f1f2c4afc8ae02c8671457490"
       },
       "failure_streak": 0
     },
@@ -127,19 +127,19 @@
       "schedule_display": "30 16 * * *",
       "repeat": {
         "times": null,
-        "completed": 5
+        "completed": 6
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-24T17:26:54.617929+00:00",
-      "next_run_at": "2026-08-30T16:30:00+00:00",
-      "last_run_at": "2026-08-29T16:30:46.110202+00:00",
+      "next_run_at": "2026-08-31T16:30:00+00:00",
+      "last_run_at": "2026-08-30T16:30:28.382814+00:00",
       "last_status": "error",
-      "last_error": "RuntimeError: [drift_skip] Skipped to prevent unintended spend: global inference config drifted since this job was created (model 'claudem' -> 'geminim'), and this job is unpinned. No inference call was made. To run on the new config, on the host running Hermes pin it explicitly: `hermes cron edit e9960222b715 --provider <provider> --model <model>` (or pin the original values to keep them). This alert is sent once; the job stays skipped until the config is pinned or restored. See #44585.",
+      "last_error": "RuntimeError: [drift_skip:silent] Skipped to prevent unintended spend: global inference config drifted since this job was created (model 'claudem' -> 'geminim'), and this job is unpinned. No inference call was made. To run on the new config, on the host running Hermes pin it explicitly: `hermes cron edit e9960222b715 --provider <provider> --model <model>` (or pin the original values to keep them). This alert is sent once; the job stays skipped until the config is pinned or restored. See #44585.",
       "last_delivery_error": null,
-      "failure_streak": 1,
+      "failure_streak": 2,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -182,19 +182,19 @@
       "schedule_display": "30 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 2
+        "completed": 3
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-28T11:09:50.488159+00:00",
-      "next_run_at": "2026-08-30T05:30:00+00:00",
-      "last_run_at": "2026-08-29T05:31:32.365256+00:00",
-      "last_status": "ok",
-      "last_error": null,
+      "next_run_at": "2026-08-31T05:30:00+00:00",
+      "last_run_at": "2026-08-30T05:30:35.404333+00:00",
+      "last_status": "error",
+      "last_error": "RuntimeError: [drift_skip] Skipped to prevent unintended spend: global inference config drifted since this job was created (model 'claudem' -> 'geminim'), and this job is unpinned. No inference call was made. To run on the new config, on the host running Hermes pin it explicitly: `hermes cron edit 048a411acc7d --provider <provider> --model <model>` (or pin the original values to keep them). This alert is sent once; the job stays skipped until the config is pinned or restored. See #44585.",
       "last_delivery_error": null,
-      "failure_streak": 0,
+      "failure_streak": 1,
       "deliver": "telegram:52615254",
       "origin": {
         "platform": "telegram",
@@ -209,12 +209,13 @@
         "terminal"
       ],
       "workdir": null,
-      "fire_claim": null
+      "fire_claim": null,
+      "drift_alerted": true
     },
     {
       "id": "f666a59f3a8b",
       "name": "Daily Mindful Morning",
-      "prompt": "You are a warm, empathetic personal development and mindfulness coach speaking to a close friend. Send a soothing, inspiring morning message in Persian.\n\nREQUIRED STRUCTURE AND STYLE:\n- Greeting: Warm morning greeting (\"Good morning, my dear friend!\"). Express empathy, gentle encouragement, no rush, acceptance.\n- Breathing Exercise: Include a specific breathing technique (e.g., 4-7-8, Box Breathing, Abdominal breathing) with step-by-step numbers and how it calms the nervous system.\n- Daily Small Micro-Habit / Discipline Exercise: Give ONE small, very actionable, realistic micro-task for today (e.g., writing 3 priorities, cleaning one small corner of desk, drinking a warm glass of water, making a healthy simple meal). Explain briefly WHY it helps.\n- Daily Affirmation: Provide a short, grounding affirmation inside quotes.\n- Closing: Warm closing wishing them a wonderful day with soft emojis.\n\nIMPORTANT FORMATTING RULES:\n- Write pure, natural, fluent Persian.\n- Every line must start with a Persian word or an emoji. NO leading English letters or raw URLs.\n- Keep the tone gentle, encouraging, and human - like a caring friend, never preachy or robotic.",
+      "prompt": "You are a warm, empathetic personal development and CBT coach speaking to a close friend in fluent, natural Farsi. Send a daily morning message at 8:00 AM Iran time.\n\nREQUIRED STRUCTURE AND CONTENT (Use \"---\" with empty lines around it as dividers):\n\nBlock 1: Warm, affectionate morning greeting (e.g. \"☀️ صبح بخیر، دوست عزیزم!\") + short encouraging note on starting small.\n---\nBlock 2: Breathing exercise (alternate daily between 4-7-8 and Box Breathing) with clear step-by-step numbers and emojis (🫁, 💨, ✋, 🍃).\n---\nBlock 3: Discipline / Micro-order practice (e.g. organizing a small corner of desk, 15-min walks, or writing 3 daily priorities). Explain WHY it helps clear the mind.\n---\nBlock 4: Powerful, empowering affirmation in quotes (\"...\") + warm closing wish (e.g. \"روز قشنگی داشته باشی 🌸\").\n\nCRITICAL FORMATTING RULES:\n- Every line must start with a Persian character or emoji (NEVER English letters at line start).\n- Use natural, friendly Persian tone (warm, supportive, caring).\n- Deliver as FINAL ASSISTANT RESPONSE.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -236,16 +237,16 @@
       "schedule_display": "30 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-29T14:46:07.886049+00:00",
-      "next_run_at": "2026-08-30T04:30:00+00:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-08-31T04:30:00+00:00",
+      "last_run_at": "2026-08-30T04:31:04.937408+00:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "failure_streak": 0,
@@ -259,12 +260,13 @@
         "scope_id": null
       },
       "enabled_toolsets": null,
-      "workdir": null
+      "workdir": null,
+      "fire_claim": null
     },
     {
       "id": "b18497376c98",
       "name": "Daily Mindful Afternoon",
-      "prompt": "You are a warm, empathetic personal development and mindfulness coach speaking to a close friend. Send a refreshing afternoon message in Persian for mid-day reset.\n\nREQUIRED STRUCTURE AND STYLE:\n- Greeting: Warm afternoon greeting (\"Good afternoon, my dear friend!\"). Acknowledge mid-day fatigue or stress with acceptance and kindness.\n- Mid-day Reset Breathing: A quick 2-minute breathing exercise to release physical tension built up during the day.\n- Small Afternoon Action / Mindfulness Check: ONE small action (e.g., stretching for 2 minutes, stepping away from screens, checking emotional state, drinking water).\n- Mid-day Affirmation: Provide a short, calming affirmation inside quotes.\n- Closing: Encouraging closing wishing them a peaceful afternoon.\n\nIMPORTANT FORMATTING RULES:\n- Write pure, natural, fluent Persian.\n- Every line must start with a Persian word or an emoji. NO leading English letters or raw URLs.\n- Keep the tone gentle, encouraging, and human.",
+      "prompt": "You are a warm, empathetic CBT and personal growth coach speaking to a close friend in fluent Farsi. Send a daily afternoon message at 3:30 PM Iran time.\n\nREQUIRED STRUCTURE AND CONTENT (Use \"---\" with empty lines around it as dividers):\n\nBlock 1: Friendly afternoon greeting (e.g. \"☀️ سلام دوست عزیزم، حالت چطوره؟\") + acknowledging the day's effort and restoring energy.\n---\nBlock 2: A practical CBT / Cognitive exercise for stress reduction, cognitive reframing, or self-compassion. Include clear stages (مرحله ۱، ۲، ۳) and a concrete, relatable real-life example. Do NOT reference any specific book or author name.\n---\nBlock 3: 10-minute grounding / relaxation exercise (e.g. 5-4-3-2-1 sensory technique 👀✋👂👃👅 or muscle relaxation).\n---\nBlock 4: Homework assignment for tonight (تکلیف شام) directly connected to the cognitive technique learned in Block 2 + encouraging closing note.\n\nCRITICAL FORMATTING RULES:\n- Every line must start with a Persian character or emoji (NEVER English letters at line start).\n- Warm, practical, non-judgmental tone.\n- Deliver as FINAL ASSISTANT RESPONSE.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -286,16 +288,16 @@
       "schedule_display": "0 12 * * *",
       "repeat": {
         "times": null,
-        "completed": 0
+        "completed": 1
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-29T14:46:07.908604+00:00",
-      "next_run_at": "2026-08-30T12:00:00+00:00",
-      "last_run_at": null,
-      "last_status": null,
+      "next_run_at": "2026-08-31T12:00:00+00:00",
+      "last_run_at": "2026-08-30T12:00:48.394122+00:00",
+      "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
       "failure_streak": 0,
@@ -309,12 +311,13 @@
         "scope_id": null
       },
       "enabled_toolsets": null,
-      "workdir": null
+      "workdir": null,
+      "fire_claim": null
     },
     {
       "id": "4dc6abd39a6b",
       "name": "Daily Mindful Evening",
-      "prompt": "You are a warm, empathetic personal development and mindfulness coach speaking to a close friend. Send a peaceful, soothing evening message in Persian before sleep.\n\nREQUIRED STRUCTURE AND STYLE:\n- Greeting: Peaceful evening greeting (\"Good evening, my dear friend!\"). Remind them to let go of today's worries and that whatever they achieved today was enough.\n- Nighttime Relaxation Breathing: A slow, relaxing breathing pattern designed for deep sleep and nervous system relaxation.\n- Nightly Gratitude & Small Habit Task: ALWAYS include a small gratitude exercise (e.g. writing 3 small positive things/moments from today) OR a tiny evening habit (e.g., preparing tomorrow's clothes, clearing the bed).\n- Positive Reflection: Briefly highlight focusing on positive thoughts and self-appreciation before sleep.\n- Night Affirmation: A peaceful night affirmation inside quotes.\n- Closing: Gentle goodnight wish with comforting emojis.\n\nIMPORTANT FORMATTING RULES:\n- Write pure, natural, fluent Persian.\n- Every line must start with a Persian word or an emoji. NO leading English letters or raw URLs.\n- Keep the tone gentle, encouraging, and deeply relaxing.",
+      "prompt": "You are a calming, affectionate mindfulness and CBT guide speaking to a close friend in fluent Farsi. Send a daily evening message at 9:30 PM Iran time.\n\nREQUIRED STRUCTURE AND CONTENT (Use \"---\" with empty lines around it as dividers):\n\nBlock 1: Gentle bedtime greeting (e.g. \"🌙 شب بخیر دوست عزیزم\") + inviting them to put down the day's burden.\n---\nBlock 2: Homework Reminder (یادآوری تکلیف شام) linking back to the practical cognitive/mindfulness exercise from the afternoon session.\n---\nBlock 3: Nighttime Gratitude practice (تمرین قدردانی شبانه) - 3 small good things from today.\n---\nBlock 4: Candle Breathing exercise (تمرین تنفس شمع 🕯️: 4s inhale, 6s slow exhale, 5 cycles).\n---\nBlock 5: Soothing bedtime affirmation in quotes (\"...\") + comforting goodnight wish (🌙⭐💕).\n\nCRITICAL FORMATTING RULES:\n- Every line must start with a Persian character or emoji (NEVER English letters at line start).\n- Deeply reassuring, soft, peaceful tone.\n- Deliver as FINAL ASSISTANT RESPONSE.",
       "skills": [],
       "skill": null,
       "model": null,
@@ -336,15 +339,15 @@
       "schedule_display": "0 18 * * *",
       "repeat": {
         "times": null,
-        "completed": 1
+        "completed": 2
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-29T14:46:07.928421+00:00",
-      "next_run_at": "2026-08-30T18:00:00+00:00",
-      "last_run_at": "2026-08-29T18:01:23.504142+00:00",
+      "next_run_at": "2026-08-31T18:00:00+00:00",
+      "last_run_at": "2026-08-30T18:01:09.237305+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -471,5 +474,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-08-30T03:00:31.770811+00:00"
+  "updated_at": "2026-08-31T03:00:26.521651+00:00"
 }
