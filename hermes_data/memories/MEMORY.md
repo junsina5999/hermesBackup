@@ -10,7 +10,7 @@ User prefers quick direct answers, gets frustrated by slow responses. Wants prac
 §
 Premium image gen: /data/workspace/premium_generator.py, output: /data/workspace/posts_premium/. Palettes: luxury_gold, royal_purple, emerald_night. Vazirmatn font in /data/workspace/fonts/. Used for @abasmanesh222.
 §
-User runs Persian Telegram channel @GoldPackFree2. Bot: @GoldPackFree_PosterBot (-1001378242402). 2 scheduled channel posts: 09:00 (AI/tech news: free models, new releases, trending AI tools) and 20:00 (practical tools/apps: photo/video editing, daily utilities, VPN/proxy/bypass tools). Style: punchy hook + 1 sentence intro + 4 emoji bullets + conclusion + @GoldPackFree2 + direct URL. Every line must start with a Persian word (no leading English or raw URLs). When posting about apps/tools, user expects thorough research of ALL features (including from GitHub/docs) before writing the post — not just surface-level descriptions.
+Iranian admin of @GoldPackFree2 (tech/AI) & @abasmanesh222 (motivation). Style: punchy hook + 1 sentence intro + 4 emoji bullets + direct URL + @handle. RTL: lines start with Persian/emoji. Crons: 08:00 (Motivational Morning), 09:00 (AI News), 15:30 (Motivational Afternoon / Free AI), 20:00 (Practical Apps), 21:30 (Motivational Evening w/ 3 Gratitudes). Thread 327836 for motivational crons.
 §
 Parse.bot MCP server configured with API key. Multiai2 provider on 9Router is active for combo models.
 §

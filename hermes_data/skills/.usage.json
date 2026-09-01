@@ -305,14 +305,14 @@
     "created_by": null,
     "last_patched_at": null,
     "last_reused_patch_generation": 0,
-    "last_used_at": "2026-08-29T15:10:20.353704+00:00",
-    "last_viewed_at": "2026-08-29T15:10:20.342854+00:00",
+    "last_used_at": "2026-08-31T04:31:02.065990+00:00",
+    "last_viewed_at": "2026-08-31T04:31:02.058678+00:00",
     "patch_count": 0,
     "patch_generation": 0,
     "pinned": false,
     "state": "active",
-    "use_count": 7,
-    "view_count": 7
+    "use_count": 8,
+    "view_count": 8
   },
   "design-md": {
     "archived_at": null,
