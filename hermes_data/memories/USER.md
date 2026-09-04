@@ -3,3 +3,5 @@ Channel @GoldPackFree2 post format: catchy emoji+headline → 1-2 sentence intro
 Always express/display times in Tehran time (Iran Standard Time, UTC+3:30 or IRST) by default. Specify the timezone explicitly only when mentioning non-Iran time.
 §
 Cron jobs must have model pinned explicitly (e.g. opencodeM on openai-api) to prevent "drift skipped" errors when default model changes. Active crons: Morning AI News (09:00), Evening Tools/Apps (20:00), Daily Backup (06:30). CBT/mindfulness crons deleted.
+§
+User built a web app named She'leh-var (Ehsan's Planner - dark theme, Persian calendar, Pomodoro, habits) hosted on Cloudflare Workers/Pages.

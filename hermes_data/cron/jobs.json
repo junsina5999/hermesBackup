@@ -22,15 +22,15 @@
       "schedule_display": "0 3 * * *",
       "repeat": {
         "times": null,
-        "completed": 41
+        "completed": 42
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-07-26T12:58:23.705132+00:00",
-      "next_run_at": "2026-09-04T03:00:00+00:00",
-      "last_run_at": "2026-09-02T03:00:28.748085+00:00",
+      "next_run_at": "2026-09-05T03:00:00+00:00",
+      "last_run_at": "2026-09-03T03:00:59.539210+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -45,8 +45,8 @@
       "enabled_toolsets": null,
       "workdir": null,
       "fire_claim": {
-        "at": "2026-09-03T03:00:48.976918+00:00",
-        "by": "788d1ced33b1:2:a9b2472048704ec183b2baf2e7466202"
+        "at": "2026-09-04T03:00:22.228330+00:00",
+        "by": "788d1ced33b1:2:9c9080af4ecb4d83a705982114183a70"
       },
       "failure_streak": 0
     },
@@ -75,19 +75,19 @@
       "schedule_display": "30 16 * * *",
       "repeat": {
         "times": null,
-        "completed": 9
+        "completed": 10
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-24T17:26:54.617929+00:00",
-      "next_run_at": "2026-09-03T16:30:00+00:00",
-      "last_run_at": "2026-09-02T16:30:59.657698+00:00",
+      "next_run_at": "2026-09-04T16:30:00+00:00",
+      "last_run_at": "2026-09-03T16:30:11.446813+00:00",
       "last_status": "error",
       "last_error": "RuntimeError: [drift_skip:silent] Skipped to prevent unintended spend: global inference config drifted since this job was created (model 'claudem' -> 'geminim'), and this job is unpinned. No inference call was made. To run on the new config, on the host running Hermes pin it explicitly: `hermes cron edit e9960222b715 --provider <provider> --model <model>` (or pin the original values to keep them). This alert is sent once; the job stays skipped until the config is pinned or restored. See #44585.",
       "last_delivery_error": null,
-      "failure_streak": 5,
+      "failure_streak": 6,
       "deliver": "origin",
       "origin": {
         "platform": "telegram",
@@ -130,19 +130,19 @@
       "schedule_display": "30 5 * * *",
       "repeat": {
         "times": null,
-        "completed": 6
+        "completed": 7
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-28T11:09:50.488159+00:00",
-      "next_run_at": "2026-09-03T05:30:00+00:00",
-      "last_run_at": "2026-09-02T05:30:30.807103+00:00",
+      "next_run_at": "2026-09-04T05:30:00+00:00",
+      "last_run_at": "2026-09-03T05:30:24.711113+00:00",
       "last_status": "error",
       "last_error": "RuntimeError: [drift_skip:silent] Skipped to prevent unintended spend: global inference config drifted since this job was created (model 'claudem' -> 'geminim'), and this job is unpinned. No inference call was made. To run on the new config, on the host running Hermes pin it explicitly: `hermes cron edit 048a411acc7d --provider <provider> --model <model>` (or pin the original values to keep them). This alert is sent once; the job stays skipped until the config is pinned or restored. See #44585.",
       "last_delivery_error": null,
-      "failure_streak": 4,
+      "failure_streak": 5,
       "deliver": "telegram:52615254",
       "origin": {
         "platform": "telegram",
@@ -185,15 +185,15 @@
       "schedule_display": "30 4 * * *",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-29T14:46:07.886049+00:00",
-      "next_run_at": "2026-09-03T04:30:00+00:00",
-      "last_run_at": "2026-09-02T04:31:27.147896+00:00",
+      "next_run_at": "2026-09-04T04:30:00+00:00",
+      "last_run_at": "2026-09-03T04:32:04.623899+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -236,15 +236,15 @@
       "schedule_display": "0 12 * * *",
       "repeat": {
         "times": null,
-        "completed": 4
+        "completed": 5
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-29T14:46:07.908604+00:00",
-      "next_run_at": "2026-09-03T12:00:00+00:00",
-      "last_run_at": "2026-09-02T12:01:02.621312+00:00",
+      "next_run_at": "2026-09-04T12:00:00+00:00",
+      "last_run_at": "2026-09-03T12:01:43.982961+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -287,15 +287,15 @@
       "schedule_display": "0 18 * * *",
       "repeat": {
         "times": null,
-        "completed": 5
+        "completed": 6
       },
       "enabled": true,
       "state": "scheduled",
       "paused_at": null,
       "paused_reason": null,
       "created_at": "2026-08-29T14:46:07.928421+00:00",
-      "next_run_at": "2026-09-03T18:00:00+00:00",
-      "last_run_at": "2026-09-02T18:00:33.864072+00:00",
+      "next_run_at": "2026-09-04T18:00:00+00:00",
+      "last_run_at": "2026-09-03T18:00:47.877813+00:00",
       "last_status": "ok",
       "last_error": null,
       "last_delivery_error": null,
@@ -422,5 +422,5 @@
       "fire_claim": null
     }
   ],
-  "updated_at": "2026-09-03T03:00:48.977078+00:00"
+  "updated_at": "2026-09-04T03:00:22.228550+00:00"
 }
